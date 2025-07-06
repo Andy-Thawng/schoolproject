@@ -1,0 +1,55 @@
+/* Global styles for navbar and footer */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar hover */
+/* Advanced Navbar Styles */
+
+.navbar-nav .nav-link {
+  color: #ddd !important;
+  transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #ffc107 !important;
+}
+
+.navbar-brand {
+  font-size: 1.3rem;
+}
+
+/* Cart badge style override */
+.badge {
+  font-size: 0.65rem;
+  padding: 0.4em 0.5em;
+}
+
+
+/* Footer */
+/* Advanced Footer Styles */
+
+.footer-link {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #ffc107;
+  text-decoration: underline;
+}
+
+.footer-icon {
+  font-size: 1.3rem;
+  color: #ccc;
+  transition: 0.3s ease;
+}
+
+.footer-icon:hover {
+  color: #ffc107;
+}
+

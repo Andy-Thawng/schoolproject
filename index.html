@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Include Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Navbar  -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <!-- Brand / Logo -->
+            <a class="navbar-brand fw-bold text-warning" href="index.html">
+            <i class="bi bi-ticket-detailed-fill"></i> EventBooking
+            </a>
+
+            <!-- Hamburger -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Nav Items -->
+            <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="events/events.html">Events</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="wishlist.html"><i class="bi bi-heart-fill"></i> Wishlist</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                <li class="nav-item"><a class="nav-link position-relative" href="cart.html">
+                <i class="bi bi-cart-fill"></i> Cart
+                <!-- Optional cart badge -->
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">2</span>
+                </a></li>
+                <!-- Login & Sign Up CTA -->
+                <li class="nav-item ms-lg-3">
+                <a class="btn btn-outline-warning btn-sm me-2" href="login.html">Login</a>
+                <a class="btn btn-warning btn-sm" href="signup.html">Sign Up</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+<section class="hero-section text-white d-flex align-items-center" style="background: linear-gradient(to right, #0f2027, #203a43, #2c5364); height: 100vh;">
+  <div class="container text-center">
+    <h1 class="display-4 fw-bold">Discover & Book Amazing Events</h1>
+    <p class="lead">Concerts, Expos, Conferences, and more — all in one place.</p>
+    <a href="events/events.html" class="btn btn-warning btn-lg me-2">Browse Events</a>
+    <a href="signup.html" class="btn btn-outline-light btn-lg">Sign Up</a>
+  </div>
+</section>
+
+<!-- Search & Filters Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h3 class="text-center mb-4">Find Your Event</h3>
+    <form class="row g-3 justify-content-center">
+      <div class="col-md-4">
+        <input type="text" class="form-control" placeholder="Search by name, location...">
+      </div>
+      <div class="col-md-2">
+        <select class="form-select">
+          <option selected>Category</option>
+          <option>Concert</option>
+          <option>Expo</option>
+          <option>Sports</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <input type="date" class="form-control">
+      </div>
+      <div class="col-md-2">
+        <button type="submit" class="btn btn-warning w-100">Search</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- Featured Events Section -->
+<section class="py-5">
+  <div class="container">
+    <h3 class="text-center mb-5">Featured Events</h3>
+    <div class="row g-4">
+      <!-- Event Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow">
+          <img src="assets/images/event1.jpg" class="card-img-top" alt="Concert">
+          <div class="card-body">
+            <h5 class="card-title">Rock & Roll Night</h5>
+            <p class="card-text text-muted">July 15, 2025 — Yangon Arena</p>
+            <a href="events/event-details/rock-concert.html" class="btn btn-warning">View Details</a>
+          </div>
+        </div>
+      </div>
+      <!-- Event Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow">
+          <img src="assets/images/event2.jpg" class="card-img-top" alt="Art Expo">
+          <div class="card-body">
+            <h5 class="card-title">Creative Art Expo 2025</h5>
+            <p class="card-text text-muted">July 20, 2025 — Mandalay Hall</p>
+            <a href="events/event-details/art-expo.html" class="btn btn-warning">View Details</a>
+          </div>
+        </div>
+      </div>
+      <!-- Event Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow">
+          <img src="assets/images/event3.jpg" class="card-img-top" alt="Tech Conference">
+          <div class="card-body">
+            <h5 class="card-title">FutureTech 2025</h5>
+            <p class="card-text text-muted">August 5, 2025 — Online</p>
+            <a href="events/event-details/tech-conference.html" class="btn btn-warning">View Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Categories Section -->
+<section class="py-5 bg-light">
+  <div class="container text-center">
+    <h3 class="mb-4">Explore by Category</h3>
+    <div class="row g-3 justify-content-center">
+      <div class="col-6 col-md-2"><div class="p-3 border rounded bg-white shadow-sm">🎤 Concert</div></div>
+      <div class="col-6 col-md-2"><div class="p-3 border rounded bg-white shadow-sm">🖼️ Expo</div></div>
+      <div class="col-6 col-md-2"><div class="p-3 border rounded bg-white shadow-sm">⚽ Sports</div></div>
+      <div class="col-6 col-md-2"><div class="p-3 border rounded bg-white shadow-sm">🎭 Theater</div></div>
+      <div class="col-6 col-md-2"><div class="p-3 border rounded bg-white shadow-sm">💼 Business</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- How It Works Section -->
+<section class="py-5">
+  <div class="container text-center">
+    <h3 class="mb-4">How It Works</h3>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="p-4 border rounded shadow-sm h-100">
+          <h5>1. Browse Events</h5>
+          <p class="text-muted">Discover concerts, expos, sports, and more happening near you.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 border rounded shadow-sm h-100">
+          <h5>2. Book Tickets</h5>
+          <p class="text-muted">Select ticket type, quantity, and checkout easily.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 border rounded shadow-sm h-100">
+          <h5>3. Enjoy the Show</h5>
+          <p class="text-muted">Get your ticket and have an amazing experience.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Banner Section -->
+<section class="py-5 bg-warning text-center text-dark">
+  <div class="container">
+    <h4 class="fw-bold mb-3">Don't Miss Out on Exclusive Deals</h4>
+    <a href="signup.html" class="btn btn-dark">Join Now</a>
+  </div>
+</section>
+
+<!-- Newsletter Subscribe (Optional) -->
+<section class="py-5 bg-light">
+  <div class="container text-center">
+    <h4 class="mb-3">Subscribe to Our Newsletter</h4>
+    <form class="row justify-content-center g-2">
+      <div class="col-md-4">
+        <input type="email" class="form-control" placeholder="Enter your email">
+      </div>
+      <div class="col-md-2">
+        <button type="submit" class="btn btn-warning w-100">Subscribe</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+    <!-- Footer  -->
+    <footer class="footer bg-dark text-white pt-5 pb-3 mt-5">
+        <div class="container">
+            <div class="row">
+
+            <!-- Brand/Logo Section -->
+            <div class="col-md-4 mb-4">
+                <h4 class="text-warning">🎟️ EventBooking</h4>
+                <p>Book your favorite events with ease. Concerts, expos, and more — all in one place.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-4 mb-4">
+                <h5 class="text-warning">Quick Links</h5>
+                <ul class="list-unstyled">
+                <li><a href="index.html" class="footer-link">Home</a></li>
+                <li><a href="events/events.html" class="footer-link">Events</a></li>
+                <li><a href="about.html" class="footer-link">About Us</a></li>
+                <li><a href="contact.html" class="footer-link">Contact</a></li>
+                <li><a href="faq.html" class="footer-link">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact & Social -->
+            <div class="col-md-4 mb-4">
+                <h5 class="text-warning">Contact Us</h5>
+                <p>Email: <a href="mailto:support@eventbooking.com" class="footer-link">support@eventbooking.com</a></p>
+                <p>Phone: +95 123 456 789</p>
+                <div class="social-icons mt-3">
+                <a href="#" class="me-3 footer-icon"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="me-3 footer-icon"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" class="me-3 footer-icon"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="footer-icon"><i class="bi bi-globe"></i></a>
+                </div>
+            </div>
+
+            </div>
+            <hr class="border-secondary">
+            <div class="text-center">
+            <p class="mb-0">&copy; 2025 EventBooking. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+</html>
