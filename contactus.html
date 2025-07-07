@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | EventBooking</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/global.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <!-- Brand / Logo -->
+            <a class="navbar-brand fw-bold text-warning" href="index.html">
+            <i class="bi bi-ticket-detailed-fill"></i> EventBooking
+            </a>
+
+            <!-- Hamburger -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Nav Items -->
+            <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="events/events.html">Events</a></li>
+                <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="wishlist.html"><i class="bi bi-heart-fill"></i> Wishlist</a></li>
+                <li class="nav-item"><a class="nav-link" href="contactus.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                <li class="nav-item"><a class="nav-link position-relative" href="cart.html">
+                <i class="bi bi-cart-fill"></i> Cart
+                <!-- Optional cart badge -->
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">2</span>
+                </a></li>
+                <!-- Login & Sign Up CTA -->
+                <li class="nav-item ms-lg-3">
+                <a class="btn btn-outline-warning btn-sm me-2" href="login.html">Login</a>
+                <a class="btn btn-warning btn-sm" href="signup.html">Sign Up</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav> 
+
+  <!-- Page Header -->
+  <header class="bg-dark text-white text-center py-5">
+    <div class="container">
+      <h1 class="display-5 fw-bold">Get In Touch</h1>
+      <p class="lead">We’d love to hear from you. Reach out anytime!</p>
+    </div>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Contact Info -->
+        <div class="col-md-5">
+          <h4>Contact Information</h4>
+          <p class="mb-2"><i class="bi bi-envelope-fill text-warning me-2"></i> support@eventbooking.com</p>
+          <p class="mb-2"><i class="bi bi-telephone-fill text-warning me-2"></i> +95 123 456 789</p>
+          <p class="mb-2"><i class="bi bi-geo-alt-fill text-warning me-2"></i> No. 123, Main Street, Yangon, Myanmar</p>
+          <hr>
+          <h5>Office Hours</h5>
+          <p class="mb-0">Monday - Friday: 9:00 AM - 6:00 PM</p>
+          <p>Saturday - Sunday: Closed</p>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="col-md-7">
+          <h4>Send Us a Message</h4>
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Your Name</label>
+              <input type="text" class="form-control" id="name" placeholder="John Doe" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Your Email</label>
+              <input type="email" class="form-control" id="email" placeholder="email@example.com" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Your Message</label>
+              <textarea class="form-control" id="message" rows="5" placeholder="Write your message..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-warning">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Optional: Google Map Embed -->
+  <section class="py-5 bg-light">
+    <div class="container text-center">
+      <h5 class="mb-3">Visit Us</h5>
+      <div class="ratio ratio-16x9">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3819.7768911374927!2d96.15012311487087!3d16.798097023689103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c194e2a82f4431%3A0x9a21605f21d59df6!2sSule%20Pagoda!5e0!3m2!1sen!2smm!4v1654294401234!5m2!1sen!2smm"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-dark text-white pt-5 pb-3 mt-5">
+        <div class="container">
+            <div class="row">
+
+            <!-- Brand/Logo Section -->
+            <div class="col-md-4 mb-4">
+                <h4 class="text-warning">🎟️ EventBooking</h4>
+                <p>Book your favorite events with ease. Concerts, expos, and more — all in one place.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-4 mb-4">
+                <h5 class="text-warning">Quick Links</h5>
+                <ul class="list-unstyled">
+                <li><a href="index.html" class="footer-link">Home</a></li>
+                <li><a href="events/events.html" class="footer-link">Events</a></li>
+                <li><a href="about.html" class="footer-link">About Us</a></li>
+                <li><a href="contact.html" class="footer-link">Contact</a></li>
+                <li><a href="faq.html" class="footer-link">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact & Social -->
+            <div class="col-md-4 mb-4">
+                <h5 class="text-warning">Contact Us</h5>
+                <p>Email: <a href="mailto:support@eventbooking.com" class="footer-link">support@eventbooking.com</a></p>
+                <p>Phone: +95 123 456 789</p>
+                <div class="social-icons mt-3">
+                <a href="#" class="me-3 footer-icon"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="me-3 footer-icon"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" class="me-3 footer-icon"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="footer-icon"><i class="bi bi-globe"></i></a>
+                </div>
+            </div>
+
+            </div>
+            <hr class="border-secondary">
+            <div class="text-center">
+            <p class="mb-0">&copy; 2025 EventBooking. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

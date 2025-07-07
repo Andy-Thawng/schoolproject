@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Browse Events | EventBooking</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <link href="../css/global.css" rel="stylesheet">
+  <title>Rock & Roll Night | EventBooking</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="../../css/global.css" rel="stylesheet" />
 </head>
 <body>
 
   <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
         <div class="container">
             <!-- Brand / Logo -->
             <a class="navbar-brand fw-bold text-warning" href="index.html">
@@ -26,8 +26,8 @@
             <!-- Nav Items -->
             <div class="collapse navbar-collapse" id="navbarMenu">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="events/events.html">Events</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="../events.html">Events</a></li>
                 <li class="nav-item"><a class="nav-link" href="../aboutus.html">About Us</a></li>
                 <li class="nav-item"><a class="nav-link" href="../wishlist.html"><i class="bi bi-heart-fill"></i> Wishlist</a></li>
                 <li class="nav-item"><a class="nav-link" href="../contactus.html">Contact</a></li>
@@ -47,85 +47,73 @@
         </div>
     </nav>
 
-  <!-- Page Header -->
-  <header class="bg-dark text-white text-center py-5">
-    <div class="container">
-      <h1 class="display-5 fw-bold">Explore All Events</h1>
-      <p class="lead">Find the perfect event to attend</p>
-    </div>
-  </header>
-
-  <!-- Filter/Search Section -->
-  <section class="py-4 bg-light">
-    <div class="container">
-      <form class="row g-3 justify-content-center">
-        <div class="col-md-4">
-          <input type="text" class="form-control" placeholder="Search events...">
-        </div>
-        <div class="col-md-3">
-          <select class="form-select">
-            <option selected>Category</option>
-            <option>Concert</option>
-            <option>Expo</option>
-            <option>Conference</option>
-          </select>
-        </div>
-        <div class="col-md-3">
-          <input type="date" class="form-control">
-        </div>
-        <div class="col-md-2">
-          <button type="submit" class="btn btn-warning w-100">Search</button>
-        </div>
-      </form>
+  <!-- Hero/Event Banner -->
+  <section class="bg-dark text-white text-center py-5" style="background: url('../../assets/images/event1.jpg') no-repeat center center / cover;">
+    <div class="container py-5 bg-dark bg-opacity-75 rounded">
+      <h1 class="display-4 fw-bold">Rock & Roll Night</h1>
+      <p class="lead">July 15, 2025 | Yangon Arena</p>
+      <p class="small"><i class="bi bi-clock"></i> Starts at 7:00 PM</p>
     </div>
   </section>
 
-  <!-- Events List/Grid -->
+  <!-- Event Details -->
   <section class="py-5">
     <div class="container">
-      <div class="row g-4">
+      <div class="row g-5">
+        <!-- Left: Event Description -->
+        <div class="col-md-8">
+          <h3>About the Event</h3>
+          <p>
+            Get ready for an unforgettable night of classic rock anthems, booming guitars, and energetic live performances!
+            Featuring top local and international rock bands, this event is a must for every music lover.
+          </p>
+          <p>
+            Join thousands of fans at Yangon Arena and experience the best of live music. Food, drinks, and merchandise will be available.
+          </p>
 
-        <!-- Event Card 1 -->
+          <h4 class="mt-4">Location</h4>
+          <p><i class="bi bi-geo-alt-fill text-warning"></i> Yangon Arena, Myanmar</p>
+
+          <h4 class="mt-4">Schedule</h4>
+          <ul>
+            <li>6:00 PM - Doors Open</li>
+            <li>7:00 PM - Opening Act</li>
+            <li>8:00 PM - Main Performance</li>
+            <li>10:30 PM - Closing Ceremony</li>
+          </ul>
+        </div>
+
+        <!-- Right: Tickets + Actions -->
         <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <img src="../assets/images/event1.jpg" class="card-img-top" alt="Event 1">
+          <div class="card shadow-sm">
             <div class="card-body">
-              <h5 class="card-title">Rock & Roll Night</h5>
-              <p class="text-muted mb-1"><i class="bi bi-calendar-event"></i> July 15, 2025</p>
-              <p class="text-muted"><i class="bi bi-geo-alt-fill"></i> Yangon Arena</p>
-              <a href="event-details/rock.html" class="btn btn-warning">View Details</a>
+              <h5 class="card-title">Tickets</h5>
+              <ul class="list-group list-group-flush mb-3">
+                <li class="list-group-item d-flex justify-content-between">
+                  <span>General Admission</span>
+                  <strong>MMK 10,000</strong>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                  <span>VIP</span>
+                  <strong>MMK 25,000</strong>
+                </li>
+              </ul>
+              <div class="mb-3">
+                <label for="ticketType" class="form-label">Select Ticket Type</label>
+                <select id="ticketType" class="form-select">
+                  <option>General Admission</option>
+                  <option>VIP</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="quantity" class="form-label">Quantity</label>
+                <input type="number" class="form-control" id="quantity" value="1" min="1" />
+              </div>
+              <button class="btn btn-warning w-100">Add to Cart</button>
+              <p class="text-center text-muted mt-2 small">Or <a href="../../cart.html">go to cart</a> to complete booking</p>
             </div>
           </div>
         </div>
-
-        <!-- Event Card 2 -->
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <img src="../assets/images/event2.jpg" class="card-img-top" alt="Event 2">
-            <div class="card-body">
-              <h5 class="card-title">Creative Art Expo 2025</h5>
-              <p class="text-muted mb-1"><i class="bi bi-calendar-event"></i> July 20, 2025</p>
-              <p class="text-muted"><i class="bi bi-geo-alt-fill"></i> Mandalay Hall</p>
-              <a href="event-details/art-expo.html" class="btn btn-warning">View Details</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Event Card 3 -->
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <img src="../assets/images/event3.jpg" class="card-img-top" alt="Event 3">
-            <div class="card-body">
-              <h5 class="card-title">FutureTech 2025</h5>
-              <p class="text-muted mb-1"><i class="bi bi-calendar-event"></i> Aug 5, 2025</p>
-              <p class="text-muted"><i class="bi bi-geo-alt-fill"></i> Online</p>
-              <a href="event-details/tech-conference.html" class="btn btn-warning">View Details</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Add more cards here... -->
-
       </div>
     </div>
   </section>
