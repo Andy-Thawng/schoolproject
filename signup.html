@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sign Up | EventBooking</title>
+  <title>Sign Up | EventHive </title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
   <link href="css/global.css" rel="stylesheet" />
@@ -27,7 +27,7 @@
         <div class="container">
             <!-- Brand / Logo -->
             <a class="navbar-brand fw-bold text-warning" href="index.html">
-            <i class="bi bi-ticket-detailed-fill"></i> EventBooking
+            <i class="bi bi-ticket-detailed-fill"></i> EventHive
             </a>
 
             <!-- Hamburger -->
@@ -50,9 +50,9 @@
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">2</span>
                 </a></li>
                 <!-- Login & Sign Up CTA -->
-                <li class="nav-item ms-lg-3">
-                <a class="btn btn-outline-warning btn-sm me-2" href="login.html">Login</a>
-                <a class="btn btn-warning btn-sm" href="signup.html">Sign Up</a>
+                <li class="nav-item ms-lg-3" id="authButtons">
+                    <a class="btn btn-outline-warning btn-sm me-2" href="login.html">Login</a>
+                    <a class="btn btn-warning btn-sm" href="signup.html">Sign Up</a>
                 </li>
             </ul>
             </div>
@@ -101,7 +101,7 @@
 
             <!-- Brand/Logo Section -->
             <div class="col-md-4 mb-4">
-                <h4 class="text-warning">🎟️ EventBooking</h4>
+                <h4 class="text-warning">🎟️ EventHive</h4>
                 <p>Book your favorite events with ease. Concerts, expos, and more — all in one place.</p>
             </div>
 
@@ -133,11 +133,86 @@
             </div>
             <hr class="border-secondary">
             <div class="text-center">
-            <p class="mb-0">&copy; 2025 EventBooking. All rights reserved.</p>
+            <p class="mb-0">&copy; 2025 EventHive. All rights reserved.</p>
             </div>
         </div>
     </footer>
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+  document.querySelector("form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const fullname = document.getElementById("fullname").value.trim();
+    const email = document.getElementById("signupEmail").value.trim();
+    const password = document.getElementById("signupPassword").value;
+    const confirmPassword = document.getElementById("confirmPassword").value;
+    const agreeTerms = document.getElementById("agreeTerms").checked;
+
+    if (!fullname || !email || !password || !confirmPassword) {
+      alert("Please fill in all fields.");
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      alert("Passwords do not match.");
+      return;
+    }
+
+    if (!agreeTerms) {
+      alert("You must agree to the terms.");
+      return;
+    }
+
+    // Save to localStorage
+    const userData = {
+      fullname,
+      email,
+      password
+    };
+    localStorage.setItem("eventUser", JSON.stringify(userData));
+
+    alert("Account created successfully!");
+    window.location.href = "login.html";
+  });
+
+  // Check login state on page load
+  window.addEventListener("DOMContentLoaded", () => {
+  const isLoggedIn = localStorage.getItem("eventLoggedIn");
+  if (isLoggedIn === "true") {
+    const authSection = document.getElementById("authButtons");
+    if (authSection) {
+      authSection.style.display = "none";
+    }
+
+    const nav = document.querySelector(".navbar-nav");
+    if (nav) {
+      const storedUser = JSON.parse(localStorage.getItem("eventUser"));
+
+      // Show welcome message
+      const welcome = document.createElement("li");
+      welcome.className = "nav-item d-flex align-items-center ms-lg-3 text-white fw-bold";
+      welcome.innerHTML = `<span>Welcome, ${storedUser.fullname.split(" ")[0]}</span>`;
+      nav.appendChild(welcome);
+
+      // ✅ Create and append logout button
+      const logoutBtn = document.createElement("li");
+      logoutBtn.className = "nav-item ms-2";
+      logoutBtn.innerHTML = `<button class="btn btn-danger btn-sm" id="logoutBtn">Logout</button>`;
+      nav.appendChild(logoutBtn);
+
+      // ✅ Add click event to logout
+      document.getElementById("logoutBtn").addEventListener("click", () => {
+        localStorage.removeItem("eventLoggedIn");
+        localStorage.removeItem("eventUser");
+        window.location.href = "index.html"; // Or use: window.location.reload();
+      });
+    }
+  }
+});
+
+</script>
+
+
 </body>
 </html>

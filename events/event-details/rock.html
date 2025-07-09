@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rock & Roll Night | EventBooking</title>
+  <title>Rock & Roll Night | EventHive</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
   <link href="../../css/global.css" rel="stylesheet" />
@@ -15,7 +15,7 @@
         <div class="container">
             <!-- Brand / Logo -->
             <a class="navbar-brand fw-bold text-warning" href="index.html">
-            <i class="bi bi-ticket-detailed-fill"></i> EventBooking
+            <i class="bi bi-ticket-detailed-fill"></i> EventHive
             </a>
 
             <!-- Hamburger -->
@@ -28,19 +28,19 @@
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="../events.html">Events</a></li>
-                <li class="nav-item"><a class="nav-link" href="../aboutus.html">About Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="../wishlist.html"><i class="bi bi-heart-fill"></i> Wishlist</a></li>
-                <li class="nav-item"><a class="nav-link" href="../contactus.html">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="../faq.html">FAQ</a></li>
-                <li class="nav-item"><a class="nav-link position-relative" href="../cart.html">
+                <li class="nav-item"><a class="nav-link" href="../../aboutus.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../wishlist.html"><i class="bi bi-heart-fill"></i> Wishlist</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../contactus.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../faq.html">FAQ</a></li>
+                <li class="nav-item"><a class="nav-link position-relative" href="../../cart.html">
                 <i class="bi bi-cart-fill"></i> Cart
                 <!-- Optional cart badge -->
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">2</span>
                 </a></li>
                 <!-- Login & Sign Up CTA -->
-                <li class="nav-item ms-lg-3">
-                <a class="btn btn-outline-warning btn-sm me-2" href="../login.html">Login</a>
-                <a class="btn btn-warning btn-sm" href="../signup.html">Sign Up</a>
+                <li class="nav-item ms-lg-3" id="authButtons">
+                <a class="btn btn-outline-warning btn-sm me-2" href="../../login.html">Login</a>
+                <a class="btn btn-warning btn-sm" href="../../signup.html">Sign Up</a>
                 </li>
             </ul>
             </div>
@@ -125,7 +125,7 @@
 
             <!-- Brand/Logo Section -->
             <div class="col-md-4 mb-4">
-                <h4 class="text-warning">🎟️ EventBooking</h4>
+                <h4 class="text-warning">🎟️ EventHive</h4>
                 <p>Book your favorite events with ease. Concerts, expos, and more — all in one place.</p>
             </div>
 
@@ -157,12 +157,77 @@
             </div>
             <hr class="border-secondary">
             <div class="text-center">
-            <p class="mb-0">&copy; 2025 EventBooking. All rights reserved.</p>
+            <p class="mb-0">&copy; 2025 EventHive. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Add to Cart Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow">
+        <div class="modal-header bg-success text-white">
+            <h5 class="modal-title" id="cartModalLabel">Added to Cart</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+            🎟️ <strong>Rock & Roll Night</strong> ticket(s) added to your cart!
+        </div>
+        <div class="modal-footer justify-content-center">
+            <a href="../../cart.html" class="btn btn-warning">Go to Cart</a>
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Continue Browsing</button>
+        </div>
+        </div>
+    </div>
+    </div>
+
+
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const addToCartBtn = document.querySelector('.btn.btn-warning.w-100');
+    const cartModal = new bootstrap.Modal(document.getElementById('cartModal'));
+
+    addToCartBtn.addEventListener('click', function (e) {
+        e.preventDefault(); // prevent form submit if wrapped in a form
+        cartModal.show();
+    });
+
+    // Check login state on page load
+  window.addEventListener("DOMContentLoaded", () => {
+  const isLoggedIn = localStorage.getItem("eventLoggedIn");
+  if (isLoggedIn === "true") {
+    const authSection = document.getElementById("authButtons");
+    if (authSection) {
+      authSection.style.display = "none";
+    }
+
+    const nav = document.querySelector(".navbar-nav");
+    if (nav) {
+      const storedUser = JSON.parse(localStorage.getItem("eventUser"));
+
+      // Show welcome message
+      const welcome = document.createElement("li");
+      welcome.className = "nav-item d-flex align-items-center ms-lg-3 text-white fw-bold";
+      welcome.innerHTML = `<span>Welcome, ${storedUser.fullname.split(" ")[0]}</span>`;
+      nav.appendChild(welcome);
+
+      // ✅ Create and append logout button
+      const logoutBtn = document.createElement("li");
+      logoutBtn.className = "nav-item ms-2";
+      logoutBtn.innerHTML = `<button class="btn btn-danger btn-sm" id="logoutBtn">Logout</button>`;
+      nav.appendChild(logoutBtn);
+
+      // ✅ Add click event to logout
+      document.getElementById("logoutBtn").addEventListener("click", () => {
+        localStorage.removeItem("eventLoggedIn");
+        localStorage.removeItem("eventUser");
+        window.location.href = "index.html"; // Or use: window.location.reload();
+      });
+    }
+  }
+});
+</script>
+
 </body>
 </html>
