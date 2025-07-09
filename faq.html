@@ -6,6 +6,7 @@
   <title>FAQ | EventHive</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href="css/global.css" rel="stylesheet">
 </head>
 <body>
@@ -14,9 +15,11 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
         <div class="container">
             <!-- Brand / Logo -->
-            <a class="navbar-brand fw-bold text-warning" href="index.html">
-            <i class="bi bi-ticket-detailed-fill"></i> EventHive
+            <a class="navbar-brand fw-bold text-warning d-flex align-items-center gap-2" href="index.html">
+              <img src="assets/images/logo.jpg" alt="EventHive Logo" style="height: 40px; width: 40px; object-fit: cover; border-radius: 50%;">
+              <span>EventHive</span>
             </a>
+
 
             <!-- Hamburger -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
@@ -56,7 +59,7 @@
   </header>
 
   <!-- FAQ Section -->
-  <section class="py-5">
+  <section class="py-5" data-aos="fade-up" data-aos-delay="100">
     <div class="container">
       <div class="accordion" id="faqAccordion">
 
@@ -141,7 +144,11 @@
 
             <!-- Brand/Logo Section -->
             <div class="col-md-4 mb-4">
-                <h4 class="text-warning">🎟️ EventHive</h4>
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <img src="assets/images/logo.jpg" alt="EventHive Logo" style="height: 40px; width: 40px; object-fit: cover; border-radius: 50%;">
+                  <h4 class="text-warning mb-0">EventHive</h4>
+              </div>
+
                 <p>Book your favorite events with ease. Concerts, expos, and more — all in one place.</p>
             </div>
 
@@ -163,11 +170,23 @@
                 <p>Email: <a href="mailto:support@eventbooking.com" class="footer-link">support@eventbooking.com</a></p>
                 <p>Phone: +95 123 456 789</p>
                 <div class="social-icons mt-3">
-                <a href="#" class="me-3 footer-icon"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="me-3 footer-icon"><i class="bi bi-twitter-x"></i></a>
-                <a href="#" class="me-3 footer-icon"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="footer-icon"><i class="bi bi-globe"></i></a>
+                <a href="https://www.facebook.com/" class="me-3 footer-icon"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.twitter.com/" class="me-3 footer-icon"><i class="bi bi-twitter"></i></a>
+                <a href="https://www.instagram.com/" class="me-3 footer-icon"><i class="bi bi-instagram"></i></a>
+                <!-- Language Switcher -->
+                <div class="dropdown d-inline-block">
+                  <a class="footer-icon dropdown-toggle text-white" href="#" role="button" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-globe"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="langDropdown">
+                    <li><a class="dropdown-item" href="#" onclick="changeLang('en')">English</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="changeLang('my')">မြန်မာ</a></li>
+                  </ul>
                 </div>
+                </div>
+
+          
+
             </div>
 
             </div>
@@ -180,6 +199,12 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+      });
+    </script>
   <script>
     // Check login state on page load
   window.addEventListener("DOMContentLoaded", () => {
@@ -216,5 +241,6 @@
   }
 });
   </script>
+  <script src="js/global.js"></script>
 </body>
 </html>

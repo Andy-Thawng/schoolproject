@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rock & Roll Night | EventHive</title>
+  <title>Creative Art Expo 2025 | EventHive</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -12,7 +12,7 @@
 <body>
 
   <!-- Navbar -->
-   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
   <div class="container">
     <a class="navbar-brand fw-bold text-warning d-flex align-items-center gap-2" href="index.html">
         <img src="../../assets/images/logo.jpg" alt="EventHive Logo" style="height: 40px; width: 40px; object-fit: cover; border-radius: 50%;">
@@ -44,11 +44,11 @@
 </nav>
 
   <!-- Hero/Event Banner -->
-  <section class="bg-dark text-white text-center py-5" style="background: url('../../assets/images/rock.webp') no-repeat center center / cover;">
+  <section class="bg-dark text-white text-center py-5" style="background: url('../../assets/images/expo.jpg') no-repeat center center / cover;">
     <div class="container py-5 bg-dark bg-opacity-75 rounded">
-      <h1 class="display-4 fw-bold">Rock & Roll Night</h1>
-      <p class="lead">July 15, 2025 | Yangon Arena</p>
-      <p class="small"><i class="bi bi-clock"></i> Starts at 7:00 PM</p>
+      <h1 class="display-4 fw-bold">Creative Art Expo 2025</h1>
+      <p class="lead">July 20, 2025 | Mandalay Hall</p>
+      <p class="small"><i class="bi bi-clock"></i> Starts at 10:00 AM</p>
     </div>
   </section>
 
@@ -56,49 +56,48 @@
   <section class="py-5" data-aos="fade-up" data-aos-delay="100">
     <div class="container">
       <div class="row g-5">
-        <!-- Left: Event Description -->
         <div class="col-md-8">
           <h3>About the Event</h3>
           <p>
-            Get ready for an unforgettable night of classic rock anthems, booming guitars, and energetic live performances!
-            Featuring top local and international rock bands, this event is a must for every music lover.
+            Discover a world of creativity and imagination at Creative Art Expo 2025! From paintings to sculptures,
+            digital installations to handmade crafts—this expo brings together talented artists from across the globe.
           </p>
           <p>
-            Join thousands of fans at Yangon Arena and experience the best of live music. Food, drinks, and merchandise will be available.
+            Whether you're an art lover, collector, or simply looking for inspiration, join us at Mandalay Hall for a day
+            full of artistic expression, workshops, and interactive experiences.
           </p>
 
           <h4 class="mt-4">Location</h4>
-          <p><i class="bi bi-geo-alt-fill text-warning"></i> Yangon Arena, Myanmar</p>
+          <p><i class="bi bi-geo-alt-fill text-warning"></i> Mandalay Hall, Myanmar</p>
 
           <h4 class="mt-4">Schedule</h4>
           <ul>
-            <li>6:00 PM - Doors Open</li>
-            <li>7:00 PM - Opening Act</li>
-            <li>8:00 PM - Main Performance</li>
-            <li>10:30 PM - Closing Ceremony</li>
+            <li>9:00 AM - Registration & Welcome</li>
+            <li>10:00 AM - Exhibition Opens</li>
+            <li>1:00 PM - Artist Panels & Workshops</li>
+            <li>6:00 PM - Closing Remarks</li>
           </ul>
         </div>
 
-        <!-- Right: Tickets + Actions -->
         <div class="col-md-4">
           <div class="card shadow-sm">
             <div class="card-body">
               <h5 class="card-title">Tickets</h5>
               <ul class="list-group list-group-flush mb-3">
                 <li class="list-group-item d-flex justify-content-between">
-                  <span>General Admission</span>
-                  <strong>MMK 10,000</strong>
+                  <span>Standard</span>
+                  <strong>MMK 5,000</strong>
                 </li>
                 <li class="list-group-item d-flex justify-content-between">
-                  <span>VIP</span>
-                  <strong>MMK 25,000</strong>
+                  <span>Workshop Access</span>
+                  <strong>MMK 12,000</strong>
                 </li>
               </ul>
               <div class="mb-3">
                 <label for="ticketType" class="form-label">Select Ticket Type</label>
                 <select id="ticketType" class="form-select">
-                  <option>General Admission</option>
-                  <option>VIP</option>
+                  <option>Standard</option>
+                  <option>Workshop Access</option>
                 </select>
               </div>
               <div class="mb-3">
@@ -174,79 +173,69 @@
         </div>
     </footer>
 
-    <!-- Add to Cart Modal -->
-    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+  <!-- Add to Cart Modal -->
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content border-0 shadow">
+      <div class="modal-content border-0 shadow">
         <div class="modal-header bg-success text-white">
-            <h5 class="modal-title" id="cartModalLabel">Added to Cart</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h5 class="modal-title" id="cartModalLabel">Added to Cart</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body text-center">
-            🎟️ <strong>Rock & Roll Night</strong> ticket(s) added to your cart!
+          🎨 <strong>Creative Art Expo 2025</strong> ticket(s) added to your cart!
         </div>
         <div class="modal-footer justify-content-center">
-            <a href="../../cart.html" class="btn btn-warning">Go to Cart</a>
-            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Continue Browsing</button>
+          <a href="../../cart.html" class="btn btn-warning">Go to Cart</a>
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Continue Browsing</button>
         </div>
-        </div>
+      </div>
     </div>
-    </div>
+  </div>
 
-
-  <!-- Bootstrap JS -->
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- AOS JS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({
-      });
-    </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script>
     const addToCartBtn = document.querySelector('.btn.btn-warning.w-100');
     const cartModal = new bootstrap.Modal(document.getElementById('cartModal'));
 
     addToCartBtn.addEventListener('click', function (e) {
-        e.preventDefault(); // prevent form submit if wrapped in a form
-        cartModal.show();
+      e.preventDefault();
+      cartModal.show();
     });
 
-    // Check login state on page load
-  window.addEventListener("DOMContentLoaded", () => {
-  const isLoggedIn = localStorage.getItem("eventLoggedIn");
-  if (isLoggedIn === "true") {
-    const authSection = document.getElementById("authButtons");
-    if (authSection) {
-      authSection.style.display = "none";
-    }
+    window.addEventListener("DOMContentLoaded", () => {
+      const isLoggedIn = localStorage.getItem("eventLoggedIn");
+      if (isLoggedIn === "true") {
+        const authSection = document.getElementById("authButtons");
+        if (authSection) authSection.style.display = "none";
 
-    const nav = document.querySelector(".navbar-nav");
-    if (nav) {
-      const storedUser = JSON.parse(localStorage.getItem("eventUser"));
+        const nav = document.querySelector(".navbar-nav");
+        if (nav) {
+          const storedUser = JSON.parse(localStorage.getItem("eventUser"));
+          const welcome = document.createElement("li");
+          welcome.className = "nav-item d-flex align-items-center ms-lg-3 text-white fw-bold";
+          welcome.innerHTML = `<span>Welcome, ${storedUser.fullname.split(" ")[0]}</span>`;
+          nav.appendChild(welcome);
 
-      // Show welcome message
-      const welcome = document.createElement("li");
-      welcome.className = "nav-item d-flex align-items-center ms-lg-3 text-white fw-bold";
-      welcome.innerHTML = `<span>Welcome, ${storedUser.fullname.split(" ")[0]}</span>`;
-      nav.appendChild(welcome);
+          const logoutBtn = document.createElement("li");
+          logoutBtn.className = "nav-item ms-2";
+          logoutBtn.innerHTML = `<button class="btn btn-danger btn-sm" id="logoutBtn">Logout</button>`;
+          nav.appendChild(logoutBtn);
 
-      // ✅ Create and append logout button
-      const logoutBtn = document.createElement("li");
-      logoutBtn.className = "nav-item ms-2";
-      logoutBtn.innerHTML = `<button class="btn btn-danger btn-sm" id="logoutBtn">Logout</button>`;
-      nav.appendChild(logoutBtn);
-
-      // ✅ Add click event to logout
-      document.getElementById("logoutBtn").addEventListener("click", () => {
-        localStorage.removeItem("eventLoggedIn");
-        localStorage.removeItem("eventUser");
-        window.location.href = "index.html"; // Or use: window.location.reload();
-      });
-    }
-  }
-});
-</script>
-<script src="../../js/global.js"></script>
+          document.getElementById("logoutBtn").addEventListener("click", () => {
+            localStorage.removeItem("eventLoggedIn");
+            localStorage.removeItem("eventUser");
+            window.location.href = "index.html";
+          });
+        }
+      }
+    });
+  </script>
+  <script src="../../js/global.js"></script>
 
 </body>
 </html>

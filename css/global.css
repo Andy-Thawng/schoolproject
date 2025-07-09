@@ -29,6 +29,20 @@ body {
   padding: 0.4em 0.5em;
 }
 
+/* Hover effect for featured event cards */
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 10; /* So hovered card appears above others */
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+  cursor: pointer; /* Optional: show pointer on hover */
+}
+
 
 /* Footer */
 /* Advanced Footer Styles */
