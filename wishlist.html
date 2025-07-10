@@ -4,151 +4,116 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="assets/images/logo.jpg">
-  <title>Wishlist | EventHive</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title data-key="wishlistPageTitle">Wishlist | EventHive</title> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <!-- AOS CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href="css/global.css" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
         <div class="container">
-            <!-- Brand / Logo -->
             <a class="navbar-brand fw-bold text-warning d-flex align-items-center gap-2" href="index.html">
               <img src="assets/images/logo.jpg" alt="EventHive Logo" style="height: 40px; width: 40px; object-fit: cover; border-radius: 50%;">
               <span>EventHive</span>
             </a>
 
 
-            <!-- Hamburger -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
             <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Nav Items -->
             <div class="collapse navbar-collapse" id="navbarMenu">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="events/events.html">Events</a></li>
-                <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="wishlist.html"><i class="bi bi-heart-fill"></i> Wishlist</a></li>
-                <li class="nav-item"><a class="nav-link" href="contactus.html">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html" data-key="navHome">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="events/events.html" data-key="navEvents">Events</a></li>
+                <li class="nav-item"><a class="nav-link" href="aboutus.html" data-key="navAboutUs">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="wishlist.html"><i class="bi bi-heart-fill"></i> <span data-key="navWishlist">Wishlist</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="contactus.html" data-key="navContact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="faq.html" data-key="navFAQ">FAQ</a></li>
                 <li class="nav-item"><a class="nav-link position-relative" href="cart.html">
-                <i class="bi bi-cart-fill"></i> Cart
-                <!-- Optional cart badge -->
+                <i class="bi bi-cart-fill"></i> <span data-key="navCart">Cart</span>
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">2</span>
                 </a></li>
-                <!-- Login & Sign Up CTA -->
                 <li class="nav-item ms-lg-3" id="authButtons">
-                    <a class="btn btn-outline-warning btn-sm me-2" href="login.html">Login</a>
-                    <a class="btn btn-warning btn-sm" href="signup.html">Sign Up</a>
+                    <a class="btn btn-outline-warning btn-sm me-2" href="login.html" data-key="navLogin">Login</a>
+                    <a class="btn btn-warning btn-sm" href="signup.html" data-key="navSignUp">Sign Up</a>
                 </li>
             </ul>
             </div>
         </div>
-    </nav>    <!-- Navbar  -->
+    </nav>
 
-  <!-- Header -->
   <header class="bg-dark text-white text-center py-5">
-    <div class="container">
-      <h1 class="display-5 fw-bold">Your Wishlist</h1>
-      <p class="lead">Manage events you've saved for later.</p>
+  <div class="container">
+    <h1 data-key="heroTitle" class="display-5 fw-bold">Your Wishlist</h1>
+    <p data-key="heroSubtitle" class="lead">Manage events you've saved for later.</p>
     </div>
   </header>
 
-  <!-- Wishlist Content -->
   <section class="py-5" data-aos="fade-up" data-aos-delay="100">
     <div class="container">
-      <!-- Empty Wishlist Message -->
-    <div id="emptyMessage" class="text-center text-muted d-none">
+      <div id="emptyMessage" class="text-center text-muted d-none">
         <i class="bi bi-heart fs-1"></i>
-        <p class="mt-3">Your wishlist is empty. Start adding events!</p>
-        <a href="events/events.html" class="btn btn-warning">Browse Events</a>
-    </div>
+        <p class="mt-3" data-key="emptyWishlistMessage">Your wishlist is empty. Start adding events!</p> <a href="events/events.html" class="btn btn-warning" data-key="browseEventsBtn">Browse Events</a> </div>
 
-      <!-- Wishlist Items Grid -->
       <div id="wishlistItems" class="row g-4">
-        <!-- Wishlist Event Card 1 -->
         <div class="col-md-4">
           <div class="card h-100 shadow-sm">
             <img src="assets/images/rock.webp" class="card-img-top" alt="Event 1" style="height: 250px; object-fit: cover;">
             <div class="card-body">
-              <h5 class="card-title">Rock & Roll Night</h5>
-              <p class="text-muted mb-1"><i class="bi bi-calendar-event"></i> July 15, 2025</p>
-              <p class="text-muted"><i class="bi bi-geo-alt-fill"></i> Yangon Arena</p>
-              <div class="d-flex justify-content-between">
-                <a href="events/event-details/rock.html" class="btn btn-outline-primary btn-sm">View</a>
-                <button class="btn btn-outline-success btn-sm" onclick="addToCart('Rock & Roll Night')">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm" onclick="removeCard(this)"><i class="bi bi-x"></i></button>
-              </div>
+              <h5 class="card-title" data-key="wishlistEvent1Title">Rock & Roll Night</h5> <p class="text-muted mb-1"><i class="bi bi-calendar-event"></i> <span data-key="wishlistEvent1Date">July 15, 2025</span></p> <p class="text-muted"><i class="bi bi-geo-alt-fill"></i> <span data-key="wishlistEvent1Location">Yangon Arena</span></p> <div class="d-flex justify-content-between">
+                <a href="events/event-details/rock.html" class="btn btn-outline-primary btn-sm" data-key="viewBtn">View</a> <button class="btn btn-outline-success btn-sm" onclick="addToCart('Rock & Roll Night')" data-key="addToCartBtn">Add to Cart</button> <button class="btn btn-outline-danger btn-sm" onclick="removeCard(this)" data-key="removeBtn"><i class="bi bi-x"></i></button> </div>
             </div>
           </div>
         </div>
 
-        <!-- Wishlist Event Card 2 -->
         <div class="col-md-4">
           <div class="card h-100 shadow-sm">
             <img src="assets/images/expo.jpg" class="card-img-top" alt="Event 2" style="height: 250px; object-fit: cover;">
             <div class="card-body">
-              <h5 class="card-title">Creative Art Expo</h5>
-              <p class="text-muted mb-1"><i class="bi bi-calendar-event"></i> July 20, 2025</p>
-              <p class="text-muted"><i class="bi bi-geo-alt-fill"></i> Mandalay Hall</p>
-              <div class="d-flex justify-content-between">
-                <a href="events/event-details/expo.html" class="btn btn-outline-primary btn-sm">View</a>
-                <button class="btn btn-outline-success btn-sm" onclick="addToCart('Creative Art Expo')">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm" onclick="removeCard(this)"><i class="bi bi-x"></i></button>
-              </div>
+              <h5 class="card-title" data-key="wishlistEvent2Title">Creative Art Expo</h5> <p class="text-muted mb-1"><i class="bi bi-calendar-event"></i> <span data-key="wishlistEvent2Date">July 20, 2025</span></p> <p class="text-muted"><i class="bi bi-geo-alt-fill"></i> <span data-key="wishlistEvent2Location">Mandalay Hall</span></p> <div class="d-flex justify-content-between">
+                <a href="events/event-details/expo.html" class="btn btn-outline-primary btn-sm" data-key="viewBtn">View</a> <button class="btn btn-outline-success btn-sm" onclick="addToCart('Creative Art Expo')" data-key="addToCartBtn">Add to Cart</button> <button class="btn btn-outline-danger btn-sm" onclick="removeCard(this)" data-key="removeBtn"><i class="bi bi-x"></i></button> </div>
             </div>
           </div>
         </div>
 
-        <!-- Add more wishlist cards here -->
-
-      </div>
+        </div>
     </div>
   </section>
 
-  <!-- Footer -->
-    <footer class="footer bg-dark text-white pt-5 pb-3 mt-5">
+  <footer class="footer bg-dark text-white pt-5 pb-3 mt-5">
         <div class="container">
             <div class="row">
 
-            <!-- Brand/Logo Section -->
             <div class="col-md-4 mb-4">
                 <div class="d-flex align-items-center gap-2 mb-2">
                   <img src="assets/images/logo.jpg" alt="EventHive Logo" style="height: 40px; width: 40px; object-fit: cover; border-radius: 50%;">
                   <h4 class="text-warning mb-0">EventHive</h4>
               </div>
 
-                <p>Book your favorite events with ease. Concerts, expos, and more — all in one place.</p>
+                <p data-key="footerTagline">Book your favorite events with ease. Concerts, expos, and more — all in one place.</p>
             </div>
 
-            <!-- Quick Links -->
             <div class="col-md-4 mb-4">
-                <h5 class="text-warning">Quick Links</h5>
+                <h5 class="text-warning" data-key="footerQuickLinksTitle">Quick Links</h5>
                 <ul class="list-unstyled">
-                <li><a href="index.html" class="footer-link">Home</a></li>
-                <li><a href="events/events.html" class="footer-link">Events</a></li>
-                <li><a href="aboutus.html" class="footer-link">About Us</a></li>
-                <li><a href="contactus.html" class="footer-link">Contact</a></li>
-                <li><a href="faq.html" class="footer-link">FAQ</a></li>
+                <li><a href="index.html" class="footer-link" data-key="navHome">Home</a></li>
+                <li><a href="events/events.html" class="footer-link" data-key="navEvents">Events</a></li>
+                <li><a href="aboutus.html" class="footer-link" data-key="navAboutUs">About Us</a></li>
+                <li><a href="contactus.html" class="footer-link" data-key="navContact">Contact</a></li>
+                <li><a href="faq.html" class="footer-link" data-key="navFAQ">FAQ</a></li>
                 </ul>
             </div>
 
-            <!-- Contact & Social -->
             <div class="col-md-4 mb-4">
-                <h5 class="text-warning">Contact Us</h5>
-                <p>Email: <a href="mailto:support@eventbooking.com" class="footer-link">support@eventhive.com</a></p>
-                <p>Phone: +95 123 456 789</p>
+                <h5 class="text-warning" data-key="footerContactUsTitle">Contact Us</h5>
+                <p data-key="footerEmail">Email: <a href="mailto:support@eventbooking.com" class="footer-link">support@eventhive.com</a></p>
+                <p data-key="footerPhone">Phone: +95 123 456 789</p>
                 <div class="social-icons mt-3">
                 <a href="https://www.facebook.com/" class="me-3 footer-icon"><i class="bi bi-facebook"></i></a>
                 <a href="https://www.twitter.com/" class="me-3 footer-icon"><i class="bi bi-twitter"></i></a>
                 <a href="https://www.instagram.com/" class="me-3 footer-icon"><i class="bi bi-instagram"></i></a>
-                <!-- Language Switcher -->
                 <div class="dropdown d-inline-block">
                   <a class="footer-icon dropdown-toggle text-white" href="#" role="button" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="bi bi-globe"></i>
@@ -159,42 +124,33 @@
                   </ul>
                 </div>
                 </div>
-
-          
-
             </div>
-
             </div>
             <hr class="border-secondary">
             <div class="text-center">
-            <p class="mb-0">&copy; 2025 EventHive. All rights reserved.</p>
+            <p class="mb-0" data-key="footerCopyright">&copy; 2025 EventHive. All rights reserved.</p>
             </div>
         </div>
     </footer>
-    
-    <!-- Modal -->
+
     <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content border-success">
         <div class="modal-header bg-success text-white">
-            <h5 class="modal-title" id="cartModalLabel">Success</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h5 class="modal-title" id="cartModalLabel" data-key="cartModalTitle">Success</h5> <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body" id="cartModalBody">
+        <div class="modal-body" id="cartModalBody" data-key="cartModalBody">
             Event has been added to your cart!
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">OK</button>
-        </div>
+            <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal" data-key="cartModalOkBtn">OK</button> </div>
         </div>
     </div>
     </div>
 
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- AOS JS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({
       });
@@ -216,6 +172,9 @@
     if (remaining === 0) {
       emptyMessage.classList.remove('d-none');
       wishlistItems.classList.add('d-none');
+    } else {
+      emptyMessage.classList.add('d-none');
+      wishlistItems.classList.remove('d-none');
     }
   }
 
@@ -226,8 +185,9 @@
 
   // Show Success Modal
   function addToCart(eventName) {
-    // Just a placeholder to show it's working
+    // This part likely needs to be updated to use data-key for the event name if you translate names
     const modalBody = document.getElementById('cartModalBody');
+    // For now, it will just show the English name if you pass it
     modalBody.textContent = `"${eventName}" has been successfully added to your cart!`;
     const modal = new bootstrap.Modal(document.getElementById('cartModal'));
     modal.show();
@@ -248,16 +208,14 @@
       // Show welcome message
       const welcome = document.createElement("li");
       welcome.className = "nav-item d-flex align-items-center ms-lg-3 text-white fw-bold";
-      welcome.innerHTML = `<span>Welcome, ${storedUser.fullname.split(" ")[0]}</span>`;
-      nav.appendChild(welcome);
+      welcome.innerHTML = `<span data-key="welcomeMessage">Welcome,</span> ${storedUser.fullname.split(" ")[0]}`; nav.appendChild(welcome);
 
-      // ✅ Create and append logout button
+      // Create and append logout button
       const logoutBtn = document.createElement("li");
       logoutBtn.className = "nav-item ms-2";
-      logoutBtn.innerHTML = `<button class="btn btn-danger btn-sm" id="logoutBtn">Logout</button>`;
-      nav.appendChild(logoutBtn);
+      logoutBtn.innerHTML = `<button class="btn btn-danger btn-sm" id="logoutBtn" data-key="navLogout">Logout</button>`; nav.appendChild(logoutBtn);
 
-      // ✅ Add click event to logout
+      // Add click event to logout
       document.getElementById("logoutBtn").addEventListener("click", () => {
         localStorage.removeItem("eventLoggedIn");
         localStorage.removeItem("eventUser");
@@ -269,8 +227,119 @@
 
 </script>
 <script src="js/global.js"></script>
+<script>
+    // **This 'translations' object needs to be MERGED into your existing `js/lag.js` file.**
+    // **Do NOT keep this <script> block in your HTML.**
+    const translations = {
+  en: {
+    // Page Title
+    wishlistPageTitle: "Wishlist | EventHive",
 
+    // Navbar (consistent with other pages)
+    navHome: "Home",
+    navEvents: "Events",
+    navAboutUs: "About Us",
+    navWishlist: "Wishlist",
+    navContact: "Contact",
+    navFAQ: "FAQ",
+    navCart: "Cart",
+    navLogin: "Login",
+    navSignUp: "Sign Up",
+    navLogout: "Logout",
+    welcomeMessage: "Welcome,",
 
+    // Hero Section
+    heroTitle: "Your Wishlist",
+    heroSubtitle: "Manage events you've saved for later.",
+
+    // Empty Wishlist
+    emptyWishlistMessage: "Your wishlist is empty. Start adding events!",
+    browseEventsBtn: "Browse Events",
+
+    // Wishlist Card 1
+    wishlistEvent1Title: "Rock & Roll Night",
+    wishlistEvent1Date: "July 15, 2025",
+    wishlistEvent1Location: "Yangon Arena",
+
+    // Wishlist Card 2
+    wishlistEvent2Title: "Creative Art Expo",
+    wishlistEvent2Date: "July 20, 2025",
+    wishlistEvent2Location: "Mandalay Hall",
+
+    // Card Buttons (reusable)
+    viewBtn: "View",
+    addToCartBtn: "Add to Cart",
+    removeBtn: "Remove",
+
+    // Footer (consistent with other pages)
+    footerTagline: "Book your favorite events with ease. Concerts, expos, and more — all in one place.",
+    footerQuickLinksTitle: "Quick Links",
+    footerContactUsTitle: "Contact Us",
+    footerEmail: "Email: support@eventhive.com",
+    footerPhone: "Phone: +95 123 456 789",
+    footerCopyright: "&copy; 2025 EventHive. All rights reserved.",
+
+    // Cart Modal
+    cartModalTitle: "Success",
+    cartModalBody: "Event has been added to your cart!",
+    cartModalOkBtn: "OK",
+  },
+  my: {
+    // Page Title
+    wishlistPageTitle: "စိတ်ကြိုက်ပွဲများ | EventHive",
+
+    // Navbar
+    navHome: "ပင်မ",
+    navEvents: "ပွဲစဉ်များ",
+    navAboutUs: "ကျွန်ုပ်တို့အကြောင်း",
+    navWishlist: "စိတ်ကြိုက်ပွဲများ",
+    navContact: "ဆက်သွယ်ရန်",
+    navFAQ: "အမေးအဖြေများ",
+    navCart: "လှည်း",
+    navLogin: "ဝင်ရန်",
+    navSignUp: "စာရင်းသွင်းရန်",
+    navLogout: "ထွက်ရန်",
+    welcomeMessage: "ကြိုဆိုပါတယ်,",
+
+    // Hero Section
+    heroTitle: "သင်၏စိတ်ကြိုက်ပွဲများ",
+    heroSubtitle: "နောက်မှကြည့်ရန် သိမ်းထားသော ပွဲများကို စီမံခန့်ခွဲပါ။",
+
+    // Empty Wishlist
+    emptyWishlistMessage: "သင်၏စိတ်ကြိုက်ပွဲစာရင်း ဗလာဖြစ်နေပါသည်။ ပွဲများထည့်သွင်းလိုက်ပါ။",
+    browseEventsBtn: "ပွဲများရှာဖွေရန်",
+
+    // Wishlist Card 1
+    wishlistEvent1Title: "Rock & Roll ည",
+    wishlistEvent1Date: "ဇူလိုင် ၁၅၊ ၂၀၂၅",
+    wishlistEvent1Location: "ရန်ကုန် အားကစားကွင်း",
+
+    // Wishlist Card 2
+    wishlistEvent2Title: "တီထွင်ဖန်တီးမှုအနုပညာပြပွဲ",
+    wishlistEvent2Date: "ဇူလိုင် ၂၀၊ ၂၀၂၅",
+    wishlistEvent2Location: "မန္တလေးခန်းမ",
+
+    // Card Buttons (reusable)
+    viewBtn: "ကြည့်ရန်",
+    addToCartBtn: "လှည်းထဲထည့်ရန်",
+    removeBtn: "ဖယ်ရှားရန်",
+
+    // Footer
+    footerTagline: "သင်နှစ်သက်ရာပွဲများကို လွယ်ကူစွာ ကြိုတင်မှာယူပါ။ ဖျော်ဖြေပွဲများ၊ ပြပွဲများနှင့် အခြားအရာများ — အားလုံးကို တစ်နေရာတည်းတွင်။",
+    footerQuickLinksTitle: "အမြန်လင့်ခ်များ",
+    footerContactUsTitle: "ကျွန်ုပ်တို့ကို ဆက်သွယ်ပါ",
+    footerEmail: "အီးမေးလ်- support@eventhive.com",
+    footerPhone: "ဖုန်း- +၉၅ ၁၂၃ ၄၅၆ ၇၈၉",
+    footerCopyright: "© ၂၀၂၅ EventHive။ မူပိုင်ခွင့်များ ရရှိပြီး။",
+
+    // Cart Modal
+    cartModalTitle: "အောင်မြင်ပါသည်",
+    cartModalBody: "ပွဲကို သင်၏လှည်းထဲသို့ ထည့်လိုက်ပါပြီ!",
+    cartModalOkBtn: "OK",
+  }
+};
+</script>
+<script src="js/lag.js"></script>
 
 </body>
 </html>

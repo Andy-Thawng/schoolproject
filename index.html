@@ -4,98 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/images/logo.jpg">
-    <!-- Include Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/global.css">
-    <title>Home | EventHive </title>
+    <title data-key="homeTitle">Home | EventHive </title>
 </head>
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
         <div class="container">
-            <!-- Brand / Logo -->
             <a class="navbar-brand fw-bold text-warning d-flex align-items-center gap-2" href="index.html">
               <img src="assets/images/logo.jpg" alt="EventHive Logo" style="height: 40px; width: 40px; object-fit: cover; border-radius: 50%;">
               <span>EventHive</span>
             </a>
 
-
-            <!-- Hamburger -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
             <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Nav Items -->
             <div class="collapse navbar-collapse" id="navbarMenu">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="events/events.html">Events</a></li>
-                <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="wishlist.html"><i class="bi bi-heart-fill"></i> Wishlist</a></li>
-                <li class="nav-item"><a class="nav-link" href="contactus.html">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html" data-key="navHome">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="events/events.html" data-key="navEvents">Events</a></li>
+                <li class="nav-item"><a class="nav-link" href="aboutus.html" data-key="navAboutUs">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="wishlist.html"><i class="bi bi-heart-fill"></i> <span data-key="navWishlist">Wishlist</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="contactus.html" data-key="navContact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="faq.html" data-key="navFAQ">FAQ</a></li>
                 <li class="nav-item"><a class="nav-link position-relative" href="cart.html">
-                <i class="bi bi-cart-fill"></i> Cart
-                <!-- Optional cart badge -->
+                <i class="bi bi-cart-fill"></i> <span data-key="navCart">Cart</span>
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">2</span>
                 </a></li>
-                <!-- Login & Sign Up CTA -->
                 <li class="nav-item ms-lg-3" id="authButtons">
-                    <a class="btn btn-outline-warning btn-sm me-2" href="login.html">Login</a>
-                    <a class="btn btn-warning btn-sm" href="signup.html">Sign Up</a>
+                    <a class="btn btn-outline-warning btn-sm me-2" href="login.html" data-key="navLogin">Login</a>
+                    <a class="btn btn-warning btn-sm" href="signup.html" data-key="navSignUp">Sign Up</a>
                 </li>
             </ul>
             </div>
         </div>
-    </nav>    <!-- Navbar  -->
-    
-
-    <!-- Hero Section -->
-<!-- Hero Carousel with Auto Scroll -->
-<div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="1500">
+    </nav>     <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="1500">
   <div class="carousel-inner">
 
-    <!-- Slide 1 -->
     <div class="carousel-item active" style="height: 100vh; background: url('assets/images/events.jpg') center/cover no-repeat;">
       <div class="d-flex h-100 align-items-center justify-content-center text-white text-center bg-dark bg-opacity-50">
         <div>
           <h1 class="display-4 fw-bold" data-key="heroTitle">Discover & Book Amazing Events</h1>
           <p class="lead" data-key="heroSubtitle">Concerts, Expos, Conferences — all in one place</p>
-          <a href="events/events.html" class="btn btn-warning btn-lg me-2">Browse Events</a>
-          <a href="signup.html" class="btn btn-outline-light btn-lg" id="heroSignUpBtn">Sign Up</a>
+          <a href="events/events.html" class="btn btn-warning btn-lg me-2" data-key="browseEventsBtn">Browse Events</a>
+          <a href="signup.html" class="btn btn-outline-light btn-lg" id="heroSignUpBtn" data-key="joinNow">Sign Up</a>
+
         </div>
       </div>
     </div>
 
-    <!-- Slide 2 -->
     <div class="carousel-item" style="height: 100vh; background: url('assets/images/rock.webp') center/cover no-repeat;">
       <div class="d-flex h-100 align-items-center justify-content-center text-white text-center bg-dark bg-opacity-50">
         <div>
-          <h1 class="display-4 fw-bold">From Rock Concerts to Business Expos</h1>
-          <p class="lead">Whatever you're into — find it here.</p>
-          <a href="events/events.html" class="btn btn-warning btn-lg me-2">Explore Now</a>
+          <h1 class="display-4 fw-bold" data-key="slide2Title">From Rock Concerts to Business Expos</h1>
+          <p class="lead" data-key="slide2Subtitle">Whatever you're into — find it here.</p>
+          <a href="events/events.html" class="btn btn-warning btn-lg me-2" data-key="exploreNow">Explore Now</a>
         </div>
       </div>
     </div>
 
-    <!-- Slide 3 -->
-    <div class="carousel-item" style="height: 100vh; background: url('assets/images/business\ expo.jpg') center/cover no-repeat;">
+    <div class="carousel-item" style="height: 100vh; background: url('assets/images/business expo.jpg') center/cover no-repeat;">
       <div class="d-flex h-100 align-items-center justify-content-center text-white text-center bg-dark bg-opacity-50">
         <div>
-          <h1 class="display-4 fw-bold">Join the Excitement</h1>
-          <p class="lead">Get tickets before they sell out.</p>
-          <a href="events/events.html" class="btn btn-warning btn-lg me-2">Explore Now</a>
+          <h1 class="display-4 fw-bold" data-key="slide3Title">Join the Excitement</h1>
+          <p class="lead" data-key="slide3Subtitle">Get tickets before they sell out.</p>
+          <a href="events/events.html" class="btn btn-warning btn-lg me-2" data-key="exploreNow">Explore Now</a>
         </div>
       </div>
     </div>
 
   </div>
 
-  <!-- Controls -->
   <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
     <span class="carousel-control-prev-icon"></span>
   </button>
@@ -105,71 +89,64 @@
 </div>
 
 
-<!-- Search & Filters Section -->
-  <!-- Testimonials Section -->
 <section class="py-5 bg-white" data-aos="fade-up" data-aos-delay="100">
   <div class="container text-center">
-    <h3 class="mb-5">What Our Users Say</h3>
+    <h3 class="mb-5" data-key="whatUsersSay">What Our Users Say</h3>
     <div class="row g-4">
       <div class="col-md-4">
         <div class="border p-4 rounded shadow-sm">
-          <p>“Booking tickets has never been this easy. I love EventHive!”</p>
-          <h6 class="text-warning mt-3">— Aung Myo, Yangon</h6>
+          <p data-key="testimonial1">“Booking tickets has never been this easy. I love EventHive!”</p>
+          <h6 class="text-warning mt-3" data-key="testimonialAuthor1">— Aung Myo, Yangon</h6>
         </div>
       </div>
       <div class="col-md-4">
         <div class="border p-4 rounded shadow-sm">
-          <p>“The design is super clean and fast. Got my concert ticket in 2 minutes.”</p>
-          <h6 class="text-warning mt-3">— Hnin Thiri, Mandalay</h6>
+          <p data-key="testimonial2">“The design is super clean and fast. Got my concert ticket in 2 minutes.”</p>
+          <h6 class="text-warning mt-3" data-key="testimonialAuthor2">— Hnin Thiri, Mandalay</h6>
         </div>
       </div>
       <div class="col-md-4">
         <div class="border p-4 rounded shadow-sm">
-          <p>“The design is super clean and fast. Got my concert ticket in 2 minutes.”</p>
-          <h6 class="text-warning mt-3">— Hnin Thiri, Mandalay</h6>
+          <p data-key="testimonial3">“Absolutely fantastic! EventHive makes finding and booking events a breeze.”</p>
+          <h6 class="text-warning mt-3" data-key="testimonialAuthor3">— Zaw Min, Naypyidaw</h6>
         </div>
       </div>
-      <!-- Add more if needed -->
-    </div>
+      </div>
   </div>
 </section>
 
 
-<!-- Featured Events Section -->
 <section class="py-5" data-aos="fade-up" data-aos-delay="200">
   <div class="container">
-    <h3 class="text-center mb-5">Featured Events</h3>
+    <h3 class="text-center mb-5" data-key="featuredEvents">Featured Events</h3>
     <div class="row g-4">
-      <!-- Event Card 1 -->
       <div class="col-md-4">
         <div class="card h-100 shadow">
           <img src="assets/images/rockandroll.jpg!sw800"  class="card-img-top" alt="Concert" style="height: 200px; object-fit: cover;">
           <div class="card-body">
-            <h5 class="card-title">Rock & Roll Night</h5>
-            <p class="card-text text-muted">July 15, 2025 — Yangon Arena</p>
-            <a href="events/event-details/rock.html" class="btn btn-warning">View Details</a>
+            <h5 class="card-title" data-key="featuredEvent1Title">Rock & Roll Night</h5>
+            <p class="card-text text-muted" data-key="featuredEvent1DateLocation">July 15, 2025 — Yangon Arena</p>
+            <a href="events/event-details/rock.html" class="btn btn-warning" data-key="viewDetailsBtn">View Details</a>
           </div>
         </div>
       </div>
-      <!-- Event Card 2 -->
       <div class="col-md-4">
         <div class="card h-100 shadow">
           <img src="assets/images/expo.jpg"  class="card-img-top" alt="Concert" style="height: 200px; object-fit: cover;">
           <div class="card-body">
-            <h5 class="card-title">Creative Art Expo 2025</h5>
-            <p class="card-text text-muted">July 20, 2025 — Mandalay Hall</p>
-            <a href="events/event-details/expo.html" class="btn btn-warning">View Details</a>
+            <h5 class="card-title" data-key="featuredEvent2Title">Creative Art Expo 2025</h5>
+            <p class="card-text text-muted" data-key="featuredEvent2DateLocation">July 20, 2025 — Mandalay Hall</p>
+            <a href="events/event-details/expo.html" class="btn btn-warning" data-key="viewDetailsBtn">View Details</a>
           </div>
         </div>
       </div>
-      <!-- Event Card 3 -->
       <div class="col-md-4">
         <div class="card h-100 shadow">
           <img src="assets/images/tech.avif"  class="card-img-top" alt="Concert" style="height: 200px; object-fit: cover;">
           <div class="card-body">
-            <h5 class="card-title">FutureTech 2025</h5>
-            <p class="card-text text-muted">August 5, 2025 — Online</p>
-            <a href="events/event-details/tech.html" class="btn btn-warning">View Details</a>
+            <h5 class="card-title" data-key="featuredEvent3Title">FutureTech 2025</h5>
+            <p class="card-text text-muted" data-key="featuredEvent3DateLocation">August 5, 2025 — Online</p>
+            <a href="events/event-details/tech.html" class="btn btn-warning" data-key="viewDetailsBtn">View Details</a>
           </div>
         </div>
       </div>
@@ -177,75 +154,69 @@
   </div>
 </section>
 
-<!-- Categories Section -->
 <section class="py-5 bg-light" data-aos="fade-up" data-aos-delay="300">
   <div class="container text-center">
-    <h3 class="mb-4">Explore by Category</h3>
+    <h3 class="mb-4" data-key="exploreByCategory">Explore by Category</h3>
     <div class="row g-3 justify-content-center">
-      <div class="col-6 col-md-2"><div class="p-3 border rounded bg-white shadow-sm">🎤 Concert</div></div>
-      <div class="col-6 col-md-2"><div class="p-3 border rounded bg-white shadow-sm">🖼️ Expo</div></div>
-      <div class="col-6 col-md-2"><div class="p-3 border rounded bg-white shadow-sm">⚽ Sports</div></div>
-      <div class="col-6 col-md-2"><div class="p-3 border rounded bg-white shadow-sm">🎭 Theater</div></div>
-      <div class="col-6 col-md-2"><div class="p-3 border rounded bg-white shadow-sm">💼 Business</div></div>
+      <div class="col-6 col-md-2"><div class="p-3 border rounded bg-white shadow-sm" data-key="categoryConcert">🎤 Concert</div></div>
+      <div class="col-6 col-md-2"><div class="p-3 border rounded bg-white shadow-sm" data-key="categoryExpo">🖼️ Expo</div></div>
+      <div class="col-6 col-md-2"><div class="p-3 border rounded bg-white shadow-sm" data-key="categorySports">⚽ Sports</div></div>
+      <div class="col-6 col-md-2"><div class="p-3 border rounded bg-white shadow-sm" data-key="categoryTheater">🎭 Theater</div></div>
+      <div class="col-6 col-md-2"><div class="p-3 border rounded bg-white shadow-sm" data-key="categoryBusiness">💼 Business</div></div>
     </div>
   </div>
 </section>
 
-<!-- How It Works Section -->
 <section class="py-5" data-aos="fade-up" data-aos-delay="400">
   <div class="container text-center">
-    <h3 class="mb-4">How It Works</h3>
+    <h3 class="mb-4" data-key="howItWorks">How It Works</h3>
     <div class="row g-4">
       <div class="col-md-4">
         <div class="p-4 border rounded shadow-sm h-100">
-          <h5>1. Browse Events</h5>
-          <p class="text-muted">Discover concerts, expos, sports, and more happening near you.</p>
+          <h5 data-key="step1Title">1. Browse Events</h5>
+          <p class="text-muted" data-key="step1Desc">Discover concerts, expos, sports, and more happening near you.</p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="p-4 border rounded shadow-sm h-100">
-          <h5>2. Book Tickets</h5>
-          <p class="text-muted">Select ticket type, quantity, and checkout easily.</p>
+          <h5 data-key="step2Title">2. Book Tickets</h5>
+          <p class="text-muted" data-key="step2Desc">Select ticket type, quantity, and checkout easily.</p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="p-4 border rounded shadow-sm h-100">
-          <h5>3. Enjoy the Show</h5>
-          <p class="text-muted">Get your ticket and have an amazing experience.</p>
+          <h5 data-key="step3Title">3. Enjoy the Show</h5>
+          <p class="text-muted" data-key="step3Desc">Get your ticket and have an amazing experience.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Trending Events Section -->
-<!-- Trending Events Section -->
 <section class="py-5" data-aos="fade-up" data-aos-delay="700">
   <div class="container text-center">
-    <h3 class="mb-4">🔥 Trending Events</h3>
+    <h3 class="mb-4" data-key="trendingEvents">🔥 Trending Events</h3>
     <div id="trendingCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1500">
       <div class="carousel-inner rounded shadow-sm" style="height: 70vh; overflow: hidden;">
         <div class="carousel-item active">
           <img src="assets/images/t7.webp" class="d-block w-100" alt="Trending 1" style="object-fit: cover; height: 100%;" >
           <div class="carousel-caption d-none d-md-block">
-            <h5 class="bg-dark bg-opacity-75 px-3 py-1 rounded">EDM Mega Fest</h5>
+            <h5 class="bg-dark bg-opacity-75 px-3 py-1 rounded" data-key="trendingEvent1Title">EDM Mega Fest</h5>
           </div>
         </div>
         <div class="carousel-item">
           <img src="assets/images/t2.webp" class="d-block w-100" alt="Trending 2" style="object-fit: cover; height: 100%;">
           <div class="carousel-caption d-none d-md-block">
-            <h5 class="bg-dark bg-opacity-75 px-3 py-1 rounded">Startup Expo 2025</h5>
+            <h5 class="bg-dark bg-opacity-75 px-3 py-1 rounded" data-key="trendingEvent2Title">Startup Expo 2025</h5>
           </div>
         </div>
         <div class="carousel-item">
           <img src="assets/images/t3.webp" class="d-block w-100" alt="Trending 3" style="object-fit: cover; height: 100%;">
           <div class="carousel-caption d-none d-md-block">
-            <h5 class="bg-dark bg-opacity-75 px-3 py-1 rounded">Startup Expo 2025</h5>
+            <h5 class="bg-dark bg-opacity-75 px-3 py-1 rounded" data-key="trendingEvent3Title">Startup Expo 2025</h5>
           </div>
         </div>
-        <!-- Add more slides as needed -->
-      </div>
-      <!-- Controls -->
+        </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#trendingCarousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon"></span>
       </button>
@@ -257,32 +228,21 @@
 </section>
 
 
-
-<!-- CTA Banner Section -->
 <section class="py-5 bg-warning text-center text-dark" data-aos="fade-up" data-aos-delay="500">
   <div class="container">
-    <h4 class="fw-bold mb-3">Don't Miss Out on Exclusive Deals</h4>
-    <a href="signup.html" class="btn btn-dark" id="ctaJoinBtn">Join Now</a>
-    <span id="ctaLoggedInMessage" class="fw-bold d-none">🎉 You're already a member! Enjoy exclusive deals.</span>
-
-
+    <h4 class="fw-bold mb-3" data-key="ctaBanner">Don't Miss Out on Exclusive Deals</h4>
+    <a href="signup.html" class="btn btn-dark" id="ctaJoinBtn" data-key="joinNow">Join Now</a>
+    <span id="ctaLoggedInMessage" class="fw-bold d-none" data-key="alreadyMember">🎉 You're already a member! Enjoy exclusive deals.</span>
   </div>
 </section>
 
-<!-- Newsletter Subscribe (Optional) -->
 <section class="py-5 bg-light" data-aos="fade-up" data-aos-delay="600">
   <div class="container text-center">
-    <h4 class="mb-3">Subscribe to Our Newsletter</h4>
-    <form class="row justify-content-center g-2">
+      <h4 class="mb-3" data-key="subscribeHeading">Subscribe to Our Newsletter</h4>      <form class="row justify-content-center g-2">
       <div class="col-md-4">
-        <input type="email" class="form-control" placeholder="Enter your email" required>
-      </div>
+        <input type="email" class="form-control" data-key="newsletterPlaceholder" placeholder="Enter your email" required>       </div>
       <div class="col-md-2">
-      <!-- Replace inside Newsletter section -->
-    <!-- In Newsletter Section -->
-    <button type="button" class="btn btn-warning w-100" id="subscribeBtn">
-      Subscribe
-    </button>
+      <button type="button" class="btn btn-warning w-100" id="subscribeBtn" data-key="newsletterBtn">Subscribe</button>
 
       </div>
     </form>
@@ -290,89 +250,80 @@
 </section>
 
 
-    <!-- Footer  -->
     <footer class="footer bg-dark text-white pt-5 pb-3 mt-5">
         <div class="container">
             <div class="row">
 
-            <!-- Brand/Logo Section -->
             <div class="col-md-4 mb-4">
                 <div class="d-flex align-items-center gap-2 mb-2">
                   <img src="assets/images/logo.jpg" alt="EventHive Logo" style="height: 40px; width: 40px; object-fit: cover; border-radius: 50%;">
                   <h4 class="text-warning mb-0">EventHive</h4>
               </div>
 
-                <p>Book your favorite events with ease. Concerts, expos, and more — all in one place.</p>
+                <p data-key="footerTagline">Book your favorite events with ease. Concerts, expos, and more — all in one place.</p>
             </div>
 
-            <!-- Quick Links -->
             <div class="col-md-4 mb-4">
-                <h5 class="text-warning">Quick Links</h5>
+                <h5 class="text-warning" data-key="footerQuickLinksTitle">Quick Links</h5>
                 <ul class="list-unstyled">
-                <li><a href="index.html" class="footer-link">Home</a></li>
-                <li><a href="events/events.html" class="footer-link">Events</a></li>
-                <li><a href="aboutus.html" class="footer-link">About Us</a></li>
-                <li><a href="contactus.html" class="footer-link">Contact</a></li>
-                <li><a href="faq.html" class="footer-link">FAQ</a></li>
+                <li><a href="index.html" class="footer-link" data-key="navHome">Home</a></li>
+                <li><a href="events/events.html" class="footer-link" data-key="navEvents">Events</a></li>
+                <li><a href="aboutus.html" class="footer-link" data-key="navAboutUs">About Us</a></li>
+                <li><a href="contactus.html" class="footer-link" data-key="navContact">Contact</a></li>
+                <li><a href="faq.html" class="footer-link" data-key="navFAQ">FAQ</a></li>
                 </ul>
             </div>
 
-            <!-- Contact & Social -->
             <div class="col-md-4 mb-4">
-                <h5 class="text-warning">Contact Us</h5>
-                <p>Email: <a href="mailto:support@eventbooking.com" class="footer-link">support@eventhive.com</a></p>
-                <p>Phone: +95 123 456 789</p>
+                <h5 class="text-warning" data-key="footerContactUsTitle">Contact Us</h5>
+                <p data-key="footerEmail">Email: <a href="mailto:support@eventbooking.com" class="footer-link">support@eventhive.com</a></p>
+                <p data-key="footerPhone">Phone: +95 123 456 789</p>
                 <div class="social-icons mt-3">
                 <a href="https://www.facebook.com/" class="me-3 footer-icon"><i class="bi bi-facebook"></i></a>
                 <a href="https://www.twitter.com/" class="me-3 footer-icon"><i class="bi bi-twitter"></i></a>
                 <a href="https://www.instagram.com/" class="me-3 footer-icon"><i class="bi bi-instagram"></i></a>
-                <!-- Language Switcher -->
                 <div class="dropdown d-inline-block">
                   <a class="footer-icon dropdown-toggle text-white" href="#" role="button" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="bi bi-globe"></i>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="langDropdown">
-                    <li><a class="dropdown-item" href="#" onclick="changeLang('en')">English</a></li>
-                    <li><a class="dropdown-item" href="#" onclick="changeLang('my')">မြန်မာ</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="changeLang('en'); alert('Language switched to: English');">English</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="changeLang('my'); alert('ဘာသာစကား: မြန်မာ');">မြန်မာ</a></li>
+
                   </ul>
                 </div>
                 </div>
 
-          
 
             </div>
 
             </div>
             <hr class="border-secondary">
             <div class="text-center">
-            <p class="mb-0">&copy; 2025 EventHive. All rights reserved.</p>
+            <p class="mb-0" data-key="footerCopyright">&copy; 2025 EventHive. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Subscribe Modal -->
     <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header bg-warning text-dark">
-            <h5 class="modal-title" id="subscribeModalLabel">Thank You!</h5>
+            <h5 class="modal-title" id="subscribeModalLabel" data-key="modalThankYouTitle">Thank You!</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            🎉 You've successfully subscribed to our newsletter!<br> Stay tuned for exciting event updates and deals.
+            <span data-key="modalSubscribeMessage">🎉 You've successfully subscribed to our newsletter!<br> Stay tuned for exciting event updates and deals.</span>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-dark" data-bs-dismiss="modal" data-key="modalCloseBtn">Close</button>
           </div>
         </div>
       </div>
     </div>
 
 
-  
-    <!-- Bootstrap 5 JS Bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({
@@ -381,105 +332,273 @@
 
     <script>
     window.addEventListener("DOMContentLoaded", () => {
-  const isLoggedIn = localStorage.getItem("eventLoggedIn");
-  if (isLoggedIn === "true") {
-    // Hide navbar login/signup buttons
-    const authSection = document.getElementById("authButtons");
-    if (authSection) authSection.style.display = "none";
+    const isLoggedIn = localStorage.getItem("eventLoggedIn");
+    if (isLoggedIn === "true") {
+      // Hide navbar login/signup buttons
+      const authSection = document.getElementById("authButtons");
+      if (authSection) authSection.style.display = "none";
 
-    // Hide Hero Section Sign Up Button
-    const heroSignUp = document.getElementById("heroSignUpBtn");
-    if (heroSignUp) heroSignUp.style.display = "none";
+      // Hide Hero Section Sign Up Button
+      const heroSignUp = document.getElementById("heroSignUpBtn");
+      if (heroSignUp) heroSignUp.style.display = "none";
 
-    // Show welcome & logout
-    const nav = document.querySelector(".navbar-nav");
-    if (nav) {
-      const storedUser = JSON.parse(localStorage.getItem("eventUser"));
-      const welcome = document.createElement("li");
-      welcome.className = "nav-item d-flex align-items-center ms-lg-3 text-white fw-bold";
-      welcome.innerHTML = `<span>Welcome, ${storedUser.fullname.split(" ")[0]}</span>`;
-      nav.appendChild(welcome);
+      // Show welcome & logout
+      const nav = document.querySelector(".navbar-nav");
+      if (nav) {
+        const storedUser = JSON.parse(localStorage.getItem("eventUser"));
+        const welcome = document.createElement("li");
+        welcome.className = "nav-item d-flex align-items-center ms-lg-3 text-white fw-bold";
+        welcome.innerHTML = `<span data-key="welcomeMessage">Welcome,</span> ${storedUser.fullname.split(" ")[0]}`;
+        nav.appendChild(welcome);
 
-      const logoutBtn = document.createElement("li");
-      logoutBtn.className = "nav-item ms-2";
-      logoutBtn.innerHTML = `<button class="btn btn-danger btn-sm" id="logoutBtn">Logout</button>`;
-      nav.appendChild(logoutBtn);
+        const logoutBtn = document.createElement("li");
+        logoutBtn.className = "nav-item ms-2";
+        logoutBtn.innerHTML = `<button class="btn btn-danger btn-sm" id="logoutBtn" data-key="navLogout">Logout</button>`;
+        nav.appendChild(logoutBtn);
 
-      document.getElementById("logoutBtn").addEventListener("click", () => {
-        localStorage.removeItem("eventLoggedIn");
-        window.location.reload(); // or window.location.href = "index.html"
-      });
+        document.getElementById("logoutBtn").addEventListener("click", () => {
+          localStorage.removeItem("eventLoggedIn");
+          localStorage.removeItem("eventUser"); // Also clear user data
+          window.location.href = "index.html"; // Redirect to home after logout
+        });
+
+      }
 
       const ctaJoin = document.getElementById("ctaJoinBtn");
-      if (ctaJoin) ctaJoin.style.display = "none";
+      if (ctaJoin) {
+        // Replace the button with a message
+        const ctaContainer = ctaJoin.parentElement;
+        const message = document.createElement("span");
+        message.id = "ctaLoggedInMessage";
+        message.className = "fw-bold";
+        message.setAttribute("data-key", "alreadyMember"); // Add data-key to the dynamically added message
+        message.innerHTML = "🎉 You're already a member! Enjoy exclusive deals.";
+
+        ctaJoin.remove(); // Remove the button
+        ctaContainer.appendChild(message); // Add the message
+      }
     }
 
-    const ctaJoin = document.getElementById("ctaJoinBtn");
-    if (ctaJoin) {
-      // Replace the button with a message
-      const ctaContainer = ctaJoin.parentElement;
-      const message = document.createElement("span");
-      message.id = "ctaLoggedInMessage";
-      message.className = "fw-bold";
-      message.innerHTML = "🎉 You're already a member! Enjoy exclusive deals.";
-
-      ctaJoin.remove(); // Remove the button
-      ctaContainer.appendChild(message); // Add the message
-    }
-
-
-  }
-   
 });
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const subscribeBtn = document.getElementById("subscribeBtn");
-    const emailInput = document.querySelector('input[type="email"]');
+    document.addEventListener("DOMContentLoaded", () => {
+      const subscribeBtn = document.getElementById("subscribeBtn");
+      const emailInput = document.querySelector('input[type="email"]');
+      const subscribeModal = new bootstrap.Modal(document.getElementById('subscribeModal'));
 
-    subscribeBtn.addEventListener("click", () => {
-      const email = emailInput.value.trim();
 
-      // Basic email format validation
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      subscribeBtn.addEventListener("click", () => {
+        const email = emailInput.value.trim();
 
-      if (email === "") {
-        alert("Please enter your email.");
-      } else if (!emailRegex.test(email)) {
-        alert("Please enter a valid email address.");
-      } else {
-        // Show modal only if valid
-        const modal = new bootstrap.Modal(document.getElementById('subscribeModal'));
-        modal.show();
+        // Basic email format validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-        // Optional: Clear input after showing
-        emailInput.value = "";
-      }
+        if (email === "") {
+          alert(translations[currentLang].enterEmailAlert); // Use translated alert
+        } else if (!emailRegex.test(email)) {
+          alert(translations[currentLang].invalidEmailAlert); // Use translated alert
+        } else {
+          // Show modal only if valid
+          subscribeModal.show();
+
+          // Optional: Clear input after showing
+          emailInput.value = "";
+        }
+      });
     });
-  });
-
-
 
     </script>
-
-    
+<script src="js/lag.js"></script>
 <script>
   const translations = {
   en: {
+    // ... (your existing translations for other pages)
+
+    // Navbar (ensure these are consistent across all pages)
+    navHome: "Home",
+    navEvents: "Events",
+    navAboutUs: "About Us",
+    navWishlist: "Wishlist",
+    navContact: "Contact",
+    navFAQ: "FAQ",
+    navCart: "Cart",
+    navLogin: "Login",
+    navSignUp: "Sign Up",
+    navLogout: "Logout", // For the dynamically added logout button
+    welcomeMessage: "Welcome,", // For the dynamically added welcome message
+
+    // Home Page - General
+    homeTitle: "Home | EventHive",
+    browseEventsBtn: "Browse Events", // New key for Hero button
+    exploreNow: "Explore Now", // Used for multiple hero buttons
+    viewDetailsBtn: "View Details", // Used for featured events
+
+    // Hero Section
     heroTitle: "Discover & Book Amazing Events",
     heroSubtitle: "Concerts, Expos, Conferences — all in one place",
-    featuredEvents: "Featured Events",
+    slide2Title: "From Rock Concerts to Business Expos",
+    slide2Subtitle: "Whatever you're into — find it here.",
+    slide3Title: "Join the Excitement",
+    slide3Subtitle: "Get tickets before they sell out.",
+
+    // Testimonials Section
     whatUsersSay: "What Our Users Say",
+    testimonial1: "“Booking tickets has never been this easy. I love EventHive!”",
+    testimonialAuthor1: "— Aung Myo, Yangon",
+    testimonial2: "“The design is super clean and fast. Got my concert ticket in 2 minutes.”",
+    testimonialAuthor2: "— Hnin Thiri, Mandalay",
+    testimonial3: "“Absolutely fantastic! EventHive makes finding and booking events a breeze.”",
+    testimonialAuthor3: "— Zaw Min, Naypyidaw", // Added for the third testimonial
+
+    // Featured Events Section
+    featuredEvents: "Featured Events",
+    featuredEvent1Title: "Rock & Roll Night",
+    featuredEvent1DateLocation: "July 15, 2025 — Yangon Arena",
+    featuredEvent2Title: "Creative Art Expo 2025",
+    featuredEvent2DateLocation: "July 20, 2025 — Mandalay Hall",
+    featuredEvent3Title: "FutureTech 2025",
+    CTABanner: "Don't Miss Out on Exclusive Deals",
+    joinNow: "Join Now",
+    alreadyMember: "🎉 You're already a member! Enjoy exclusive deals.",
+    featuredEvent3DateLocation: "August 5, 2025 — Online",
+
+    // Categories Section
+    exploreByCategory: "Explore by Category",
+    categoryConcert: "🎤 Concert",
+    categoryExpo: "🖼️ Expo",
+    categorySports: "⚽ Sports",
+    categoryTheater: "🎭 Theater",
+    categoryBusiness: "💼 Business",
+
+    // How It Works Section
+    howItWorks: "How It Works",
+    step1Title: "1. Browse Events",
+    step1Desc: "Discover concerts, expos, sports, and more happening near you.",
+    step2Title: "2. Book Tickets",
+    step2Desc: "Select ticket type, quantity, and checkout easily.",
+    step3Title: "3. Enjoy the Show",
+    step3Desc: "Get your ticket and have an amazing experience.",
+
+    // Trending Events Section
+    trendingEvents: "🔥 Trending Events",
+    trendingEvent1Title: "EDM Mega Fest",
+    trendingEvent2Title: "Startup Expo 2025",
+    trendingEvent3Title: "Startup Expo 2025", // If it's different, you'll need another key
+
+    // Newsletter Section
+    subscribeHeading: "Subscribe to Our Newsletter",
+    newsletterPlaceholder: "Enter your email",
+    newsletterBtn: "Subscribe",
+    modalThankYouTitle: "Thank You!",
+    modalSubscribeMessage: "🎉 You've successfully subscribed to our newsletter!<br> Stay tuned for exciting event updates and deals.",
+    modalCloseBtn: "Close",
+    enterEmailAlert: "Please enter your email.", // For JS alert
+    invalidEmailAlert: "Please enter a valid email address.", // For JS alert
+
+    // Footer (ensure these are consistent across all pages)
+    footerTagline: "Book your favorite events with ease. Concerts, expos, and more — all in one place.",
+    footerQuickLinksTitle: "Quick Links",
+    footerContactUsTitle: "Contact Us",
+    footerEmail: "Email: support@eventhive.com",
+    footerPhone: "Phone: +95 123 456 789",
+    footerCopyright: "&copy; 2025 EventHive. All rights reserved.",
   },
   my: {
-    heroTitle: "အံ့သြဖွယ်အဖျော်ယမကာများ ရှာဖွေပြီး လက်မှတ်မှာယူပါ",
-    heroSubtitle: "ဂီတဖျော်ဖြေမှုများ၊ ပြပွဲများ၊ သင်တန်းများ — တစ်နေရာထဲတွင်",
-    featuredEvents: "အထူးအခမ်းအနားများ",
-    whatUsersSay: "အသုံးပြုသူများက ပြောသည်",
+    // ... (your existing translations for other pages)
+
+    // Navbar
+    navHome: "ပင်မ",
+    navEvents: "ပွဲစဉ်များ",
+    navAboutUs: "ကျွန်ုပ်တို့အကြောင်း",
+    navWishlist: "စိတ်ကြိုက်ပွဲများ",
+    navContact: "ဆက်သွယ်ရန်",
+    navFAQ: "အမေးအဖြေများ",
+    navCart: "လှည်း",
+    navLogin: "ဝင်ရန်",
+    navSignUp: "စာရင်းသွင်းရန်",
+    navLogout: "ထွက်ရန်",
+    welcomeMessage: "ကြိုဆိုပါတယ်,",
+
+    // Home Page - General
+    homeTitle: "ပင်မ | EventHive",
+    browseEventsBtn: "ပွဲစဉ်များ ရှာဖွေပါ",
+    exploreNow: "ယခုစူးစမ်းပါ",
+    viewDetailsBtn: "အသေးစိတ်ကြည့်ရန်",
+
+    // Hero Section
+    heroTitle: "အံ့သြဖွယ်ပွဲများကို ရှာဖွေပြီး လက်မှတ်ဝယ်ယူပါ",
+    heroSubtitle: "ဖျော်ဖြေပွဲများ၊ ပြပွဲများ၊ ညီလာခံများ — အားလုံးကို တစ်နေရာတည်းတွင်",
+    slide2Title: "ရော့ခ်ဖျော်ဖြေပွဲများမှ စီးပွားရေးပြပွဲများအထိ",
+    slide2Subtitle: "သင်စိတ်ဝင်စားသည်ဖြစ်စေ — ဤနေရာတွင် ရှာတွေ့နိုင်ပါသည်။",
+    slide3Title: "စိတ်လှုပ်ရှားမှုကို ပူးပေါင်းပါ",
+    slide3Subtitle: "လက်မှတ်များမကုန်မီ ရယူလိုက်ပါ။",
+
+    // Testimonials Section
+    whatUsersSay: "ကျွန်ုပ်တို့၏အသုံးပြုသူများ ပြောကြားသည်",
+    testimonial1: "“လက်မှတ်ဝယ်တာ ဒီလောက်မလွယ်ကူခဲ့ဖူးဘူး။ EventHive ကို သဘောကျတယ်!”",
+    testimonialAuthor1: "— အောင်မျိုး၊ ရန်ကုန်",
+    testimonial2: "“ဒီဇိုင်းက အရမ်းသပ်ရပ်ပြီး မြန်တယ်။ ဖျော်ဖြေပွဲလက်မှတ်ကို ၂ မိနစ်အတွင်း ရလိုက်တယ်။”",
+    testimonialAuthor2: "— နှင်းသီရိ၊ မန္တလေး",
+    testimonial3: "“လုံးဝအံ့မခန်းပဲ! EventHive က ပွဲတွေရှာရတာနဲ့ လက်မှတ်ဝယ်ရတာကို လွယ်ကူစေတယ်။”",
+    testimonialAuthor3: "— ဇော်မင်း၊ နေပြည်တော်",
+
+    // Featured Events Section
+    featuredEvents: "အထူးအစီအစဉ်များ",
+    featuredEvent1Title: "Rock & Roll ည",
+    featuredEvent1DateLocation: "ဇူလိုင် ၁၅၊ ၂၀၂၅ — ရန်ကုန်အနုပညာပြဇာတ်ရုံ",
+    featuredEvent2Title: "တီထွင်ဖန်တီးမှုအနုပညာပြပွဲ ၂၀၂၅",
+    featuredEvent2DateLocation: "ဇူလိုင် ၂၀၊ ၂၀၂၅ — မန္တလေးခန်းမ",
+    featuredEvent3Title: "FutureTech ၂၀၂၅",
+    featuredEvent3DateLocation: "ဩဂုတ် ၅၊ ၂၀၂၅ — အွန်လိုင်း",
+
+    // Categories Section
+    exploreByCategory: "အမျိုးအစားအလိုက် ရှာဖွေပါ",
+    categoryConcert: "🎤 ဖျော်ဖြေပွဲ",
+    categoryExpo: "🖼️ ပြပွဲ",
+    categorySports: "⚽ အားကစား",
+    categoryTheater: "🎭 ပြဇာတ်",
+    categoryBusiness: "💼 စီးပွားရေး",
+
+    // How It Works Section
+    howItWorks: "လုပ်ဆောင်ပုံအဆင့်ဆင့်",
+    step1Title: "၁။ ပွဲများရှာဖွေပါ",
+    step1Desc: "သင့်အနီးအနားရှိ ဖျော်ဖြေပွဲများ၊ ပြပွဲများ၊ အားကစားပွဲများနှင့် အခြားအရာများကို ရှာဖွေပါ။",
+    step2Title: "၂။ လက်မှတ်မှာယူပါ",
+    step2Desc: "လက်မှတ်အမျိုးအစား၊ အရေအတွက်ကို ရွေးချယ်ပြီး အလွယ်တကူ ငွေရှင်းပါ။",
+    step3Title: "၃။ ပျော်ရွှင်စွာခံစားပါ",
+    step3Desc: "သင်၏လက်မှတ်ကိုရယူပြီး အံ့သြဖွယ်အတွေ့အကြုံကို ရယူပါ။",
+
+    // Trending Events Section
+    trendingEvents: "🔥 လူကြိုက်အများဆုံးပွဲများ",
+    trendingEvent1Title: "EDM Mega Fest",
+    trendingEvent2Title: "Startup Expo ၂၀၂၅",
+    trendingEvent3Title: "Startup Expo ၂၀၂၅",
+
+    // CTA Banner Section
+    ctaBanner: "အထူးလျှော့စျေးများ လက်မလွတ်စေနဲ့",
+    joinNow: "ယခုဝင်ရောက်ပါ",
+    alreadyMember: "🎉 သင်က အဖွဲ့ဝင်ဖြစ်ပြီးသားပါ။ အထူးလျှော့စျေးများကို ခံစားလိုက်ပါ။",
+
+    // Newsletter Section
+    subscribeHeading: "ကျွန်ုပ်တို့၏ သတင်းလွှာကို စာရင်းသွင်းပါ",
+    newsletterPlaceholder: "သင့်အီးမေးလ်ထည့်ပါ",
+    newsletterBtn: "စာရင်းပေးသွင်းပါ",
+    modalThankYouTitle: "ကျေးဇူးတင်ပါတယ်!",
+    modalSubscribeMessage: "🎉 သင် ကျွန်ုပ်တို့၏သတင်းလွှာကို အောင်မြင်စွာ စာရင်းသွင်းပြီးပါပြီ! စိတ်လှုပ်ရှားဖွယ်ပွဲစဉ်အသစ်များနှင့် ကမ်းလှမ်းမှုများအတွက် စောင့်မျှော်နေပါ။",
+    modalCloseBtn: "ပိတ်မည်",
+    enterEmailAlert: "ကျေးဇူးပြု၍ သင့်အီးမေးလ်ကို ထည့်ပါ။",
+    invalidEmailAlert: "ကျေးဇူးပြု၍ မှန်ကန်သောအီးမေးလ်လိပ်စာကို ထည့်ပါ။",
+
+    // Footer
+    footerTagline: "သင်နှစ်သက်ရာပွဲများကို လွယ်ကူစွာ ကြိုတင်မှာယူပါ။ ဖျော်ဖြေပွဲများ၊ ပြပွဲများနှင့် အခြားအရာများ — အားလုံးကို တစ်နေရာတည်းတွင်။",
+    footerQuickLinksTitle: "အမြန်လင့်ခ်များ",
+    footerContactUsTitle: "ကျွန်ုပ်တို့ကို ဆက်သွယ်ပါ",
+    footerEmail: "အီးမေးလ်- support@eventhive.com",
+    footerPhone: "ဖုန်း- +၉၅ ၁၂၃ ၄၅၆ ၇၈၉",
+    footerCopyright: "© ၂၀၂၅ EventHive။ မူပိုင်ခွင့်များ ရရှိပြီး။",
   },
 };
-
 </script>
-<script src="js/lag.js"></script>
 
 </body>
 </html>

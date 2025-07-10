@@ -29,38 +29,38 @@
     <div class="container">
       <div class="mb-4">
         <i class="bi bi-check-circle-fill checkmark-icon"></i>
-        <h1 class="display-5 fw-bold mt-3">Thank You for Your Purchase!</h1>
-        <p class="lead text-muted">Your booking was successful. A confirmation email has been sent to <strong>you@example.com</strong>.</p>
+        <h1 class="display-5 fw-bold mt-3" data-key="thankYouHeading">Thank You for Your Purchase!</h1>
+        <p class="lead text-muted" data-key="thankYouSubtitle">Your booking was successful. A confirmation email has been sent to <strong>you@example.com</strong>.</p>
       </div>
 
       <div class="row justify-content-center">
         <div class="col-md-6">
           <div class="card shadow-sm mb-4">
             <div class="card-body text-start">
-              <h5 class="card-title">Order Summary</h5>
+              <h5 class="card-title" data-key="orderSummaryTitle">Order Summary</h5>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item d-flex justify-content-between">
-                  <span>Rock & Roll Night (VIP)</span>
+                  <span data-key="rockRollNight">Rock & Roll Night (VIP)</span>
                   <span>MMK 50,000</span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between">
-                  <span>Art Expo (General)</span>
+                  <span data-key="artExpo">Art Expo (General)</span>
                   <span>MMK 10,000</span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between">
-                  <span>Service Fee</span>
+                  <span data-key="serviceFeeLabel">Service Fee</span>
                   <span>MMK 2,000</span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between fw-bold">
-                  <span>Total</span>
+                  <span data-key="totalLabel">Total</span>
                   <span>MMK 62,000</span>
                 </li>
               </ul>
             </div>
           </div>
 
-          <a href="index.html" class="btn btn-primary w-100 mb-2">Back to Home</a>
-          <a href="wishlist.html" class="btn btn-outline-secondary w-100">View My Wishlist</a>
+          <a href="index.html" class="btn btn-primary w-100 mb-2" data-key="backToHomeBtn">Back to Home</a>
+          <a href="wishlist.html" class="btn btn-outline-secondary w-100" data-key="viewWishlistBtn">View My Wishlist</a>
         </div>
       </div>
     </div>
@@ -70,5 +70,26 @@
   <!-- Paste your footer here -->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const translations = {
+  en: {
+    thankYouPageTitle: "Thank You | EventHive",
+    thankYouHeading: "Thank You for Your Purchase!",
+    thankYouSubtitle: "Your booking was successful. A confirmation email has been sent to you@example.com.",
+    orderSummaryTitle: "Order Summary",
+    backToHomeBtn: "Back to Home",
+    viewWishlistBtn: "View My Wishlist",
+  },
+  my: {
+    thankYouPageTitle: "ကျေးဇူးတင်ပါသည် | EventHive",
+    thankYouHeading: "ဝယ်ယူမှုအတွက် ကျေးဇူးတင်ပါသည်!",
+    thankYouSubtitle: "သင်၏မှာယူမှုအောင်မြင်ပါသည်။ အတည်ပြုအီးမေးလ်ကို you@example.com သို့ ပေးပို့ထားပါသည်။",
+    orderSummaryTitle: "မှာယူမှု အကျဉ်းချုပ်",
+    backToHomeBtn: "ပင်မစာမျက်နှာသို့ ပြန်သွားရန်",
+    viewWishlistBtn: "ကျွန်ုပ်၏ စိတ်ကြိုက်စာရင်းကို ကြည့်ရန်",
+  }
+};
+  </script>
+  <script src="js/lag.js"></script>
 </body>
 </html>

@@ -4,159 +4,147 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="assets/images/logo.jpg">
-  <title>About Us | EventHive</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title data-key="aboutPageTitle">About Us | EventHive</title> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <!-- AOS CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <link href="css/global.css" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
         <div class="container">
-            <!-- Brand / Logo -->
             <a class="navbar-brand fw-bold text-warning d-flex align-items-center gap-2" href="index.html">
               <img src="assets/images/logo.jpg" alt="EventHive Logo" style="height: 40px; width: 40px; object-fit: cover; border-radius: 50%;">
               <span>EventHive</span>
             </a>
 
 
-            <!-- Hamburger -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
             <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Nav Items -->
             <div class="collapse navbar-collapse" id="navbarMenu">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="events/events.html">Events</a></li>
-                <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="wishlist.html"><i class="bi bi-heart-fill"></i> Wishlist</a></li>
-                <li class="nav-item"><a class="nav-link" href="contactus.html">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html" data-key="navHome">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="events/events.html" data-key="navEvents">Events</a></li>
+                <li class="nav-item"><a class="nav-link" href="aboutus.html" data-key="navAboutUs">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="wishlist.html"><i class="bi bi-heart-fill"></i> <span data-key="navWishlist">Wishlist</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="contactus.html" data-key="navContact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="faq.html" data-key="navFAQ">FAQ</a></li>
                 <li class="nav-item"><a class="nav-link position-relative" href="cart.html">
-                <i class="bi bi-cart-fill"></i> Cart
-                <!-- Optional cart badge -->
+                <i class="bi bi-cart-fill"></i> <span data-key="navCart">Cart</span>
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">2</span>
                 </a></li>
-                <!-- Login & Sign Up CTA -->
                 <li class="nav-item ms-lg-3" id="authButtons">
-                    <a class="btn btn-outline-warning btn-sm me-2" href="login.html">Login</a>
-                    <a class="btn btn-warning btn-sm" href="signup.html">Sign Up</a>
+                    <a class="btn btn-outline-warning btn-sm me-2" href="login.html" data-key="navLogin">Login</a>
+                    <a class="btn btn-warning btn-sm" href="signup.html" data-key="navSignUp">Sign Up</a>
                 </li>
             </ul>
             </div>
         </div>
     </nav>
 
-  <!-- Page Header -->
   <header class="bg-dark text-white text-center py-5">
     <div class="container">
-      <h1 class="display-5 fw-bold">About EventBooking</h1>
-      <p class="lead">Your gateway to unforgettable experiences.</p>
+      <h1 class="display-5 fw-bold" data-key="aboutPageTitle">About EventBooking</h1>
+      <p class="lead" data-key="aboutPageSubtitle">Your gateway to unforgettable experiences.</p>
     </div>
   </header>
 
-  <!-- About Content -->
   <section class="py-5" data-aos="fade-up" data-aos-delay="100">
-    <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-md-6">
-          <img src="assets/images/logo.jpg" alt="About Us" class="img-fluid rounded shadow">
-        </div>
-        <div class="col-md-6">
-          <h3 class="mb-3">Who We Are</h3>
-          <p>EventBooking is your one-stop platform for discovering and booking events in Myanmar and beyond. From concerts and expos to business conferences and sports, we make event access easy and reliable.</p>
-          <p>We connect people with moments — bringing you closer to the music, ideas, and culture you love.</p>
-          <h5 class="mt-4">Why Choose Us?</h5>
-          <ul class="list-unstyled">
-            <li><i class="bi bi-check-circle-fill text-warning me-2"></i> Easy, secure ticket booking</li>
-            <li><i class="bi bi-check-circle-fill text-warning me-2"></i> Curated event selection</li>
-            <li><i class="bi bi-check-circle-fill text-warning me-2"></i> Wishlist & Cart features</li>
-            <li><i class="bi bi-check-circle-fill text-warning me-2"></i> Friendly support team</li>
-          </ul>
-        </div>
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-md-6">
+        <img src="assets/images/logo.jpg" alt="About Us" class="img-fluid rounded shadow" data-key-alt="aboutImageAlt">
+      </div>
+      <div class="col-md-6">
+        <h3 data-key="whoWeAreTitle" class="mb-3">Who We Are</h3>
+        <p data-key="whoWeAreParagraph1">
+          EventBooking is your one-stop platform for discovering and booking events in Myanmar and beyond. From concerts and expos to business conferences and sports, we make event access easy and reliable.
+        </p>
+        <p data-key="whoWeAreParagraph2">
+          We connect people with moments — bringing you closer to the music, ideas, and culture you love.
+        </p>
+        <h5 data-key="whyChooseUsTitle" class="mt-4">Why Choose Us?</h5>
+        <ul class="list-unstyled">
+          <li><i class="bi bi-check-circle-fill text-warning me-2"></i><span data-key="whyChooseUs1">Easy, secure ticket booking</span></li>
+          <li><i class="bi bi-check-circle-fill text-warning me-2"></i><span data-key="whyChooseUs2">Curated event selection</span></li>
+          <li><i class="bi bi-check-circle-fill text-warning me-2"></i><span data-key="whyChooseUs3">Wishlist & Cart features</span></li>
+          <li><i class="bi bi-check-circle-fill text-warning me-2"></i><span data-key="whyChooseUs4">Friendly support team</span></li>
+        </ul>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Our Mission Section -->
   <section class="py-5 bg-light" data-aos="fade-up" data-aos-delay="200">
-    <div class="container text-center">
-      <h3 class="mb-3">Our Mission</h3>
-      <p class="lead">To make event discovery, planning, and ticketing seamless and inspiring for everyone.</p>
-    </div>
-  </section>
+  <div class="container text-center">
+    <h3 data-key="ourMissionTitle" class="mb-3">Our Mission</h3>
+    <p data-key="ourMissionSubtitle" class="lead">
+      To make event discovery, planning, and ticketing seamless and inspiring for everyone.
+    </p>
+  </div>
+</section>
 
-  <!-- Optional: Meet the Team -->
   <section class="py-5" data-aos="fade-up" data-aos-delay="300">
-    <div class="container text-center">
-      <h3 class="mb-5">Meet Our Team</h3>
-      <div class="row g-4 justify-content-center">
-        <div class="col-md-3">
-          <div class="card border-0 shadow-sm">
-            <img src="assets/images/dev.avif" class="card-img-top" alt="Team Member" style="height: 250px; object-fit: cover;">
-            <div class="card-body">
-              <h5 class="card-title">Aye Chan</h5>
-              <p class="card-text text-muted">Frontend Developer</p>
-            </div>
+  <div class="container text-center">
+    <h3 data-key="meetOurTeamTitle" class="mb-5">Meet Our Team</h3>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-3">
+        <div class="card border-0 shadow-sm">
+          <img src="assets/images/dev.avif" class="card-img-top" alt="Team Member - Aye Chan" data-key-alt="teamMemberAyeChanAlt" style="height: 250px; object-fit: cover;">
+          <div class="card-body">
+            <h5 data-key="teamMemberAyeChanName" class="card-title">Aye Chan</h5>
+            <p data-key="teamMemberAyeChanRole" class="card-text text-muted">Frontend Developer</p>
           </div>
         </div>
-        <div class="col-md-3">
-          <div class="card border-0 shadow-sm">
-            <img src="assets/images/desginer.png" class="card-img-top" alt="Team Member" style="height: 250px; object-fit: cover;">
-            <div class="card-body">
-              <h5 class="card-title">Thazin Hlaing</h5>
-              <p class="card-text text-muted">UI/UX Designer</p>
-            </div>
-          </div>
-        </div>
-        <!-- Add more team members as needed -->
       </div>
-    </div>
-  </section>
+      <div class="col-md-3">
+        <div class="card border-0 shadow-sm">
+          <img src="assets/images/desginer.png" class="card-img-top" alt="Team Member - Thazin Hlaing" data-key-alt="teamMemberThazinHlaingAlt" style="height: 250px; object-fit: cover;">
+          <div class="card-body">
+            <h5 data-key="teamMemberThazinHlaingName" class="card-title">Thazin Hlaing</h5>
+            <p data-key="teamMemberThazinHlaingRole" class="card-text text-muted">UI/UX Designer</p>
+          </div>
+        </div>
+      </div>
+      </div>
+  </div>
+</section>
 
-  <!-- Footer -->
   <footer class="footer bg-dark text-white pt-5 pb-3 mt-5">
         <div class="container">
             <div class="row">
 
-            <!-- Brand/Logo Section -->
             <div class="col-md-4 mb-4">
                 <div class="d-flex align-items-center gap-2 mb-2">
                   <img src="assets/images/logo.jpg" alt="EventHive Logo" style="height: 40px; width: 40px; object-fit: cover; border-radius: 50%;">
                   <h4 class="text-warning mb-0">EventHive</h4>
               </div>
 
-                <p>Book your favorite events with ease. Concerts, expos, and more — all in one place.</p>
+                <p data-key="footerTagline">Book your favorite events with ease. Concerts, expos, and more — all in one place.</p>
             </div>
 
-            <!-- Quick Links -->
             <div class="col-md-4 mb-4">
-                <h5 class="text-warning">Quick Links</h5>
+                <h5 class="text-warning" data-key="footerQuickLinksTitle">Quick Links</h5>
                 <ul class="list-unstyled">
-                <li><a href="index.html" class="footer-link">Home</a></li>
-                <li><a href="events/events.html" class="footer-link">Events</a></li>
-                <li><a href="aboutus.html" class="footer-link">About Us</a></li>
-                <li><a href="contactus.html" class="footer-link">Contact</a></li>
-                <li><a href="faq.html" class="footer-link">FAQ</a></li>
+                <li><a href="index.html" class="footer-link" data-key="navHome">Home</a></li>
+                <li><a href="events/events.html" class="footer-link" data-key="navEvents">Events</a></li>
+                <li><a href="aboutus.html" class="footer-link" data-key="navAboutUs">About Us</a></li>
+                <li><a href="contactus.html" class="footer-link" data-key="navContact">Contact</a></li>
+                <li><a href="faq.html" class="footer-link" data-key="navFAQ">FAQ</a></li>
                 </ul>
             </div>
 
-            <!-- Contact & Social -->
             <div class="col-md-4 mb-4">
-                <h5 class="text-warning">Contact Us</h5>
-                <p>Email: <a href="mailto:support@eventbooking.com" class="footer-link">support@eventhive.com</a></p>
-                <p>Phone: +95 123 456 789</p>
+                <h5 class="text-warning" data-key="footerContactUsTitle">Contact Us</h5>
+                <p data-key="footerEmail">Email: <a href="mailto:support@eventbooking.com" class="footer-link">support@eventhive.com</a></p>
+                <p data-key="footerPhone">Phone: +95 123 456 789</p>
                 <div class="social-icons mt-3">
                 <a href="https://www.facebook.com/" class="me-3 footer-icon"><i class="bi bi-facebook"></i></a>
                 <a href="https://www.twitter.com/" class="me-3 footer-icon"><i class="bi bi-twitter"></i></a>
                 <a href="https://www.instagram.com/" class="me-3 footer-icon"><i class="bi bi-instagram"></i></a>
-                <!-- Language Switcher -->
                 <div class="dropdown d-inline-block">
                   <a class="footer-icon dropdown-toggle text-white" href="#" role="button" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="bi bi-globe"></i>
@@ -168,22 +156,19 @@
                 </div>
                 </div>
 
-          
 
             </div>
 
             </div>
             <hr class="border-secondary">
             <div class="text-center">
-            <p class="mb-0">&copy; 2025 EventHive. All rights reserved.</p>
+            <p class="mb-0" data-key="footerCopyright">&copy; 2025 EventHive. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- AOS JS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({
       });
@@ -205,25 +190,121 @@
       // Show welcome message
       const welcome = document.createElement("li");
       welcome.className = "nav-item d-flex align-items-center ms-lg-3 text-white fw-bold";
-      welcome.innerHTML = `<span>Welcome, ${storedUser.fullname.split(" ")[0]}</span>`;
+      // Use data-key for welcome message
+      welcome.innerHTML = `<span data-key="welcomeMessage">Welcome,</span> ${storedUser.fullname.split(" ")[0]}`;
       nav.appendChild(welcome);
 
-      // ✅ Create and append logout button
+      // Create and append logout button
       const logoutBtn = document.createElement("li");
       logoutBtn.className = "nav-item ms-2";
-      logoutBtn.innerHTML = `<button class="btn btn-danger btn-sm" id="logoutBtn">Logout</button>`;
+      logoutBtn.innerHTML = `<button class="btn btn-danger btn-sm" id="logoutBtn" data-key="navLogout">Logout</button>`;
       nav.appendChild(logoutBtn);
 
-      // ✅ Add click event to logout
+      // Add click event to logout
       document.getElementById("logoutBtn").addEventListener("click", () => {
         localStorage.removeItem("eventLoggedIn");
         localStorage.removeItem("eventUser");
-        window.location.href = "index.html"; // Or use: window.location.reload();
+        window.location.href = "index.html";
       });
     }
   }
 });
   </script>
   <script src="js/global.js"></script>
+  <script>
+    // **This 'translations' object needs to be MERGED into your existing `js/lag.js` file.**
+    // **Do NOT keep this <script> block in your HTML.**
+    const translations = {
+  en: {
+    // Existing About Us translations (already in your HTML)
+    aboutPageTitle: "About Us | EventHive", // Added this data-key to title tag
+    aboutPageSubtitle: "Your gateway to unforgettable experiences.",
+    aboutImageAlt: "About Us",
+    whoWeAreTitle: "Who We Are",
+    whoWeAreParagraph1: "EventBooking is your one-stop platform for discovering and booking events in Myanmar and beyond. From concerts and expos to business conferences and sports, we make event access easy and reliable.",
+    whoWeAreParagraph2: "We connect people with moments — bringing you closer to the music, ideas, and culture you love.",
+    whyChooseUsTitle: "Why Choose Us?",
+    whyChooseUs1: "Easy, secure ticket booking",
+    whyChooseUs2: "Curated event selection",
+    whyChooseUs3: "Wishlist & Cart features",
+    whyChooseUs4: "Friendly support team",
+    ourMissionTitle: "Our Mission",
+    ourMissionSubtitle: "To make event discovery, planning, and ticketing seamless and inspiring for everyone.",
+    meetOurTeamTitle: "Meet Our Team",
+    teamMemberAyeChanName: "Aye Chan",
+    teamMemberAyeChanRole: "Frontend Developer",
+    teamMemberAyeChanAlt: "Team Member - Aye Chan",
+    teamMemberThazinHlaingName: "Thazin Hlaing",
+    teamMemberThazinHlaingRole: "UI/UX Designer",
+    teamMemberThazinHlaingAlt: "Team Member - Thazin Hlaing",
+
+    // New Navbar Keys (consistent with index.html, events.html)
+    navHome: "Home",
+    navEvents: "Events",
+    navAboutUs: "About Us",
+    navWishlist: "Wishlist",
+    navContact: "Contact",
+    navFAQ: "FAQ",
+    navCart: "Cart",
+    navLogin: "Login",
+    navSignUp: "Sign Up",
+    navLogout: "Logout", // For dynamic logout button
+    welcomeMessage: "Welcome,", // For dynamic welcome message
+
+    // New Footer Keys (consistent with index.html, events.html)
+    footerTagline: "Book your favorite events with ease. Concerts, expos, and more — all in one place.",
+    footerQuickLinksTitle: "Quick Links",
+    footerContactUsTitle: "Contact Us",
+    footerEmail: "Email: support@eventhive.com", // Full text including email
+    footerPhone: "Phone: +95 123 456 789",
+    footerCopyright: "&copy; 2025 EventHive. All rights reserved.",
+  },
+  my: {
+    // Existing About Us translations
+    aboutPageTitle: "ကျွန်ုပ်တို့အကြောင်း | EventHive", // Added this data-key to title tag
+    aboutPageSubtitle: "မမေ့နိုင်သော အတွေ့အကြုံများဆီသို့ သင့်လမ်းကြောင်း။",
+    aboutImageAlt: "ကျွန်ုပ်တို့အကြောင်း",
+    whoWeAreTitle: "ကျွန်ုပ်တို့သည် မည်သူများလဲ",
+    whoWeAreParagraph1: "EventHive သည် မြန်မာနှင့် အခြားနိုင်ငံများရှိ ပွဲများကို ရှာဖွေပြီး လက်မှတ်ဝယ်ယူရန်အတွက် သင့်အတွက် တစ်နေရာတည်းတွင် အပြီးအစီး ဝန်ဆောင်မှုပေးသော ပလက်ဖောင်းဖြစ်သည်။ ဂီတဖျော်ဖြေပွဲများ၊ ပြပွဲများမှ စီးပွားရေးညီလာခံများနှင့် အားကစားပွဲများအထိ ပွဲများကို လွယ်ကူစိတ်ချစွာ ဝင်ရောက်နိုင်စေရန် ကျွန်ုပ်တို့ ဆောင်ရွက်ပေးပါသည်။",
+    whoWeAreParagraph2: "ကျွန်ုပ်တို့သည် လူများကို အမှတ်တရအခိုက်အတန့်များနှင့် ချိတ်ဆက်ပေးကာ သင်နှစ်သက်သော ဂီတ၊ အတွေးအမြင်နှင့် ယဉ်ကျေးမှုတို့နှင့် ပိုမိုနီးစပ်စေပါသည်။",
+    whyChooseUsTitle: "ဘာကြောင့် ကျွန်ုပ်တို့ကို ရွေးချယ်သလဲ?",
+    whyChooseUs1: "လွယ်ကူပြီး လုံခြုံသော လက်မှတ်ဝယ်ယူခြင်း",
+    whyChooseUs2: "ရွေးချယ်ထားသော ပွဲများ စုစည်းမှု",
+    whyChooseUs3: "စိတ်ကြိုက်စာရင်းနှင့် ဈေးဝယ်ခြင်းတောင်း လုပ်ဆောင်ချက်များ",
+    whyChooseUs4: "ဖော်ရွေသော ဝန်ဆောင်မှုအဖွဲ့",
+    ourMissionTitle: "ကျွန်ုပ်တို့၏ ရည်မှန်းချက်",
+    ourMissionSubtitle: "ပွဲရှာဖွေခြင်း၊ စီစဉ်ခြင်းနှင့် လက်မှတ်ဝယ်ယူခြင်းတို့ကို လူတိုင်းအတွက် ချောမွေ့လွယ်ကူပြီး စိတ်လှုံ့ဆော်မှုဖြစ်စေရန်။",
+    meetOurTeamTitle: "ကျွန်ုပ်တို့၏ အဖွဲ့ဝင်များ",
+    teamMemberAyeChanName: "အေးချမ်း",
+    teamMemberAyeChanRole: "ဖရန့်အင် (Frontend) ဒီဗယ်လော့ပါ",
+    teamMemberAyeChanAlt: "အဖွဲ့ဝင် - အေးချမ်း",
+    teamMemberThazinHlaingName: "သဇင်လှိုင်",
+    teamMemberThazinHlaingRole: "UI/UX ဒီဇိုင်နာ",
+    teamMemberThazinHlaingAlt: "အဖွဲ့ဝင် - သဇင်လှိုင်",
+
+    // New Navbar Keys
+    navHome: "ပင်မ",
+    navEvents: "ပွဲစဉ်များ",
+    navAboutUs: "ကျွန်ုပ်တို့အကြောင်း",
+    navWishlist: "စိတ်ကြိုက်ပွဲများ",
+    navContact: "ဆက်သွယ်ရန်",
+    navFAQ: "အမေးအဖြေများ",
+    navCart: "လှည်း",
+    navLogin: "ဝင်ရန်",
+    navSignUp: "စာရင်းသွင်းရန်",
+    navLogout: "ထွက်ရန်",
+    welcomeMessage: "ကြိုဆိုပါတယ်,",
+
+    // New Footer Keys
+    footerTagline: "သင်နှစ်သက်ရာပွဲများကို လွယ်ကူစွာ ကြိုတင်မှာယူပါ။ ဖျော်ဖြေပွဲများ၊ ပြပွဲများနှင့် အခြားအရာများ — အားလုံးကို တစ်နေရာတည်းတွင်။",
+    footerQuickLinksTitle: "အမြန်လင့်ခ်များ",
+    footerContactUsTitle: "ကျွန်ုပ်တို့ကို ဆက်သွယ်ပါ",
+    footerEmail: "အီးမေးလ်- support@eventhive.com",
+    footerPhone: "ဖုန်း- +၉၅ ၁၂၃ ၄၅၆ ၇၈၉",
+    footerCopyright: "© ၂၀၂၅ EventHive။ မူပိုင်ခွင့်များ ရရှိပြီး။",
+  }
+};
+  </script>
+  <script src="js/lag.js"></script>
 </body>
 </html>

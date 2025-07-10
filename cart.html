@@ -4,91 +4,77 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="assets/images/logo.jpg">
-  <title>Your Cart | EventHive</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title data-key="cartPageTitle">Your Cart | EventHive</title> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href="css/global.css" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Navbar -->
-   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
         <div class="container">
-            <!-- Brand / Logo -->
             <a class="navbar-brand fw-bold text-warning d-flex align-items-center gap-2" href="index.html">
               <img src="assets/images/logo.jpg" alt="EventHive Logo" style="height: 40px; width: 40px; object-fit: cover; border-radius: 50%;">
               <span>EventHive</span>
             </a>
 
 
-            <!-- Hamburger -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
             <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Nav Items -->
             <div class="collapse navbar-collapse" id="navbarMenu">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="events/events.html">Events</a></li>
-                <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="wishlist.html"><i class="bi bi-heart-fill"></i> Wishlist</a></li>
-                <li class="nav-item"><a class="nav-link" href="contactus.html">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html" data-key="navHome">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="events/events.html" data-key="navEvents">Events</a></li>
+                <li class="nav-item"><a class="nav-link" href="aboutus.html" data-key="navAboutUs">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="wishlist.html"><i class="bi bi-heart-fill"></i> <span data-key="navWishlist">Wishlist</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="contactus.html" data-key="navContact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="faq.html" data-key="navFAQ">FAQ</a></li>
                 <li class="nav-item"><a class="nav-link position-relative" href="cart.html">
-                <i class="bi bi-cart-fill"></i> Cart
-                <!-- Optional cart badge -->
+                <i class="bi bi-cart-fill"></i> <span data-key="navCart">Cart</span>
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">2</span>
                 </a></li>
-                <!-- Login & Sign Up CTA -->
                 <li class="nav-item ms-lg-3" id="authButtons">
-                    <a class="btn btn-outline-warning btn-sm me-2" href="login.html">Login</a>
-                    <a class="btn btn-warning btn-sm" href="signup.html">Sign Up</a>
+                    <a class="btn btn-outline-warning btn-sm me-2" href="login.html" data-key="navLogin">Login</a>
+                    <a class="btn btn-warning btn-sm" href="signup.html" data-key="navSignUp">Sign Up</a>
                 </li>
             </ul>
             </div>
         </div>
     </nav>
 
-  <!-- Page Header -->
-  <header class="bg-dark text-white text-center py-5">
+ <header class="bg-dark text-white text-center py-5">
     <div class="container">
-      <h1 class="display-5 fw-bold">Your Cart</h1>
-      <p class="lead">Review your tickets before checkout</p>
+      <h1 class="display-5 fw-bold" data-key="cartHeaderTitle">Your Cart</h1>
+      <p class="lead" data-key="cartHeaderSubtitle">Review your tickets before checkout</p>
     </div>
   </header>
 
-  <!-- Cart Section -->
   <section class="py-5" data-aos="fade-up" data-aos-delay="100">
-    <div class="container"  id="cartContent">
+    <div class="container" id="cartContent">
 
-      <!-- If cart is empty -->
-      <!--
-      <div class="text-center text-muted">
+      <div class="text-center text-muted" id="emptyCartMessage" style="display: none;">
         <i class="bi bi-cart fs-1"></i>
-        <p class="mt-3">Your cart is empty. Start booking events now!</p>
-        <a href="events/events.html" class="btn btn-warning">Browse Events</a>
+        <p class="mt-3" data-key="emptyCartText">Your cart is empty. Start booking events now!</p>
+        <a href="events/events.html" class="btn btn-warning" data-key="browseEventsBtn">Browse Events</a>
       </div>
-      -->
 
-      <!-- Cart Table -->
-      <div class="table-responsive">
+      <div class="table-responsive" id="cartTableContainer">
         <table class="table table-bordered align-middle text-center">
           <thead class="table-dark">
             <tr>
-              <th>Event</th>
-              <th>Date</th>
-              <th>Location</th>
-              <th>Ticket Type</th>
-              <th>Quantity</th>
-              <th>Price</th>
-              <th>Total</th>
-              <th>Remove</th>
+              <th data-key="tableHeaderEvent">Event</th>
+              <th data-key="tableHeaderDate">Date</th>
+              <th data-key="tableHeaderLocation">Location</th>
+              <th data-key="tableHeaderTicketType">Ticket Type</th>
+              <th data-key="tableHeaderQuantity">Quantity</th>
+              <th data-key="tableHeaderPrice">Price</th>
+              <th data-key="tableHeaderTotal">Total</th>
+              <th data-key="tableHeaderRemove">Remove</th>
             </tr>
           </thead>
           <tbody id="cartTableBody">
-            <!-- Cart Item 1 -->
             <tr>
               <td>Rock & Roll Night</td>
               <td>July 15, 2025</td>
@@ -102,7 +88,6 @@
               <td><button class="btn btn-sm btn-outline-danger"><i class="bi bi-x-lg"></i></button></td>
             </tr>
 
-            <!-- Cart Item 2 -->
             <tr>
               <td>Art Expo 2025</td>
               <td>July 20, 2025</td>
@@ -119,26 +104,25 @@
         </table>
       </div>
 
-      <!-- Cart Summary -->
-      <div class="row justify-content-end mt-4">
+      <div class="row justify-content-end mt-4" id="cartSummary">
         <div class="col-md-4">
           <div class="card shadow-sm">
             <div class="card-body">
-              <h5 class="card-title">Cart Summary</h5>
+              <h5 class="card-title" data-key="cartSummaryTitle">Cart Summary</h5>
               <hr>
               <p class="d-flex justify-content-between">
-                <span>Subtotal:</span>
-                <span>MMK 60,000</span>
+                <span data-key="cartSubtotalLabel">Subtotal:</span>
+                <span id="cartSubtotal">MMK 60,000</span>
               </p>
               <p class="d-flex justify-content-between">
-                <span>Service Fee:</span>
-                <span>MMK 2,000</span>
+                <span data-key="cartServiceFeeLabel">Service Fee:</span>
+                <span id="cartServiceFee">MMK 2,000</span>
               </p>
               <h5 class="d-flex justify-content-between mt-3">
-                <strong>Total:</strong>
-                <strong>MMK 62,000</strong>
+                <strong data-key="cartTotalLabel">Total:</strong>
+                <strong id="cartGrandTotal">MMK 62,000</strong>
               </h5>
-              <a href="checkout.html" class="btn btn-warning w-100 mt-3">Proceed to Checkout</a>
+              <a href="checkout.html" class="btn btn-warning w-100 mt-3" data-key="proceedToCheckoutBtn">Proceed to Checkout</a>
             </div>
           </div>
         </div>
@@ -146,44 +130,36 @@
 
     </div>
   </section>
-
-  <!-- Footer -->
   <footer class="footer bg-dark text-white pt-5 pb-3 mt-5">
         <div class="container">
             <div class="row">
 
-            <!-- Brand/Logo Section -->
             <div class="col-md-4 mb-4">
                 <div class="d-flex align-items-center gap-2 mb-2">
                   <img src="assets/images/logo.jpg" alt="EventHive Logo" style="height: 40px; width: 40px; object-fit: cover; border-radius: 50%;">
                   <h4 class="text-warning mb-0">EventHive</h4>
               </div>
 
-                <p>Book your favorite events with ease. Concerts, expos, and more — all in one place.</p>
+                <p data-key="footerTagline">Book your favorite events with ease. Concerts, expos, and more — all in one place.</p>
             </div>
 
-            <!-- Quick Links -->
             <div class="col-md-4 mb-4">
-                <h5 class="text-warning">Quick Links</h5>
+                <h5 class="text-warning" data-key="footerQuickLinksTitle">Quick Links</h5>
                 <ul class="list-unstyled">
-                <li><a href="index.html" class="footer-link">Home</a></li>
-                <li><a href="events/events.html" class="footer-link">Events</a></li>
-                <li><a href="aboutus.html" class="footer-link">About Us</a></li>
-                <li><a href="contactus.html" class="footer-link">Contact</a></li>
-                <li><a href="faq.html" class="footer-link">FAQ</a></li>
+                <li><a href="index.html" class="footer-link" data-key="navHome">Home</a></li>
+                <li><a href="events/events.html" class="footer-link" data-key="navEvents">Events</a></li>
+                <li><a href="aboutus.html" class="footer-link" data-key="navAboutUs">About Us</a></li>
+                <li><a href="contactus.html" class="footer-link" data-key="navContact">Contact</a></li>
+                <li><a href="faq.html" class="footer-link" data-key="navFAQ">FAQ</a></li>
                 </ul>
             </div>
 
-            <!-- Contact & Social -->
             <div class="col-md-4 mb-4">
-                <h5 class="text-warning">Contact Us</h5>
-                <p>Email: <a href="mailto:support@eventbooking.com" class="footer-link">support@eventhive.com</a></p>
-                <p>Phone: +95 123 456 789</p>
-                <div class="social-icons mt-3">
+                <h5 class="text-warning" data-key="footerContactUsTitle">Contact Us</h5>
+                <p><span data-key="footerEmail">Email: support@eventhive.com</span></p> <p><span data-key="footerPhone">Phone: +95 123 456 789</span></p> <div class="social-icons mt-3">
                 <a href="https://www.facebook.com/" class="me-3 footer-icon"><i class="bi bi-facebook"></i></a>
                 <a href="https://www.twitter.com/" class="me-3 footer-icon"><i class="bi bi-twitter"></i></a>
                 <a href="https://www.instagram.com/" class="me-3 footer-icon"><i class="bi bi-instagram"></i></a>
-                <!-- Language Switcher -->
                 <div class="dropdown d-inline-block">
                   <a class="footer-icon dropdown-toggle text-white" href="#" role="button" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="bi bi-globe"></i>
@@ -195,22 +171,19 @@
                 </div>
                 </div>
 
-          
 
             </div>
 
             </div>
             <hr class="border-secondary">
             <div class="text-center">
-            <p class="mb-0">&copy; 2025 EventHive. All rights reserved.</p>
+            <p class="mb-0" data-key="footerCopyright">&copy; 2025 EventHive. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- AOS JS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({
       });
@@ -238,39 +211,43 @@
         });
 
         // Update summary section
-        document.querySelector('.card-body span:nth-child(2)').textContent = `MMK ${subtotal.toLocaleString()}`;
-        document.querySelectorAll('.card-body span')[3].textContent = `MMK ${serviceFee.toLocaleString()}`;
-        document.querySelector('.card-body strong:last-child').textContent = `MMK ${(subtotal + serviceFee).toLocaleString()}`;
+        document.querySelector('#cartSubtotal').textContent = `MMK ${subtotal.toLocaleString()}`;
+        document.querySelector('#cartServiceFee').textContent = `MMK ${serviceFee.toLocaleString()}`;
+        document.querySelector('#cartGrandTotal').textContent = `MMK ${(subtotal + serviceFee).toLocaleString()}`;
+
+        // Show/hide cart content based on items
+        const cartContent = document.getElementById('cartContent');
+        const emptyCartMessage = document.getElementById('emptyCartMessage');
+        const cartTableContainer = document.getElementById('cartTableContainer');
+        const cartSummary = document.getElementById('cartSummary');
+
+        if (rows.length === 0) {
+            cartTableContainer.style.display = 'none';
+            cartSummary.style.display = 'none';
+            emptyCartMessage.style.display = 'block';
+        } else {
+            cartTableContainer.style.display = 'block';
+            cartSummary.style.display = 'flex'; // Use flex to maintain justify-content-end
+            emptyCartMessage.style.display = 'none';
+        }
     }
 
     // Attach change event to quantity inputs
     tableBody.addEventListener('input', function (e) {
         if (e.target.matches('input[type="number"]')) {
-        recalculateTotal();
+            recalculateTotal();
         }
     });
 
     // Attach click event to remove buttons
     tableBody.addEventListener('click', function (e) {
         if (e.target.closest('.btn-outline-danger')) {
-        e.target.closest('tr').remove();
-        recalculateTotal();
-
-        if (tableBody.querySelectorAll('tr').length === 0) {
-            const emptyHTML = `
-                <div class="text-center text-muted py-5">
-                    <i class="bi bi-cart fs-1"></i>
-                    <p class="mt-3">Your cart is empty. Start booking events now!</p>
-                    <a href="events/events.html" class="btn btn-warning">Browse Events</a>
-                </div>
-                `;
-                document.getElementById('cartContent').innerHTML = emptyHTML;
-
-            }
+            e.target.closest('tr').remove();
+            recalculateTotal(); // This will now also hide/show elements correctly
         }
     });
 
-    // Initial calculation
+    // Initial calculation and empty cart check
     recalculateTotal();
     });
 
@@ -290,16 +267,16 @@
       // Show welcome message
       const welcome = document.createElement("li");
       welcome.className = "nav-item d-flex align-items-center ms-lg-3 text-white fw-bold";
-      welcome.innerHTML = `<span>Welcome, ${storedUser.fullname.split(" ")[0]}</span>`;
+      welcome.innerHTML = `<span data-key="welcomeMessage">Welcome,</span> ${storedUser.fullname.split(" ")[0]}`;
       nav.appendChild(welcome);
 
-      // ✅ Create and append logout button
+      // Create and append logout button
       const logoutBtn = document.createElement("li");
       logoutBtn.className = "nav-item ms-2";
-      logoutBtn.innerHTML = `<button class="btn btn-danger btn-sm" id="logoutBtn">Logout</button>`;
+      logoutBtn.innerHTML = `<button class="btn btn-danger btn-sm" id="logoutBtn" data-key="navLogout">Logout</button>`;
       nav.appendChild(logoutBtn);
 
-      // ✅ Add click event to logout
+      // Add click event to logout
       document.getElementById("logoutBtn").addEventListener("click", () => {
         localStorage.removeItem("eventLoggedIn");
         localStorage.removeItem("eventUser");
@@ -310,6 +287,113 @@
 });
 </script>
 <script src="js/global.js"></script>
+<script>
+    // **This 'translations' object needs to be MERGED into your existing `js/lag.js` file.**
+    // **Do NOT keep this <script> block in your HTML.**
+    const translations = {
+  en: {
+    // Page Title
+    cartPageTitle: "Your Cart | EventHive",
+
+    // Navbar (consistent with other pages)
+    navHome: "Home",
+    navEvents: "Events",
+    navAboutUs: "About Us",
+    navWishlist: "Wishlist",
+    navContact: "Contact",
+    navFAQ: "FAQ",
+    navCart: "Cart",
+    navLogin: "Login",
+    navSignUp: "Sign Up",
+    navLogout: "Logout",
+    welcomeMessage: "Welcome,",
+
+    // Header
+    cartHeaderTitle: "Your Cart",
+    cartHeaderSubtitle: "Review your tickets before checkout",
+
+    // Cart Table Headers
+    tableHeaderEvent: "Event",
+    tableHeaderDate: "Date",
+    tableHeaderLocation: "Location",
+    tableHeaderTicketType: "Ticket Type",
+    tableHeaderQuantity: "Quantity",
+    tableHeaderPrice: "Price",
+    tableHeaderTotal: "Total",
+    tableHeaderRemove: "Remove",
+
+    // Cart Summary
+    cartSummaryTitle: "Cart Summary",
+    cartSubtotalLabel: "Subtotal:",
+    cartServiceFeeLabel: "Service Fee:",
+    cartTotalLabel: "Total:",
+    proceedToCheckoutBtn: "Proceed to Checkout",
+
+    // Empty Cart Message
+    emptyCartText: "Your cart is empty. Start booking events now!",
+    browseEventsBtn: "Browse Events",
+
+    // Footer (consistent with other pages)
+    footerTagline: "Book your favorite events with ease. Concerts, expos, and more — all in one place.",
+    footerQuickLinksTitle: "Quick Links",
+    footerContactUsTitle: "Contact Us",
+    footerEmail: "Email: support@eventhive.com",
+    footerPhone: "Phone: +95 123 456 789",
+    footerCopyright: "© 2025 EventHive. All rights reserved.",
+  },
+  my: {
+    // Page Title
+    cartPageTitle: "သင့်စျေးဝယ်ခြင်းတောင်း | EventHive",
+
+    // Navbar
+    navHome: "ပင်မ",
+    navEvents: "ပွဲစဉ်များ",
+    navAboutUs: "ကျွန်ုပ်တို့အကြောင်း",
+    navWishlist: "စိတ်ကြိုက်ပွဲများ",
+    navContact: "ဆက်သွယ်ရန်",
+    navFAQ: "အမေးအဖြေများ",
+    navCart: "လှည်း",
+    navLogin: "ဝင်ရန်",
+    navSignUp: "စာရင်းသွင်းရန်",
+    navLogout: "ထွက်ရန်",
+    welcomeMessage: "ကြိုဆိုပါတယ်,",
+
+    // Header
+    cartHeaderTitle: "သင့်စျေးဝယ်ခြင်းတောင်း",
+    cartHeaderSubtitle: "ငွေရှင်းခြင်းမပြုမီ သင်၏လက်မှတ်များကို ပြန်လည်စစ်ဆေးပါ",
+
+    // Cart Table Headers
+    tableHeaderEvent: "ပွဲစဉ်",
+    tableHeaderDate: "ရက်စွဲ",
+    tableHeaderLocation: "တည်နေရာ",
+    tableHeaderTicketType: "လက်မှတ်အမျိုးအစား",
+    tableHeaderQuantity: "အရေအတွက်",
+    tableHeaderPrice: "စျေးနှုန်း",
+    tableHeaderTotal: "စုစုပေါင်း",
+    tableHeaderRemove: "ဖယ်ရှားရန်",
+
+    // Cart Summary
+    cartSummaryTitle: "စျေးဝယ်ခြင်းတောင်း အကျဉ်းချုပ်",
+    cartSubtotalLabel: "စုစုပေါင်း:",
+    cartServiceFeeLabel: "ဝန်ဆောင်ခ:",
+    cartTotalLabel: "စုစုပေါင်း:",
+    proceedToCheckoutBtn: "ငွေရှင်းရန် ဆက်လက်ဆောင်ရွက်ပါ",
+
+    // Empty Cart Message
+    emptyCartText: "သင်၏စျေးဝယ်ခြင်းတောင်းသည် ဗလာဖြစ်နေပါသည်။ ယခုပဲပွဲများကို စတင်ဝယ်ယူလိုက်ပါ။",
+    browseEventsBtn: "ပွဲစဉ်များကို ရှာဖွေပါ",
+
+    // Footer
+    footerTagline: "သင်နှစ်သက်ရာပွဲများကို လွယ်ကူစွာ ကြိုတင်မှာယူပါ။ ဖျော်ဖြေပွဲများ၊ ပြပွဲများနှင့် အခြားအရာများ — အားလုံးကို တစ်နေရာတည်းတွင်။",
+    footerQuickLinksTitle: "အမြန်လင့်ခ်များ",
+    footerContactUsTitle: "ကျွန်ုပ်တို့ကို ဆက်သွယ်ပါ",
+    footerEmail: "အီးမေးလ်- support@eventhive.com",
+    footerPhone: "ဖုန်း- +၉၅ ၁၂၃ ၄၅၆ ၇၈၉",
+    footerCopyright: "© ၂၀၂၅ EventHive။ မူပိုင်ခွင့်များ ရရှိပြီး။",
+  }
+};
+</script>
+<script src="js/lag.js"></script>
 
 </body>
 </html>

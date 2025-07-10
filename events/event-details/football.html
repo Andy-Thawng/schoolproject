@@ -1,228 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="../../assets/images/logo.jpg">
-  <title>National League Final 2025 | EventHive</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link href="../../css/global.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../../assets/images/logo.jpg">
+    <title data-key="eventNationalLeagueFinalTitle">National League Final 2025 | EventHive</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="../../css/global.css" rel="stylesheet" />
 </head>
 <body>
 
-<!-- Navbar (Same as others) -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
-  <div class="container">
-    <a class="navbar-brand fw-bold text-warning d-flex align-items-center gap-2" href="../../index.html">
-      <img src="../../assets/images/logo.jpg" alt="EventHive Logo" style="height: 40px; width: 40px; object-fit: cover; border-radius: 50%;">
-      <span>EventHive</span>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarMenu">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="../events.html">Events</a></li>
-        <li class="nav-item"><a class="nav-link" href="../../aboutus.html">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="../../wishlist.html"><i class="bi bi-heart-fill"></i> Wishlist</a></li>
-        <li class="nav-item"><a class="nav-link" href="../../contactus.html">Contact</a></li>
-        <li class="nav-item"><a class="nav-link" href="../../faq.html">FAQ</a></li>
-        <li class="nav-item"><a class="nav-link position-relative" href="../../cart.html">
-          <i class="bi bi-cart-fill"></i> Cart
-          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">2</span>
-        </a></li>
-        <li class="nav-item ms-lg-3" id="authButtons">
-          <a class="btn btn-outline-warning btn-sm me-2" href="../../login.html">Login</a>
-          <a class="btn btn-warning btn-sm" href="../../signup.html">Sign Up</a>
-        </li>
-      </ul>
+    <div class="container">
+        <a class="navbar-brand fw-bold text-warning d-flex align-items-center gap-2" href="../../index.html">
+            <img src="../../assets/images/logo.jpg" alt="EventHive Logo" style="height: 40px; width: 40px; object-fit: cover; border-radius: 50%;">
+            <span>EventHive</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="../../index.html" data-key="navHome">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="../events.html" data-key="navEvents">Events</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../aboutus.html" data-key="navAboutUs">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../wishlist.html"><i class="bi bi-heart-fill"></i> <span data-key="navWishlist">Wishlist</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="../../contactus.html" data-key="navContact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../faq.html" data-key="navFAQ">FAQ</a></li>
+                <li class="nav-item"><a class="nav-link position-relative" href="../../cart.html">
+                    <i class="bi bi-cart-fill"></i> <span data-key="navCart">Cart</span>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark" data-key="cartItemCount">2</span>
+                </a></li>
+                <li class="nav-item ms-lg-3" id="authButtons">
+                    <a class="btn btn-outline-warning btn-sm me-2" href="../../login.html" data-key="navLogin">Login</a>
+                    <a class="btn btn-warning btn-sm" href="../../signup.html" data-key="navSignUp">Sign Up</a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
 </nav>
 
-<!-- Hero Section -->
 <section class="bg-dark text-white text-center py-5" style="background: url('../../assets/images/football.jpg') no-repeat center center / cover;">
-  <div class="container py-5 bg-dark bg-opacity-75 rounded">
-    <h1 class="display-4 fw-bold">National League Final 2025</h1>
-    <p class="lead">August 10, 2025 | Riyadh, Saudi Arabia </p>
-    <p class="small"><i class="bi bi-clock"></i> Kick-off at 6:00 PM</p>
-  </div>
+    <div class="container py-5 bg-dark bg-opacity-75 rounded">
+        <h1 class="display-4 fw-bold" data-key="eventNationalLeagueFinalHeading">National League Final 2025</h1>
+        <p class="lead" data-key="eventNationalLeagueFinalDateLocation">August 10, 2025 | Riyadh, Saudi Arabia </p>
+        <p class="small"><i class="bi bi-clock"></i> <span data-key="eventNationalLeagueFinalKickoff">Kick-off at 6:00 PM</span></p>
+    </div>
 </section>
 
-<!-- Event Details -->
 <section class="py-5" data-aos="fade-up" data-aos-delay="100">
-  <div class="container">
-    <div class="row g-5">
-      <div class="col-md-8">
-        <h3>About the Match</h3>
-        <p>
-          Get ready for the biggest football clash of the year as two top-tier teams go head-to-head in the
-          **National League Final 2025**! Expect roaring crowds, heart-pounding action, and unforgettable moments.
-        </p>
-        <p>
-          Whether you're a die-hard supporter or just love the thrill of a live match, this is an event you don't want to miss.
-        </p>
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-md-8">
+                <h3 data-key="aboutMatchHeading">About the Match</h3>
+                <p data-key="aboutMatchPara1">
+                    Get ready for the biggest football clash of the year as two top-tier teams go head-to-head in the
+                    <strong data-key="aboutMatchHighlight">National League Final 2025</strong>! Expect roaring crowds, heart-pounding action, and unforgettable moments.
+                </p>
+                <p data-key="aboutMatchPara2">
+                    Whether you're a die-hard supporter or just love the thrill of a live match, this is an event you don't want to miss.
+                </p>
 
-        <h4 class="mt-4">Location</h4>
-        <p><i class="bi bi-geo-alt-fill text-warning"></i> Thuwunna Stadium, Yangon, Myanmar</p>
+                <h4 class="mt-4" data-key="locationHeading">Location</h4>
+                <p><i class="bi bi-geo-alt-fill text-warning"></i> <span data-key="locationDetails">Thuwunna Stadium, Yangon, Myanmar</span></p>
 
-        <h4 class="mt-4">Schedule</h4>
-        <ul>
-          <li>4:30 PM - Gates Open</li>
-          <li>5:45 PM - Team Warm-up</li>
-          <li>6:00 PM - Match Kick-off</li>
-          <li>8:00 PM - Trophy Ceremony</li>
-        </ul>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">Tickets</h5>
-            <ul class="list-group list-group-flush mb-3">
-              <li class="list-group-item d-flex justify-content-between">
-                <span>General Admission</span>
-                <strong>MMK 7,000</strong>
-              </li>
-              <li class="list-group-item d-flex justify-content-between">
-                <span>VIP Zone</span>
-                <strong>MMK 20,000</strong>
-              </li>
-            </ul>
-            <div class="mb-3">
-              <label for="ticketType" class="form-label">Select Ticket Type</label>
-              <select id="ticketType" class="form-select">
-                <option>General Admission</option>
-                <option>VIP Zone</option>
-              </select>
+                <h4 class="mt-4" data-key="scheduleHeading">Schedule</h4>
+                <ul>
+                    <li><span data-key="scheduleGatesOpen">4:30 PM - Gates Open</span></li>
+                    <li><span data-key="scheduleTeamWarmup">5:45 PM - Team Warm-up</span></li>
+                    <li><span data-key="scheduleKickoff">6:00 PM - Match Kick-off</span></li>
+                    <li><span data-key="scheduleTrophyCeremony">8:00 PM - Trophy Ceremony</span></li>
+                </ul>
             </div>
-            <div class="mb-3">
-              <label for="quantity" class="form-label">Quantity</label>
-              <input type="number" class="form-control" id="quantity" value="1" min="1" />
+
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title" data-key="ticketsHeading">Tickets</h5>
+                        <ul class="list-group list-group-flush mb-3">
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span data-key="ticketGeneralAdmission">General Admission</span>
+                                <strong>MMK 7,000</strong>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span data-key="ticketVIPZone">VIP Zone</span>
+                                <strong>MMK 20,000</strong>
+                            </li>
+                        </ul>
+                        <div class="mb-3">
+                            <label for="ticketType" class="form-label" data-key="selectTicketTypeLabel">Select Ticket Type</label>
+                            <select id="ticketType" class="form-select">
+                                <option data-key="optionGeneralAdmission">General Admission</option>
+                                <option data-key="optionVIPZone">VIP Zone</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="quantity" class="form-label" data-key="quantityLabel">Quantity</label>
+                            <input type="number" class="form-control" id="quantity" value="1" min="1" />
+                        </div>
+                        <button class="btn btn-warning w-100" data-key="addToCartButton">Add to Cart</button>
+                        <p class="text-center text-muted mt-2 small"><span data-key="orText">Or</span> <a href="../../cart.html" data-key="goToCartLink">go to cart</a> <span data-key="toCompleteBookingText">to complete booking</span></p>
+                    </div>
+                </div>
             </div>
-            <button class="btn btn-warning w-100">Add to Cart</button>
-            <p class="text-center text-muted mt-2 small">Or <a href="../../cart.html">go to cart</a> to complete booking</p>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
 </section>
 
-<!-- Footer (Same as others) -->
 <footer class="footer bg-dark text-white pt-5 pb-3 mt-5">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 mb-4">
-        <div class="d-flex align-items-center gap-2 mb-2">
-          <img src="../../assets/images/logo.jpg" alt="EventHive Logo" style="height: 40px; width: 40px; object-fit: cover; border-radius: 50%;">
-          <h4 class="text-warning mb-0">EventHive</h4>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                    <img src="../../assets/images/logo.jpg" alt="EventHive Logo" style="height: 40px; width: 40px; object-fit: cover; border-radius: 50%;">
+                    <h4 class="text-warning mb-0">EventHive</h4>
+                </div>
+                <p data-key="footerTagline">Book your favorite events with ease. Concerts, expos, and more — all in one place.</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h5 class="text-warning" data-key="footerQuickLinksTitle">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="../../index.html" class="footer-link" data-key="navHome">Home</a></li>
+                    <li><a href="../events.html" class="footer-link" data-key="navEvents">Events</a></li>
+                    <li><a href="../../aboutus.html" class="footer-link" data-key="navAboutUs">About Us</a></li>
+                    <li><a href="../../contactus.html" class="footer-link" data-key="navContact">Contact</a></li>
+                    <li><a href="../../faq.html" class="footer-link" data-key="navFAQ">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h5 class="text-warning" data-key="footerContactUsTitle">Contact Us</h5>
+                <p><span data-key="footerEmailPrefix">Email:</span> <a href="mailto:support@eventhive.com" class="footer-link">support@eventhive.com</a></p>
+                <p><span data-key="footerPhonePrefix">Phone:</span> +95 123 456 789</p>
+                <div class="social-icons mt-3">
+                    <a href="https://www.facebook.com/" class="me-3 footer-icon"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.twitter.com/" class="me-3 footer-icon"><i class="bi bi-twitter"></i></a>
+                    <a href="https://www.instagram.com/" class="me-3 footer-icon"><i class="bi bi-instagram"></i></a>
+                    <div class="dropdown d-inline-block">
+                        <a class="footer-icon dropdown-toggle text-white" href="#" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-globe"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="#" onclick="changeLang('en')">English</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="changeLang('my')">မြန်မာ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-        <p>Book your favorite events with ease. Concerts, expos, and more — all in one place.</p>
-      </div>
-      <div class="col-md-4 mb-4">
-        <h5 class="text-warning">Quick Links</h5>
-        <ul class="list-unstyled">
-          <li><a href="../../index.html" class="footer-link">Home</a></li>
-          <li><a href="../events.html" class="footer-link">Events</a></li>
-          <li><a href="../../aboutus.html" class="footer-link">About Us</a></li>
-          <li><a href="../../contactus.html" class="footer-link">Contact</a></li>
-          <li><a href="../../faq.html" class="footer-link">FAQ</a></li>
-        </ul>
-      </div>
-      <div class="col-md-4 mb-4">
-        <h5 class="text-warning">Contact Us</h5>
-        <p>Email: <a href="mailto:support@eventhive.com" class="footer-link">support@eventhive.com</a></p>
-        <p>Phone: +95 123 456 789</p>
-        <div class="social-icons mt-3">
-          <a href="https://www.facebook.com/" class="me-3 footer-icon"><i class="bi bi-facebook"></i></a>
-          <a href="https://www.twitter.com/" class="me-3 footer-icon"><i class="bi bi-twitter"></i></a>
-          <a href="https://www.instagram.com/" class="me-3 footer-icon"><i class="bi bi-instagram"></i></a>
-          <div class="dropdown d-inline-block">
-            <a class="footer-icon dropdown-toggle text-white" href="#" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="bi bi-globe"></i>
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item" href="#" onclick="changeLang('en')">English</a></li>
-              <li><a class="dropdown-item" href="#" onclick="changeLang('my')">မြန်မာ</a></li>
-            </ul>
-          </div>
+        <hr class="border-secondary">
+        <div class="text-center">
+            <p class="mb-0" data-key="footerCopyright">&copy; 2025 EventHive. All rights reserved.</p>
         </div>
-      </div>
     </div>
-    <hr class="border-secondary">
-    <div class="text-center">
-      <p class="mb-0">&copy; 2025 EventHive. All rights reserved.</p>
-    </div>
-  </div>
 </footer>
 
-<!-- Cart Modal -->
 <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content border-0 shadow">
-      <div class="modal-header bg-success text-white">
-        <h5 class="modal-title" id="cartModalLabel">Added to Cart</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body text-center">
-        ⚽ <strong>National League Final 2025</strong> ticket(s) added to your cart!
-      </div>
-      <div class="modal-footer justify-content-center">
-        <a href="../../cart.html" class="btn btn-warning">Go to Cart</a>
-        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Continue Browsing</button>
-      </div>
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title" id="cartModalLabel" data-key="modalAddedToCartTitle">Added to Cart</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                ⚽ <strong data-key="modalTicketAddedMessage">National League Final 2025</strong> <span data-key="modalTicketAddedSuffix">ticket(s) added to your cart!</span>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <a href="../../cart.html" class="btn btn-warning" data-key="modalGoToCartBtn">Go to Cart</a>
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal" data-key="modalContinueBrowseBtn">Continue Browse</button>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
-<!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  AOS.init();
+    AOS.init();
 </script>
 <script>
-  const addToCartBtn = document.querySelector('.btn.btn-warning.w-100');
-  const cartModal = new bootstrap.Modal(document.getElementById('cartModal'));
+    const addToCartBtn = document.querySelector('.btn.btn-warning.w-100');
+    const cartModal = new bootstrap.Modal(document.getElementById('cartModal'));
 
-  addToCartBtn.addEventListener('click', function (e) {
-    e.preventDefault();
-    cartModal.show();
-  });
+    addToCartBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        cartModal.show();
+    });
 
-  window.addEventListener("DOMContentLoaded", () => {
-    const isLoggedIn = localStorage.getItem("eventLoggedIn");
-    if (isLoggedIn === "true") {
-      const authSection = document.getElementById("authButtons");
-      if (authSection) authSection.style.display = "none";
+    window.addEventListener("DOMContentLoaded", () => {
+        const isLoggedIn = localStorage.getItem("eventLoggedIn");
+        if (isLoggedIn === "true") {
+            const authSection = document.getElementById("authButtons");
+            if (authSection) authSection.style.display = "none";
 
-      const nav = document.querySelector(".navbar-nav");
-      if (nav) {
-        const storedUser = JSON.parse(localStorage.getItem("eventUser"));
-        const welcome = document.createElement("li");
-        welcome.className = "nav-item d-flex align-items-center ms-lg-3 text-white fw-bold";
-        welcome.innerHTML = `<span>Welcome, ${storedUser.fullname.split(" ")[0]}</span>`;
-        nav.appendChild(welcome);
+            const nav = document.querySelector(".navbar-nav");
+            if (nav) {
+                const storedUser = JSON.parse(localStorage.getItem("eventUser"));
+                const welcome = document.createElement("li");
+                welcome.className = "nav-item d-flex align-items-center ms-lg-3 text-white fw-bold";
+                // Using data-key for welcome message part for translation
+                welcome.innerHTML = `<span data-key="welcomeMessage">Welcome,</span> ${storedUser.fullname.split(" ")[0]}`;
+                nav.appendChild(welcome);
 
-        const logoutBtn = document.createElement("li");
-        logoutBtn.className = "nav-item ms-2";
-        logoutBtn.innerHTML = `<button class="btn btn-danger btn-sm" id="logoutBtn">Logout</button>`;
-        nav.appendChild(logoutBtn);
+                const logoutBtn = document.createElement("li");
+                logoutBtn.className = "nav-item ms-2";
+                // Using data-key for logout button text
+                logoutBtn.innerHTML = `<button class="btn btn-danger btn-sm" id="logoutBtn" data-key="navLogout">Logout</button>`;
+                nav.appendChild(logoutBtn);
 
-        document.getElementById("logoutBtn").addEventListener("click", () => {
-          localStorage.removeItem("eventLoggedIn");
-          localStorage.removeItem("eventUser");
-          window.location.href = "index.html";
-        });
-      }
-    }
-  });
+                document.getElementById("logoutBtn").addEventListener("click", () => {
+                    localStorage.removeItem("eventLoggedIn");
+                    localStorage.removeItem("eventUser");
+                    window.location.href = "../../index.html"; // Adjusted path for consistency
+                });
+            }
+        }
+    });
 </script>
 <script src="../../js/global.js"></script>
+<script src="../../js/lag.js"></script>
+<script>
+    // This is the content for your js/lag.js file
+const translations = {
+    en: {
+        // --- Global / Navbar Translations ---
+        navHome: "Home",
+        navEvents: "Events",
+        navAboutUs: "About Us",
+        navWishlist: "Wishlist",
+        navContact: "Contact",
+        navFAQ: "FAQ",
+        navCart: "Cart",
+        cartItemCount: "2", // This might be dynamically updated by other JS, but provides a default translatable value
+        navLogin: "Login",
+        navSignUp: "Sign Up",
+        navLogout: "Logout",
+        welcomeMessage: "Welcome,", // Part of the dynamic welcome message
+
+        // --- Global / Footer Translations ---
+        footerTagline: "Book your favorite events with ease. Concerts, expos, and more — all in one place.",
+        footerQuickLinksTitle: "Quick Links",
+        footerContactUsTitle: "Contact Us",
+        footerEmailPrefix: "Email:",
+        footerPhonePrefix: "Phone:",
+        footerCopyright: "&copy; 2025 EventHive. All rights reserved.",
+
+        // --- National League Final 2025 Page Specific Translations ---
+        eventNationalLeagueFinalTitle: "National League Final 2025 | EventHive",
+        eventNationalLeagueFinalHeading: "National League Final 2025",
+        eventNationalLeagueFinalDateLocation: "August 10, 2025 | Riyadh, Saudi Arabia",
+        eventNationalLeagueFinalKickoff: "Kick-off at 6:00 PM",
+        aboutMatchHeading: "About the Match",
+        aboutMatchPara1: "Get ready for the biggest football clash of the year as two top-tier teams go head-to-head in the National League Final 2025! Expect roaring crowds, heart-pounding action, and unforgettable moments.",
+        aboutMatchHighlight: "National League Final 2025", // For the strong tag
+        aboutMatchPara2: "Whether you're a die-hard supporter or just love the thrill of a live match, this is an event you don't want to miss.",
+        locationHeading: "Location",
+        locationDetails: "Thuwunna Stadium, Yangon, Myanmar",
+        scheduleHeading: "Schedule",
+        scheduleGatesOpen: "4:30 PM - Gates Open",
+        scheduleTeamWarmup: "5:45 PM - Team Warm-up",
+        scheduleKickoff: "6:00 PM - Match Kick-off",
+        scheduleTrophyCeremony: "8:00 PM - Trophy Ceremony",
+        ticketsHeading: "Tickets",
+        ticketGeneralAdmission: "General Admission",
+        ticketVIPZone: "VIP Zone",
+        selectTicketTypeLabel: "Select Ticket Type",
+        optionGeneralAdmission: "General Admission",
+        optionVIPZone: "VIP Zone",
+        quantityLabel: "Quantity",
+        addToCartButton: "Add to Cart",
+        orText: "Or",
+        goToCartLink: "go to cart",
+        toCompleteBookingText: "to complete booking",
+        modalAddedToCartTitle: "Added to Cart",
+        modalTicketAddedMessage: "National League Final 2025", // The event name itself
+        modalTicketAddedSuffix: "ticket(s) added to your cart!",
+        modalGoToCartBtn: "Go to Cart",
+        modalContinueBrowseBtn: "Continue Browse",
+
+        // --- Add other page-specific translations here if you have them, e.g., for FutureTech ---
+        // eventFutureTechTitle: "FutureTech 2025 | EventHive",
+        // ...
+    },
+    my: {
+        // --- Global / Navbar Translations ---
+        navHome: "ပင်မ",
+        navEvents: "ပွဲစဉ်များ",
+        navAboutUs: "ကျွန်ုပ်တို့အကြောင်း",
+        navWishlist: "စိတ်ကြိုက်ပွဲများ",
+        navContact: "ဆက်သွယ်ရန်",
+        navFAQ: "အမေးအဖြေများ",
+        navCart: "လှည်း",
+        // cartItemCount: "၂",
+        navLogin: "ဝင်ရန်",
+        navSignUp: "စာရင်းသွင်းရန်",
+        navLogout: "ထွက်ရန်",
+        welcomeMessage: "ကြိုဆိုပါတယ်,",
+
+        // --- Global / Footer Translations ---
+        footerTagline: "သင်နှစ်သက်ရာပွဲများကို လွယ်ကူစွာ ကြိုတင်မှာယူပါ။ ဖျော်ဖြေပွဲများ၊ ပြပွဲများနှင့် အခြားအရာများ — အားလုံးကို တစ်နေရာတည်းတွင်။",
+        footerQuickLinksTitle: "အမြန်လင့်ခ်များ",
+        footerContactUsTitle: "ကျွန်ုပ်တို့ကို ဆက်သွယ်ပါ",
+        footerEmailPrefix: "အီးမေးလ်:",
+        footerPhonePrefix: "ဖုန်း:",
+        footerCopyright: "© ၂၀၂၅ EventHive။ မူပိုင်ခွင့်များ ရရှိပြီး။",
+
+        // --- National League Final 2025 Page Specific Translations ---
+        eventNationalLeagueFinalTitle: "အမျိုးသားလိဂ်ဖိုင်နယ် ၂၀၂၅ | EventHive",
+        eventNationalLeagueFinalHeading: "အမျိုးသားလိဂ်ဖိုင်နယ် ၂၀၂၅",
+        eventNationalLeagueFinalDateLocation: "ဩဂုတ် ၁၀၊ ၂၀၂၅ | ရီယတ်၊ ဆော်ဒီအာရေဗျ",
+        eventNationalLeagueFinalKickoff: "ညနေ ၆:၀၀ နာရီတွင် စတင်သည်",
+        aboutMatchHeading: "ပွဲစဉ်အကြောင်း",
+        aboutMatchPara1: "တစ်နှစ်တာ၏ အကြီးမားဆုံး ဘောလုံးပွဲအတွက် ပြင်ဆင်ထားပါ။ ထိပ်တန်းအသင်းနှစ်သင်းသည် **အမျိုးသားလိဂ်ဖိုင်နယ် ၂၀၂၅** တွင် ထိပ်တိုက်ရင်ဆိုင်ကြမည်ဖြစ်သည်။ ပရိသတ်တို့၏ ဟစ်ကြွေးသံများ၊ ရင်ခုန်စိတ်လှုပ်ရှားဖွယ် လုပ်ဆောင်မှုများနှင့် မမေ့နိုင်စရာ အခိုက်အတန့်များကို မျှော်လင့်နိုင်ပါသည်။",
+        aboutMatchHighlight: "အမျိုးသားလိဂ်ဖိုင်နယ် ၂၀၂၅",
+        aboutMatchPara2: "သင်သည် အမာခံပရိသတ်ဖြစ်စေ၊ တိုက်ရိုက်ပွဲ၏ စိတ်လှုပ်ရှားမှုကို နှစ်သက်သူဖြစ်စေ ဤပွဲကို လုံးဝလက်လွတ်မခံသင့်ပါ။",
+        locationHeading: "တည်နေရာ",
+        locationDetails: "ရီယတ်၊ ဆော်ဒီအာရေဗျ",
+        scheduleHeading: "အချိန်ဇယား",
+        scheduleGatesOpen: "ညနေ ၄:၃၀ - ဂိတ်များဖွင့်သည်",
+        scheduleTeamWarmup: "ညနေ ၅:၄၅ - အသင်းများ လေ့ကျင့်ခန်းလုပ်သည်",
+        scheduleKickoff: "ညနေ ၆:၀၀ - ပွဲစတင်သည်",
+        scheduleTrophyCeremony: "ည ၈:၀၀ - ဆုပေးပွဲ",
+        ticketsHeading: "လက်မှတ်များ",
+        ticketGeneralAdmission: "အထွေထွေဝင်ခွင့်",
+        ticketVIPZone: "VIP ဇုန်",
+        selectTicketTypeLabel: "လက်မှတ်အမျိုးအစား ရွေးပါ",
+        optionGeneralAdmission: "အထွေထွေဝင်ခွင့်",
+        optionVIPZone: "VIP ဇုန်",
+        quantityLabel: "အရေအတွက်",
+        addToCartButton: "လှည်းထဲထည့်ပါ",
+        orText: "သို့မဟုတ်",
+        goToCartLink: "လှည်းသို့သွားပါ",
+        toCompleteBookingText: "မှာယူမှုပြီးမြောက်ရန်",
+        modalAddedToCartTitle: "လှည်းထဲသို့ ထည့်ပြီးပါပြီ",
+        modalTicketAddedMessage: "အမျိုးသားလိဂ်ဖိုင်နယ် ၂၀၂၅",
+        modalTicketAddedSuffix: "လက်မှတ်(များ) ကို လှည်းထဲသို့ ထည့်ပြီးပါပြီ။",
+        modalGoToCartBtn: "လှည်းသို့သွားပါ",
+        modalContinueBrowseBtn: "ဆက်လက်ကြည့်ရှုပါ",
+    }
+};
+</script>
 
 </body>
 </html>

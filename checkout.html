@@ -53,124 +53,115 @@
   <!-- Header -->
   <header class="bg-dark text-white text-center py-5">
     <div class="container">
-      <h1 class="display-5 fw-bold">Checkout</h1>
-      <p class="lead">Review and complete your ticket booking</p>
+      <h1 class="display-5 fw-bold" data-key="checkoutHeaderTitle">Checkout</h1>
+      <p class="lead" data-key="checkoutHeaderSubtitle">Review and complete your ticket booking</p>
     </div>
   </header>
 
-    <!-- Checkout Section -->
-
     <form action="thankyou.html" method="GET">
-
         <section class="py-5">
             <div class="container">
             <div class="row g-5">
-                <!-- Billing Form -->
                 <div class="col-md-7">
-                <h4 class="mb-3">Billing Information</h4>
+                <h4 class="mb-3" data-key="billingInfoTitle">Billing Information</h4>
                     <div class="row">
                     <div class="col-sm-6 mb-3">
-                        <label for="firstName" class="form-label">First name</label>
+                        <label for="firstName" class="form-label" data-key="firstNameLabel">First name</label>
                         <input type="text" class="form-control" id="firstName" placeholder="John" required>
                     </div>
                     <div class="col-sm-6 mb-3">
-                        <label for="lastName" class="form-label">Last name</label>
+                        <label for="lastName" class="form-label" data-key="lastNameLabel">Last name</label>
                         <input type="text" class="form-control" id="lastName" placeholder="Doe" required>
                     </div>
                     </div>
 
                     <div class="mb-3">
-                    <label for="email" class="form-label">Email address</label>
+                    <label for="email" class="form-label" data-key="emailLabel">Email address</label>
                     <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
                     </div>
 
                     <div class="mb-3">
-                    <label for="address" class="form-label">Address</label>
+                    <label for="address" class="form-label" data-key="addressLabel">Address</label>
                     <input type="text" class="form-control" id="address" placeholder="123 Main Street" required>
                     </div>
 
                     <hr class="my-4">
 
-                    <h4 class="mb-3">Payment Method</h4>
+                    <h4 class="mb-3" data-key="paymentMethodTitle">Payment Method</h4>
 
                     <div class="form-check mb-2">
                         <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required onclick="togglePayment('credit')">
-                        <label class="form-check-label" for="credit">Credit/Debit Card</label>
+                        <label class="form-check-label" for="credit" data-key="creditCardLabel">Credit/Debit Card</label>
                     </div>
                     <div class="form-check mb-2">
                         <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required onclick="togglePayment('paypal')">
-                        <label class="form-check-label" for="paypal">PayPal</label>
+                        <label class="form-check-label" for="paypal" data-key="paypalLabel">PayPal</label>
                     </div>
                     <div class="form-check mb-3">
                         <input id="kpay" name="paymentMethod" type="radio" class="form-check-input" required onclick="togglePayment('kpay')">
-                        <label class="form-check-label" for="kpay">KPay</label>
+                        <label class="form-check-label" for="kpay" data-key="kpayLabel">KPay</label>
                     </div>
-
 
                     <div id="creditSection">
                         <div class="row gy-3 mt-3">
                             <div class="col-md-6">
-                                <label for="cc-name" class="form-label">Name on card</label>
+                                <label for="cc-name" class="form-label" data-key="nameOnCardLabel">Name on card</label>
                                 <input type="text" class="form-control" id="cc-name" required>
                             </div>
 
                             <div class="col-md-6">
-                                <label for="cc-number" class="form-label">Card number</label>
+                                <label for="cc-number" class="form-label" data-key="cardNumberLabel">Card number</label>
                                 <input type="text" class="form-control" id="cc-number" required>
                             </div>
 
                             <div class="col-md-3">
-                                <label for="cc-expiration" class="form-label">Expiry</label>
+                                <label for="cc-expiration" class="form-label" data-key="expirationLabel">Expiry</label>
                                 <input type="text" class="form-control" id="cc-expiration" placeholder="MM/YY" required>
                             </div>
 
                             <div class="col-md-3">
-                                <label for="cc-cvv" class="form-label">CVV</label>
+                                <label for="cc-cvv" class="form-label" data-key="cvvLabel">CVV</label>
                                 <input type="text" class="form-control" id="cc-cvv" placeholder="123" required>
                             </div>
                         </div>
                     </div>
 
-
-                    <!-- KPay QR Code Section -->
                     <div id="kpayQR" class="mt-4 d-none">
-                    <label class="form-label">Scan with KBZPay App:</label>
-                    <div class="border rounded p-3 text-center bg-light">
-                        <img src="assets/images/kpay.webp" alt="KPay QR" class="img-fluid" style="max-width: 250px;" />
-                        <p class="small mt-2 text-muted">Open your KBZPay app and scan this QR to pay.</p>
-                    </div>
+                        <label class="form-label" data-key="kpayScanLabel">Scan with KBZPay App:</label>
+                        <div class="border rounded p-3 text-center bg-light">
+                            <img src="assets/images/kpay.webp" alt="KPay QR" class="img-fluid" style="max-width: 250px;" />
+                            <p class="small mt-2 text-muted" data-key="kpayScanInstructions">Open your KBZPay app and scan this QR to pay.</p>
+                        </div>
                     </div>
 
                     <hr class="my-4">
 
-                    <button class="btn btn-warning w-100" type="submit">Place Order</button>
-                
+                    <button class="btn btn-warning w-100" type="submit" data-key="placeOrderBtn">Place Order</button>
                 </div>
 
-                <!-- Order Summary -->
                 <div class="col-md-5">
-                <h4 class="mb-3">Order Summary</h4>
+                <h4 class="mb-3" data-key="orderSummaryTitle">Order Summary</h4>
                 <ul class="list-group mb-3">
                     <li class="list-group-item d-flex justify-content-between lh-sm">
                     <div>
-                        <h6 class="my-0">Rock & Roll Night (VIP)</h6>
-                        <small class="text-muted">2 Tickets</small>
+                        <h6 class="my-0" data-key="rockRollNight">(VIP) Rock & Roll Night</h6>
+                        <small class="text-muted" data-key="rockRollNightTickets">2 Tickets</small>
                     </div>
                     <span class="text-muted">MMK 50,000</span>
                     </li>
                     <li class="list-group-item d-flex justify-content-between lh-sm">
                     <div>
-                        <h6 class="my-0">Art Expo (General)</h6>
-                        <small class="text-muted">1 Ticket</small>
+                        <h6 class="my-0" data-key="artExpo">(General) Art Expo 2025</h6>
+                        <small class="text-muted" data-key="artExpoTickets">1 Ticket</small>
                     </div>
                     <span class="text-muted">MMK 10,000</span>
                     </li>
                     <li class="list-group-item d-flex justify-content-between">
-                    <span>Service Fee</span>
+                    <span data-key="serviceFeeLabel">Service Fee</span>
                     <strong>MMK 2,000</strong>
                     </li>
                     <li class="list-group-item d-flex justify-content-between">
-                    <span>Total (MMK)</span>
+                    <span data-key="totalMMKLabel">Total (MMK)</span>
                     <strong>MMK 62,000</strong>
                     </li>
                 </ul>
@@ -178,7 +169,6 @@
             </div>
             </div>
         </section>
-
     </form>
 
   <!-- Footer -->
@@ -297,6 +287,67 @@
 
 </script>
 <script src="js/global.js"></script>
+<script>
+    const translations = {
+  en: {
+    checkoutPageTitle: "Checkout | EventHive",
+    checkoutHeaderTitle: "Checkout",
+    checkoutHeaderSubtitle: "Review and complete your ticket booking",
+    billingInfoTitle: "Billing Information",
+    firstNameLabel: "First name",
+    lastNameLabel: "Last name",
+    emailLabel: "Email address",
+    addressLabel: "Address",
+    paymentMethodTitle: "Payment Method",
+    creditCardLabel: "Credit/Debit Card",
+    paypalLabel: "PayPal",
+    kpayLabel: "KPay",
+    nameOnCardLabel: "Name on card",
+    cardNumberLabel: "Card number",
+    expirationLabel: "Expiry",
+    cvvLabel: "CVV",
+    kpayScanLabel: "Scan with KBZPay App:",
+    kpayScanInstructions: "Open your KBZPay app and scan this QR to pay.",
+    placeOrderBtn: "Place Order",
+    orderSummaryTitle: "Order Summary",
+    rockRollNight: "Rock & Roll Night (VIP)",
+    rockRollNightTickets: "2 Tickets",
+    artExpo: "Art Expo 2025 (General)",
+    artExpoTickets: "1 Ticket",
+    serviceFeeLabel: "Service Fee",
+    totalMMKLabel: "Total (MMK)",
+  },
+  my: {
+    checkoutPageTitle: "ငွေရှင်းခြင်း | EventHive",
+    checkoutHeaderTitle: "ငွေရှင်းခြင်း",
+    checkoutHeaderSubtitle: "လက်မှတ်မှာယူမှုကို ပြန်လည်စစ်ဆေးပြီး အပြီးသတ်ပါ",
+    billingInfoTitle: "ငွေတောင်းခံလွှာ အချက်အလက်",
+    firstNameLabel: "အမည် (ရှေ့ပိုင်း)",
+    lastNameLabel: "အမည် (နောက်ပိုင်း)",
+    emailLabel: "အီးမေးလ်လိပ်စာ",
+    addressLabel: "လိပ်စာ",
+    paymentMethodTitle: "ငွေပေးချေမှုနည်းလမ်း",
+    creditCardLabel: "ခရက်ဒစ်/ဒက်ဘစ်ကတ်",
+    paypalLabel: "PayPal",
+    kpayLabel: "KPay",
+    nameOnCardLabel: "ကတ်ပေါ်ရှိအမည်",
+    cardNumberLabel: "ကတ်နံပါတ်",
+    expirationLabel: "သက်တမ်းကုန်ဆုံးရက်",
+    cvvLabel: "CVV",
+    kpayScanLabel: "KBZPay အက်ပ်ဖြင့် စကင်ဖတ်ပါ:",
+    kpayScanInstructions: "သင့် KBZPay အက်ပ်ကိုဖွင့်ပြီး ငွေပေးချေရန် ဤ QR ကိုစကင်ဖတ်ပါ။",
+    placeOrderBtn: "မှာယူမှုပြုလုပ်ရန်",
+    orderSummaryTitle: "မှာယူမှု အကျဉ်းချုပ်",
+    rockRollNight: "Rock & Roll Night (VIP)",
+    rockRollNightTickets: "လက်မှတ် ၂ စောင်",
+    artExpo: "Art Expo 2025 (General)",
+    artExpoTickets: "လက်မှတ် ၁ စောင်",
+    serviceFeeLabel: "ဝန်ဆောင်ခ",
+    totalMMKLabel: "စုစုပေါင်း (MMK)",
+  }
+};
+</script>
+<script src="js/lag.js"></script>
 
 </body>
 </html>

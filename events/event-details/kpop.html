@@ -1,227 +1,343 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="../../assets/images/logo.jpg">
-  <title>Blackpink Night Live 2025 | EventHive</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link href="../../css/global.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../../assets/images/logo.jpg">
+    <title data-key="eventBlackpinkTitle">Blackpink Night Live 2025 | EventHive</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="../../css/global.css" rel="stylesheet" />
 </head>
 <body>
 
-<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
-  <div class="container">
-    <a class="navbar-brand fw-bold text-warning d-flex align-items-center gap-2" href="../../index.html">
-      <img src="../../assets/images/logo.jpg" alt="EventHive Logo" style="height: 40px; width: 40px; object-fit: cover; border-radius: 50%;">
-      <span>EventHive</span>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarMenu">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="../events.html">Events</a></li>
-        <li class="nav-item"><a class="nav-link" href="../../aboutus.html">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="../../wishlist.html"><i class="bi bi-heart-fill"></i> Wishlist</a></li>
-        <li class="nav-item"><a class="nav-link" href="../../contactus.html">Contact</a></li>
-        <li class="nav-item"><a class="nav-link" href="../../faq.html">FAQ</a></li>
-        <li class="nav-item"><a class="nav-link position-relative" href="../../cart.html">
-          <i class="bi bi-cart-fill"></i> Cart
-          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">2</span>
-        </a></li>
-        <li class="nav-item ms-lg-3" id="authButtons">
-          <a class="btn btn-outline-warning btn-sm me-2" href="../../login.html">Login</a>
-          <a class="btn btn-warning btn-sm" href="../../signup.html">Sign Up</a>
-        </li>
-      </ul>
+    <div class="container">
+        <a class="navbar-brand fw-bold text-warning d-flex align-items-center gap-2" href="../../index.html">
+            <img src="../../assets/images/logo.jpg" alt="EventHive Logo" style="height: 40px; width: 40px; object-fit: cover; border-radius: 50%;">
+            <span>EventHive</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="../../index.html" data-key="navHome">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="../events.html" data-key="navEvents">Events</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../aboutus.html" data-key="navAboutUs">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../wishlist.html"><i class="bi bi-heart-fill"></i> <span data-key="navWishlist">Wishlist</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="../../contactus.html" data-key="navContact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../faq.html" data-key="navFAQ">FAQ</a></li>
+                <li class="nav-item"><a class="nav-link position-relative" href="../../cart.html">
+                    <i class="bi bi-cart-fill"></i> <span data-key="navCart">Cart</span>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark" data-key="cartItemCount">2</span>
+                </a></li>
+                <li class="nav-item ms-lg-3" id="authButtons">
+                    <a class="btn btn-outline-warning btn-sm me-2" href="../../login.html" data-key="navLogin">Login</a>
+                    <a class="btn btn-warning btn-sm" href="../../signup.html" data-key="navSignUp">Sign Up</a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
 </nav>
 
-<!-- Hero Section -->
 <section class="bg-dark text-white text-center py-5" style="background: url('../../assets/images/blackpink.jpg') no-repeat center center / cover;">
-  <div class="container py-5 bg-dark bg-opacity-75 rounded">
-    <h1 class="display-4 fw-bold">Blackpink Worldtour 2025</h1>
-    <p class="lead">September 5, 2025 | Singapore, Singapore </p>
-    <p class="small"><i class="bi bi-clock"></i> Starts at 7:00 PM</p>
-  </div>
+    <div class="container py-5 bg-dark bg-opacity-75 rounded">
+        <h1 class="display-4 fw-bold" data-key="eventBlackpinkHeading">Blackpink Worldtour 2025</h1>
+        <p class="lead" data-key="eventBlackpinkDateLocation">September 5, 2025 | Singapore, Singapore </p>
+        <p class="small"><i class="bi bi-clock"></i> <span data-key="eventBlackpinkStartTime">Starts at 7:00 PM</span></p>
+    </div>
 </section>
 
-<!-- Event Details -->
 <section class="py-5" data-aos="fade-up" data-aos-delay="100">
-  <div class="container">
-    <div class="row g-5">
-      <div class="col-md-8">
-        <h3>About the Concert</h3>
-        <p>
-          Brace yourself for a night of rhythm, lights, and energy! K-Pop Night Live 2025 features top-tier idols and rising stars for an unforgettable concert experience in Singapore.
-        </p>
-        <p>
-          If you are a fan of BLACKPINK — this event will bring the ultimate fan experience with amazing performances, surprise stages, and interactive fan moments.
-        </p>
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-md-8">
+                <h3 data-key="aboutConcertHeading">About the Concert</h3>
+                <p data-key="aboutConcertPara1">
+                    Brace yourself for a night of rhythm, lights, and energy! K-Pop Night Live 2025 features top-tier idols and rising stars for an unforgettable concert experience in Singapore.
+                </p>
+                <p data-key="aboutConcertPara2">
+                    If you are a fan of BLACKPINK — this event will bring the ultimate fan experience with amazing performances, surprise stages, and interactive fan moments.
+                </p>
 
-        <h4 class="mt-4">Location</h4>
-        <p><i class="bi bi-geo-alt-fill text-warning"></i> Singapore, Singapore </p>
+                <h4 class="mt-4" data-key="locationHeading">Location</h4>
+                <p><i class="bi bi-geo-alt-fill text-warning"></i> <span data-key="locationDetails">Singapore, Singapore </span></p>
 
-        <h4 class="mt-4">Schedule</h4>
-        <ul>
-          <li>5:00 PM - Gates Open</li>
-          <li>6:30 PM - Opening Performance</li>
-          <li>7:00 PM - Main Concert Begins</li>
-          <li>10:00 PM - Encore & Closing</li>
-        </ul>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">Tickets</h5>
-            <ul class="list-group list-group-flush mb-3">
-              <li class="list-group-item d-flex justify-content-between">
-                <span>General</span>
-                <strong>MMK 15,000</strong>
-              </li>
-              <li class="list-group-item d-flex justify-content-between">
-                <span>VIP (Front Row + Fan Pack)</span>
-                <strong>MMK 35,000</strong>
-              </li>
-            </ul>
-            <div class="mb-3">
-              <label for="ticketType" class="form-label">Select Ticket Type</label>
-              <select id="ticketType" class="form-select">
-                <option>General</option>
-                <option>VIP</option>
-              </select>
+                <h4 class="mt-4" data-key="scheduleHeading">Schedule</h4>
+                <ul>
+                    <li><span data-key="scheduleGatesOpen">5:00 PM - Gates Open</span></li>
+                    <li><span data-key="scheduleOpeningPerformance">6:30 PM - Opening Performance</span></li>
+                    <li><span data-key="scheduleMainConcert">7:00 PM - Main Concert Begins</span></li>
+                    <li><span data-key="scheduleEncoreClosing">10:00 PM - Encore & Closing</span></li>
+                </ul>
             </div>
-            <div class="mb-3">
-              <label for="quantity" class="form-label">Quantity</label>
-              <input type="number" class="form-control" id="quantity" value="1" min="1" />
+
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title" data-key="ticketsHeading">Tickets</h5>
+                        <ul class="list-group list-group-flush mb-3">
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span data-key="ticketGeneral">General</span>
+                                <strong>MMK 15,000</strong>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span data-key="ticketVIP">VIP (Front Row + Fan Pack)</span>
+                                <strong>MMK 35,000</strong>
+                            </li>
+                        </ul>
+                        <div class="mb-3">
+                            <label for="ticketType" class="form-label" data-key="selectTicketTypeLabel">Select Ticket Type</label>
+                            <select id="ticketType" class="form-select">
+                                <option data-key="optionGeneral">General</option>
+                                <option data-key="optionVIP">VIP</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="quantity" class="form-label" data-key="quantityLabel">Quantity</label>
+                            <input type="number" class="form-control" id="quantity" value="1" min="1" />
+                        </div>
+                        <button class="btn btn-warning w-100" data-key="addToCartButton">Add to Cart</button>
+                        <p class="text-center text-muted mt-2 small"><span data-key="orText">Or</span> <a href="../../cart.html" data-key="goToCartLink">go to cart</a> <span data-key="toCompleteBookingText">to complete booking</span></p>
+                    </div>
+                </div>
             </div>
-            <button class="btn btn-warning w-100">Add to Cart</button>
-            <p class="text-center text-muted mt-2 small">Or <a href="../../cart.html">go to cart</a> to complete booking</p>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
 </section>
 
-<!-- Footer -->
 <footer class="footer bg-dark text-white pt-5 pb-3 mt-5">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 mb-4">
-        <div class="d-flex align-items-center gap-2 mb-2">
-          <img src="../../assets/images/logo.jpg" alt="EventHive Logo" style="height: 40px; width: 40px; object-fit: cover; border-radius: 50%;">
-          <h4 class="text-warning mb-0">EventHive</h4>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                    <img src="../../assets/images/logo.jpg" alt="EventHive Logo" style="height: 40px; width: 40px; object-fit: cover; border-radius: 50%;">
+                    <h4 class="text-warning mb-0">EventHive</h4>
+                </div>
+                <p data-key="footerTagline">Book your favorite events with ease. Concerts, expos, and more — all in one place.</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h5 class="text-warning" data-key="footerQuickLinksTitle">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="../../index.html" class="footer-link" data-key="navHome">Home</a></li>
+                    <li><a href="../events.html" class="footer-link" data-key="navEvents">Events</a></li>
+                    <li><a href="../../aboutus.html" class="footer-link" data-key="navAboutUs">About Us</a></li>
+                    <li><a href="../../contactus.html" class="footer-link" data-key="navContact">Contact</a></li>
+                    <li><a href="../../faq.html" class="footer-link" data-key="navFAQ">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h5 class="text-warning" data-key="footerContactUsTitle">Contact Us</h5>
+                <p><span data-key="footerEmailPrefix">Email:</span> <a href="mailto:support@eventhive.com" class="footer-link">support@eventhive.com</a></p>
+                <p><span data-key="footerPhonePrefix">Phone:</span> +95 123 456 789</p>
+                <div class="social-icons mt-3">
+                    <a href="https://www.facebook.com/" class="me-3 footer-icon"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.twitter.com/" class="me-3 footer-icon"><i class="bi bi-twitter"></i></a>
+                    <a href="https://www.instagram.com/" class="me-3 footer-icon"><i class="bi bi-instagram"></i></a>
+                    <div class="dropdown d-inline-block">
+                        <a class="footer-icon dropdown-toggle text-white" href="#" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-globe"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="#" onclick="changeLang('en')">English</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="changeLang('my')">မြန်မာ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-        <p>Book your favorite events with ease. Concerts, expos, and more — all in one place.</p>
-      </div>
-      <div class="col-md-4 mb-4">
-        <h5 class="text-warning">Quick Links</h5>
-        <ul class="list-unstyled">
-          <li><a href="../../index.html" class="footer-link">Home</a></li>
-          <li><a href="../events.html" class="footer-link">Events</a></li>
-          <li><a href="../../aboutus.html" class="footer-link">About Us</a></li>
-          <li><a href="../../contactus.html" class="footer-link">Contact</a></li>
-          <li><a href="../../faq.html" class="footer-link">FAQ</a></li>
-        </ul>
-      </div>
-      <div class="col-md-4 mb-4">
-        <h5 class="text-warning">Contact Us</h5>
-        <p>Email: <a href="mailto:support@eventhive.com" class="footer-link">support@eventhive.com</a></p>
-        <p>Phone: +95 123 456 789</p>
-        <div class="social-icons mt-3">
-          <a href="https://www.facebook.com/" class="me-3 footer-icon"><i class="bi bi-facebook"></i></a>
-          <a href="https://www.twitter.com/" class="me-3 footer-icon"><i class="bi bi-twitter"></i></a>
-          <a href="https://www.instagram.com/" class="me-3 footer-icon"><i class="bi bi-instagram"></i></a>
-          <div class="dropdown d-inline-block">
-            <a class="footer-icon dropdown-toggle text-white" href="#" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="bi bi-globe"></i>
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item" href="#" onclick="changeLang('en')">English</a></li>
-              <li><a class="dropdown-item" href="#" onclick="changeLang('my')">မြန်မာ</a></li>
-            </ul>
-          </div>
+        <hr class="border-secondary">
+        <div class="text-center">
+            <p class="mb-0" data-key="footerCopyright">&copy; 2025 EventHive. All rights reserved.</p>
         </div>
-      </div>
     </div>
-    <hr class="border-secondary">
-    <div class="text-center">
-      <p class="mb-0">&copy; 2025 EventHive. All rights reserved.</p>
-    </div>
-  </div>
 </footer>
 
-<!-- Modal -->
 <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content border-0 shadow">
-      <div class="modal-header bg-success text-white">
-        <h5 class="modal-title" id="cartModalLabel">Added to Cart</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body text-center">
-        🎤 <strong>K-Pop Night Live 2025</strong> ticket(s) added to your cart!
-      </div>
-      <div class="modal-footer justify-content-center">
-        <a href="../../cart.html" class="btn btn-warning">Go to Cart</a>
-        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Continue Browsing</button>
-      </div>
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title" id="cartModalLabel" data-key="modalAddedToCartTitle">Added to Cart</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                🎤 <strong data-key="modalTicketAddedMessage">K-Pop Night Live 2025</strong> <span data-key="modalTicketAddedSuffix">ticket(s) added to your cart!</span>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <a href="../../cart.html" class="btn btn-warning" data-key="modalGoToCartBtn">Go to Cart</a>
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal" data-key="modalContinueBrowseBtn">Continue Browse</button>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
-<!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  AOS.init();
+    AOS.init();
 </script>
 <script>
-  const addToCartBtn = document.querySelector('.btn.btn-warning.w-100');
-  const cartModal = new bootstrap.Modal(document.getElementById('cartModal'));
+    const addToCartBtn = document.querySelector('.btn.btn-warning.w-100');
+    const cartModal = new bootstrap.Modal(document.getElementById('cartModal'));
 
-  addToCartBtn.addEventListener('click', function (e) {
-    e.preventDefault();
-    cartModal.show();
-  });
+    addToCartBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        cartModal.show();
+    });
 
-  window.addEventListener("DOMContentLoaded", () => {
-    const isLoggedIn = localStorage.getItem("eventLoggedIn");
-    if (isLoggedIn === "true") {
-      const authSection = document.getElementById("authButtons");
-      if (authSection) authSection.style.display = "none";
+    window.addEventListener("DOMContentLoaded", () => {
+        const isLoggedIn = localStorage.getItem("eventLoggedIn");
+        if (isLoggedIn === "true") {
+            const authSection = document.getElementById("authButtons");
+            if (authSection) authSection.style.display = "none";
 
-      const nav = document.querySelector(".navbar-nav");
-      if (nav) {
-        const storedUser = JSON.parse(localStorage.getItem("eventUser"));
-        const welcome = document.createElement("li");
-        welcome.className = "nav-item d-flex align-items-center ms-lg-3 text-white fw-bold";
-        welcome.innerHTML = `<span>Welcome, ${storedUser.fullname.split(" ")[0]}</span>`;
-        nav.appendChild(welcome);
+            const nav = document.querySelector(".navbar-nav");
+            if (nav) {
+                const storedUser = JSON.parse(localStorage.getItem("eventUser"));
+                const welcome = document.createElement("li");
+                welcome.className = "nav-item d-flex align-items-center ms-lg-3 text-white fw-bold";
+                // Using data-key for welcome message part for translation
+                welcome.innerHTML = `<span data-key="welcomeMessage">Welcome,</span> ${storedUser.fullname.split(" ")[0]}`;
+                nav.appendChild(welcome);
 
-        const logoutBtn = document.createElement("li");
-        logoutBtn.className = "nav-item ms-2";
-        logoutBtn.innerHTML = `<button class="btn btn-danger btn-sm" id="logoutBtn">Logout</button>`;
-        nav.appendChild(logoutBtn);
+                const logoutBtn = document.createElement("li");
+                logoutBtn.className = "nav-item ms-2";
+                // Using data-key for logout button text
+                logoutBtn.innerHTML = `<button class="btn btn-danger btn-sm" id="logoutBtn" data-key="navLogout">Logout</button>`;
+                nav.appendChild(logoutBtn);
 
-        document.getElementById("logoutBtn").addEventListener("click", () => {
-          localStorage.removeItem("eventLoggedIn");
-          localStorage.removeItem("eventUser");
-          window.location.href = "index.html";
-        });
-      }
-    }
-  });
+                document.getElementById("logoutBtn").addEventListener("click", () => {
+                    localStorage.removeItem("eventLoggedIn");
+                    localStorage.removeItem("eventUser");
+                    window.location.href = "../../index.html"; // Adjusted path for consistency
+                });
+            }
+        }
+    });
 </script>
 <script src="../../js/global.js"></script>
+<script src="../../js/lag.js"></script>
+<script>
+    // This is the content for your js/lag.js file
+const translations = {
+    en: {
+        // --- Global / Navbar Translations ---
+        navHome: "Home",
+        navEvents: "Events",
+        navAboutUs: "About Us",
+        navWishlist: "Wishlist",
+        navContact: "Contact",
+        navFAQ: "FAQ",
+        navCart: "Cart",
+        cartItemCount: "2", // This might be dynamically updated by other JS, but provides a default translatable value
+        navLogin: "Login",
+        navSignUp: "Sign Up",
+        navLogout: "Logout",
+        welcomeMessage: "Welcome,", // Part of the dynamic welcome message
+
+        // --- Global / Footer Translations ---
+        footerTagline: "Book your favorite events with ease. Concerts, expos, and more — all in one place.",
+        footerQuickLinksTitle: "Quick Links",
+        footerContactUsTitle: "Contact Us",
+        footerEmailPrefix: "Email:",
+        footerPhonePrefix: "Phone:",
+        footerCopyright: "&copy; 2025 EventHive. All rights reserved.",
+
+        // --- Blackpink Night Live 2025 Page Specific Translations ---
+        eventBlackpinkTitle: "Blackpink Night Live 2025 | EventHive",
+        eventBlackpinkHeading: "Blackpink Worldtour 2025",
+        eventBlackpinkDateLocation: "September 5, 2025 | Singapore, Singapore",
+        eventBlackpinkStartTime: "Starts at 7:00 PM",
+        aboutConcertHeading: "About the Concert",
+        aboutConcertPara1: "Brace yourself for a night of rhythm, lights, and energy! K-Pop Night Live 2025 features top-tier idols and rising stars for an unforgettable concert experience in Singapore.",
+        aboutConcertPara2: "If you are a fan of BLACKPINK — this event will bring the ultimate fan experience with amazing performances, surprise stages, and interactive fan moments.",
+        locationHeading: "Location",
+        locationDetails: "Singapore, Singapore",
+        scheduleHeading: "Schedule",
+        scheduleGatesOpen: "5:00 PM - Gates Open",
+        scheduleOpeningPerformance: "6:30 PM - Opening Performance",
+        scheduleMainConcert: "7:00 PM - Main Concert Begins",
+        scheduleEncoreClosing: "10:00 PM - Encore & Closing",
+        ticketsHeading: "Tickets",
+        ticketGeneral: "General",
+        ticketVIP: "VIP (Front Row + Fan Pack)",
+        selectTicketTypeLabel: "Select Ticket Type",
+        optionGeneral: "General",
+        optionVIP: "VIP",
+        quantityLabel: "Quantity",
+        addToCartButton: "Add to Cart",
+        orText: "Or",
+        goToCartLink: "go to cart",
+        toCompleteBookingText: "to complete booking",
+        modalAddedToCartTitle: "Added to Cart",
+        modalTicketAddedMessage: "Blackpink Worldtour 2025", // The event name itself
+        modalTicketAddedSuffix: "ticket(s) added to your cart!",
+        modalGoToCartBtn: "Go to Cart",
+        modalContinueBrowseBtn: "Continue Browse",
+
+        // --- Add other page-specific translations here if you have them, e.g., for FutureTech ---
+        // eventFutureTechTitle: "FutureTech 2025 | EventHive",
+        // ...
+    },
+    my: {
+        // --- Global / Navbar Translations ---
+        navHome: "ပင်မ",
+        navEvents: "ပွဲစဉ်များ",
+        navAboutUs: "ကျွန်ုပ်တို့အကြောင်း",
+        navWishlist: "စိတ်ကြိုက်ပွဲများ",
+        navContact: "ဆက်သွယ်ရန်",
+        navFAQ: "အမေးအဖြေများ",
+        navCart: "လှည်း",
+        // cartItemCount: "၂",
+        navLogin: "ဝင်ရန်",
+        navSignUp: "စာရင်းသွင်းရန်",
+        navLogout: "ထွက်ရန်",
+        welcomeMessage: "ကြိုဆိုပါတယ်,",
+
+        // --- Global / Footer Translations ---
+        footerTagline: "သင်နှစ်သက်ရာပွဲများကို လွယ်ကူစွာ ကြိုတင်မှာယူပါ။ ဖျော်ဖြေပွဲများ၊ ပြပွဲများနှင့် အခြားအရာများ — အားလုံးကို တစ်နေရာတည်းတွင်။",
+        footerQuickLinksTitle: "အမြန်လင့်ခ်များ",
+        footerContactUsTitle: "ကျွန်ုပ်တို့ကို ဆက်သွယ်ပါ",
+        footerEmailPrefix: "အီးမေးလ်:",
+        footerPhonePrefix: "ဖုန်း:",
+        footerCopyright: "© ၂၀၂၅ EventHive။ မူပိုင်ခွင့်များ ရရှိပြီး။",
+
+        // --- Blackpink Night Live 2025 Page Specific Translations ---
+        eventBlackpinkTitle: "Blackpink ကမ္ဘာလှည့်ဖျော်ဖြေပွဲ ၂၀၂၅ | EventHive",
+        eventBlackpinkHeading: "Blackpink ကမ္ဘာလှည့်ဖျော်ဖြေပွဲ ၂၀၂၅",
+        eventBlackpinkDateLocation: "စက်တင်ဘာ ၅၊ ၂၀၂၅ | စင်္ကာပူ၊ စင်္ကာပူ",
+        eventBlackpinkStartTime: "ည ၇:၀၀ နာရီတွင် စတင်သည်",
+        aboutConcertHeading: "ဖျော်ဖြေပွဲအကြောင်း",
+        aboutConcertPara1: "စည်းချက်၊ အလင်းရောင်နှင့် စွမ်းအင်အပြည့်ဖြင့် ညတစ်ညအတွက် ပြင်ဆင်ထားပါ။ K-Pop Night Live 2025 သည် စင်္ကာပူတွင် မမေ့နိုင်စရာ ဖျော်ဖြေပွဲ အတွေ့အကြုံအတွက် ထိပ်တန်း Idol များ နှင့် ထွန်းသစ်စကြယ်များကို ဖိတ်ခေါ်ထားပါသည်။",
+        aboutConcertPara2: "သင်သည် BLACKPINK ပရိတ်သတ်တစ်ဦးဖြစ်ပါက ဤပွဲသည် အံ့သြဖွယ်ဖျော်ဖြေမှုများ၊ အံ့အားသင့်ဖွယ်စင်မြင့်များ နှင့် ပရိတ်သတ်အပြန်အလှန်ထိတွေ့မှု အခိုက်အတန့်များဖြင့် အကောင်းဆုံး ပရိတ်သတ်အတွေ့အကြုံကို ဆောင်ကြဉ်းပေးပါမည်။",
+        locationHeading: "တည်နေရာ",
+        locationDetails: "စင်္ကာပူ၊ စင်္ကာပူ",
+        scheduleHeading: "အချိန်ဇယား",
+        scheduleGatesOpen: "ညနေ ၅:၀၀ - ဂိတ်များဖွင့်သည်",
+        scheduleOpeningPerformance: "ညနေ ၆:၃၀ - အဖွင့်ဖျော်ဖြေမှု",
+        scheduleMainConcert: "ည ၇:၀၀ - ပင်မဖျော်ဖြေပွဲ စတင်သည်",
+        scheduleEncoreClosing: "ည ၁၀:၀၀ - Encore နှင့် ပိတ်သိမ်း",
+        ticketsHeading: "လက်မှတ်များ",
+        ticketGeneral: "သာမန်",
+        ticketVIP: "VIP (ရှေ့ဆုံးတန်း + Fan Pack)",
+        selectTicketTypeLabel: "လက်မှတ်အမျိုးအစား ရွေးပါ",
+        optionGeneral: "သာမန်",
+        optionVIP: "VIP",
+        quantityLabel: "အရေအတွက်",
+        addToCartButton: "လှည်းထဲထည့်ပါ",
+        orText: "သို့မဟုတ်",
+        goToCartLink: "လှည်းသို့သွားပါ",
+        toCompleteBookingText: "မှာယူမှုပြီးမြောက်ရန်",
+        modalAddedToCartTitle: "လှည်းထဲသို့ ထည့်ပြီးပါပြီ",
+        modalTicketAddedMessage: "Blackpink ကမ္ဘာလှည့်ဖျော်ဖြေပွဲ ၂၀၂၅",
+        modalTicketAddedSuffix: "လက်မှတ်(များ) ကို လှည်းထဲသို့ ထည့်ပြီးပါပြီ။",
+        modalGoToCartBtn: "လှည်းသို့သွားပါ",
+        modalContinueBrowseBtn: "ဆက်လက်ကြည့်ရှုပါ",
+    }
+};
+</script>
 
 </body>
 </html>
