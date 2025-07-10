@@ -63,8 +63,8 @@
     <div class="carousel-item active" style="height: 100vh; background: url('assets/images/events.jpg') center/cover no-repeat;">
       <div class="d-flex h-100 align-items-center justify-content-center text-white text-center bg-dark bg-opacity-50">
         <div>
-          <h1 class="display-4 fw-bold">Discover & Book Amazing Events</h1>
-          <p class="lead">Concerts, Expos, Conferences — all in one place</p>
+          <h1 class="display-4 fw-bold" data-key="heroTitle">Discover & Book Amazing Events</h1>
+          <p class="lead" data-key="heroSubtitle">Concerts, Expos, Conferences — all in one place</p>
           <a href="events/events.html" class="btn btn-warning btn-lg me-2">Browse Events</a>
           <a href="signup.html" class="btn btn-outline-light btn-lg" id="heroSignUpBtn">Sign Up</a>
         </div>
@@ -461,13 +461,25 @@
 
     </script>
 
-    <script>
-  function changeLang(lang) {
-    alert("Language switched to: " + (lang === 'en' ? 'English' : 'မြန်မာ'));
-    // You can add actual text-switching logic here if you want later
-  }
-</script>
+    
+<script>
+  const translations = {
+  en: {
+    heroTitle: "Discover & Book Amazing Events",
+    heroSubtitle: "Concerts, Expos, Conferences — all in one place",
+    featuredEvents: "Featured Events",
+    whatUsersSay: "What Our Users Say",
+  },
+  my: {
+    heroTitle: "အံ့သြဖွယ်အဖျော်ယမကာများ ရှာဖွေပြီး လက်မှတ်မှာယူပါ",
+    heroSubtitle: "ဂီတဖျော်ဖြေမှုများ၊ ပြပွဲများ၊ သင်တန်းများ — တစ်နေရာထဲတွင်",
+    featuredEvents: "အထူးအခမ်းအနားများ",
+    whatUsersSay: "အသုံးပြုသူများက ပြောသည်",
+  },
+};
 
+</script>
+<script src="js/lag.js"></script>
 
 </body>
 </html>
